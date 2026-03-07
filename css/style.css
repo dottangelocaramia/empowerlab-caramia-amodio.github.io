@@ -1,35 +1,56 @@
+/* Font e base */
 body{
-font-family: Arial, Helvetica, sans-serif;
-margin:0;
-background-color:#f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background-color:#f4f4f4;
+    line-height:1.6;
 }
 
+/* Header e menu */
 header{
-background:#2c3e50;
-padding:20px;
-color:white;
+    background:#2c3e50;
+    padding:20px;
+    color:white;
+}
+
+header h2{
+    margin:0;
+    display:inline-block;
+}
+
+nav{
+    display:inline-block;
+    float:right;
 }
 
 nav a{
-color:white;
-margin-right:20px;
-text-decoration:none;
-font-weight:bold;
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:bold;
+    transition: color 0.3s;
 }
 
 nav a:hover{
-text-decoration:underline;
+    color:#f39c12; /* colore accento */
 }
 
+/* Container centrale */
 .container{
-max-width:900px;
-margin:auto;
-background:white;
-padding:40px;
-margin-top:30px;
-border-radius:10px;
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    margin-top:30px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Titoli */
 h1{
-color:#2c3e50;
+    color:#2c3e50;
+}
+
+h2{
+    color:#34495e;
 }
