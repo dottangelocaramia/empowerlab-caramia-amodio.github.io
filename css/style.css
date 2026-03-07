@@ -54,3 +54,27 @@ h1{
 h2{
     color:#34495e;
 }
+
+
+
+
+
+.hero{
+    background: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url('../images/hero.jpg') no-repeat center center/cover;
+    color:white;
+    padding:100px 40px;
+    text-align:center;
+    border-radius:10px;
+    margin-top:30px;
+}
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+.hero h2{
+    font-size:24px;
+    margin-bottom:20px;
+}
+.hero p{
+    font-size:18px;
+}
