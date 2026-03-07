@@ -60,7 +60,7 @@ h2{
 
 
 .hero{
-    background: linear-gradient(rgba(44,62,80,0.8), rgba(44,62,80,0.8)), url('../images/hero.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(44,62,80,0.95), rgba(44,62,80,0.8)), url('../images/hero.jpg') no-repeat center center/cover;
     color:white;
     padding:100px 40px;
     text-align:center;
