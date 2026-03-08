@@ -16,6 +16,8 @@ header{
 header h2{
     margin:0;
     display:inline-block;
+    color:#ffffff;
+    font-weight:700;
 }
 
 nav{
@@ -32,7 +34,7 @@ nav a{
 }
 
 nav a:hover{
-    color:#f39c12; /* colore accento */
+    color:#f39c12;
 }
 
 /* Container centrale */
@@ -51,13 +53,14 @@ h1{
     color:#2c3e50;
 }
 
-h2 {
-    color: #ffffff;
-    opacity: 1;
-    font-weight: 600;
-    text-shadow: 0px 0px 6px rgba(0,0,0,0.6);
+/* h2 di default (leggibile su sfondo bianco) */
+h2{
+    color:#2c3e50;
+    font-weight:600;
+    margin-top:30px;
 }
 
+/* Hero section */
 .hero{
     background: linear-gradient(rgba(44,62,80,0.95), rgba(44,62,80,0.95)), url('../images/hero.jpg') no-repeat center center/cover;
     color:white;
@@ -67,7 +70,10 @@ h2 {
     margin-top:30px;
 }
 
-.hero h1, .hero h2, .hero p {
-    color: #ffffff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+/* Testo bianco solo nella hero */
+.hero h1,
+.hero h2,
+.hero p{
+    color:#ffffff;
+    text-shadow:1px 1px 3px rgba(0,0,0,0.4);
 }
