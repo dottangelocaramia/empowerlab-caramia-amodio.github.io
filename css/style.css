@@ -1,111 +1,73 @@
-/* ---------- BASE ---------- */
-
+/* Font e base */
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin:0;
-    background-color:#f4f6f8;
-    line-height:1.7;
-    color:#333;
+    background-color:#f4f4f4;
+    line-height:1.6;
 }
 
-
-/* ---------- HEADER ---------- */
-
+/* Header e menu */
 header{
     background:#2c3e50;
-    padding:18px 40px;
+    padding:20px;
     color:white;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
 }
 
 header h2{
     margin:0;
-    font-size:20px;
-    font-weight:700;
-    color:#ffffff;
+    display:inline-block;
 }
 
-
-/* ---------- NAVIGATION ---------- */
+nav{
+    display:inline-block;
+    float:right;
+}
 
 nav a{
     color:white;
-    margin-left:22px;
+    margin-left:20px;
     text-decoration:none;
-    font-weight:600;
-    font-size:15px;
-    transition:all 0.25s;
+    font-weight:bold;
+    transition: color 0.3s;
 }
 
 nav a:hover{
-    color:#f39c12;
+    color:#f39c12; /* colore accento */
 }
 
-
-/* ---------- HERO ---------- */
-
-.hero{
-    background: linear-gradient(rgba(44,62,80,0.92), rgba(44,62,80,0.92)), 
-    url('../images/hero.jpg') no-repeat center center/cover;
-
-    color:white;
-    padding:110px 40px;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:46px;
-    margin-bottom:10px;
-    letter-spacing:1px;
-}
-
-.hero h2{
-    font-size:22px;
-    font-weight:500;
-    margin-bottom:20px;
-}
-
-.hero p{
-    font-size:18px;
-    max-width:700px;
-    margin:auto;
-}
-
-
-/* ---------- CONTENUTO ---------- */
-
+/* Container centrale */
 .container{
     max-width:900px;
     margin:auto;
     background:white;
-    padding:45px;
-    margin-top:-40px;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    padding:40px;
+    margin-top:30px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
-
-/* ---------- TITOLI ---------- */
-
+/* Titoli */
 h1{
     color:#2c3e50;
-    margin-top:40px;
 }
 
-h2{
-    color:#2c3e50;
+h2 {
+    color: #ffffff;
+    opacity: 1;
+    font-weight: 600;
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.6);
+}
+
+.hero{
+    background: linear-gradient(rgba(44,62,80,0.95), rgba(44,62,80,0.95)), url('../images/hero.jpg') no-repeat center center/cover;
+    color:white;
+    padding:100px 40px;
+    text-align:center;
+    border-radius:10px;
     margin-top:30px;
 }
 
-
-/* ---------- PARAGRAFI ---------- */
-
-p{
-    font-size:17px;
-    margin-bottom:18px;
-}ero p {
+.hero h1, .hero h2, .hero p {
     color: #ffffff;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
