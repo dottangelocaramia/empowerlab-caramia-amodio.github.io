@@ -77,3 +77,26 @@ h2{
     color:#ffffff;
     text-shadow:1px 1px 3px rgba(0,0,0,0.4);
 }
+
+
+
+/* Articoli */
+
+.articolo{
+    max-width:750px;
+}
+
+.meta-articolo{
+    color:#777;
+    font-size:14px;
+    margin-bottom:30px;
+}
+
+.articolo p{
+    margin-bottom:18px;
+}
+
+.articolo ul{
+    margin-top:10px;
+    margin-bottom:20px;
+}
