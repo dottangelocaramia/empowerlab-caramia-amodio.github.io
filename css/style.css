@@ -155,3 +155,39 @@ footer{
     padding:12px;
     font-size:14px;
 }
+
+
+
+
+
+
+
+/* MENU MOBILE */
+
+@media (max-width:768px){
+
+header{
+    text-align:center;
+}
+
+header h2{
+    display:block;
+    margin-bottom:10px;
+}
+
+nav{
+    float:none;
+    display:block;
+}
+
+nav a{
+    display:inline-block;
+    margin:8px 10px;
+}
+
+.footer-container{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
