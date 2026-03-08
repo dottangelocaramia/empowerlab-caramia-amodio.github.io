@@ -191,3 +191,14 @@ nav a{
 }
 
 }
+
+
+/* miglioramento tipografia */
+
+p{
+    font-size:17px;
+}
+
+.articolo p{
+    font-size:18px;
+}
