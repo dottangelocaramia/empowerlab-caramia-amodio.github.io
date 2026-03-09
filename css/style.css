@@ -202,3 +202,39 @@ p{
 .articolo p{
     font-size:18px;
 }
+
+
+
+
+
+
+
+
+
+/* TEAM */
+
+.team{
+    margin-top:40px;
+}
+
+.profilo-preview{
+    margin-top:30px;
+    padding-bottom:25px;
+    border-bottom:1px solid #eee;
+}
+
+.profilo-preview h3{
+    margin-bottom:10px;
+}
+
+.profilo-link{
+    display:inline-block;
+    margin-top:10px;
+    color:#f39c12;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.profilo-link:hover{
+    text-decoration:underline;
+}
