@@ -383,9 +383,9 @@ display:block;
 
 .logo img{
 
-height:400px;
+width:420px;
 
-vertical-align:middle;
+height:auto;
 
 }
 
