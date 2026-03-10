@@ -317,3 +317,63 @@ background:white;
 border-left:3px solid #f39c12;
 
 }
+
+
+
+
+
+
+
+/* MENU TENDINA */
+
+.dropdown{
+display:inline-block;
+position:relative;
+}
+
+.dropbtn{
+
+background:none;
+border:none;
+color:white;
+font-weight:bold;
+cursor:pointer;
+font-size:16px;
+margin-left:20px;
+
+}
+
+.dropdown-content{
+
+display:none;
+position:absolute;
+
+background:white;
+
+min-width:200px;
+
+box-shadow:0 4px 8px rgba(0,0,0,0.1);
+
+border-radius:6px;
+
+}
+
+.dropdown-content a{
+
+color:#2c3e50;
+
+padding:12px 15px;
+
+display:block;
+
+text-decoration:none;
+
+}
+
+.dropdown-content a:hover{
+background:#f4f4f4;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
