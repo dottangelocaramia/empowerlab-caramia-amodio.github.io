@@ -423,12 +423,12 @@ footer {
 }
 
 .footer-container {
-    max-width: 1000px;      /* larghezza massima del contenitore */
+    max-width: 900px;      /* larghezza massima del contenitore */
     margin: auto;           /* centra il contenitore nella pagina */
-    padding: 20px 20px;     /* 20px sopra/sotto (altezza), 20px sinistra/destra (margini laterali) — riduci il primo numero per renderlo più sottile */
+    padding: 12px 20px;     /* 20px sopra/sotto (altezza), 20px sinistra/destra (margini laterali) — riduci il primo numero per renderlo più sottile */
     display: flex;          /* mette le colonne in riga orizzontale */
     justify-content: space-between; /* distribuisce le colonne: prima a sinistra, ultima a destra */
-    gap: 20px;              /* spazio tra le colonne — riducilo per avvicinarle */
+    gap: 30px;              /* spazio tra le colonne — riducilo per avvicinarle */
     flex-wrap: wrap;        /* su mobile va a capo automaticamente */
     align-items: flex-start; /* allinea le colonne in alto */
 }
@@ -443,7 +443,7 @@ footer {
 }
 
 .footer-col:last-child {
-    padding-right: 10px;    /* sposta "Contatti" verso sinistra — aumenta per spostarlo più a sinistra, riduci per più a destra */
+    padding-right: 20px;    /* sposta "Contatti" verso sinistra — aumenta per spostarlo più a sinistra, riduci per più a destra */
     text-align: right;      /* allinea il testo di "Contatti" a destra */
 }
 
