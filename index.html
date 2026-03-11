@@ -193,16 +193,12 @@ document.getElementById("footer").innerHTML = data;
 
 
 
-
 <script>
+  // Aspetta che il template header sia caricato, poi aggiunge la classe solo nella home
   setTimeout(function() {
-    var img = document.querySelector('.logo-header img');
-    var h2 = document.querySelector('.logo-header h2');
-    if (img) img.classList.add('animate-slide');
-    setTimeout(function() {
-      if (h2) h2.classList.add('animate-slide');
-    }, 350); // la scritta parte 300ms dopo il logo
-  }, 150); // attende che il template header sia caricato
+    var logo = document.querySelector('.logo-header');
+    if (logo) logo.classList.add('animate-slide');
+  }, 200);
 </script>
 
 
