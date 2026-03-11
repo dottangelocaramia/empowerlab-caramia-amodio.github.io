@@ -518,10 +518,6 @@ p {
 /* ===========================
    ANIMAZIONE TITOLO HEADER (solo home)
 =========================== */
-.logo-header img,
-.logo-header h2 {
-    opacity: 0;                              /* nascosti di default, visibili solo con la classe animate-slide */
-}
 
 .animate-slide {
     animation: slideFromRight 0.8s ease forwards;
