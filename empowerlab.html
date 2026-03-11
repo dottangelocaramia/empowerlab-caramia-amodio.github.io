@@ -15,27 +15,25 @@
 
 <body>
 
-<header>
 
-<!-- INTESTAZIONE TITOLO -->
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
 
-<h2>
-  <span style="font-family: 'Raleway', sans-serif; font-style: italic; font-weight: 800; letter-spacing: 2px; color: #ffffff;">Empower Lab</span>
-  <span style="font-size: 0.6em; font-style: italic; font-weight: normal; color: #d0d0d0;">  –  Amodio & Caramia</span>
-</h2>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="chi-siamo.html">Chi siamo</a>
-<a href="empowerlab.html">EmpowerLab</a>
-<a href="servizi.html">Servizi</a>
-<a href="articoli.html">Articoli</a>
-<a href="contatti.html">Contatti</a>
-</nav>
+<div id="header"></div>
 
-</header>
+<script>
 
+fetch("template/header.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+
+</script>
+
+
+
+
+  
 <div class="container">
 
 <h1>EmpowerLab!!!</h1>
