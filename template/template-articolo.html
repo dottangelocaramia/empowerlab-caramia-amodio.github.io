@@ -16,23 +16,25 @@
 
 <body>
 
-<header>
 
-<h2>Empower Lab — Amodio Caramia</h2>
 
-<nav>
+
+
+<div id="header"></div>
+
+<script>
+
+fetch("template/header.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+
+</script>
+
+
+
   
-<a href="index.html">Home</a>
-<a href="chi-siamo.html">Chi siamo</a>
-<a href="empowerlab.html">EmpowerLab</a>
-<a href="servizi.html">Servizi</a>
-<a href="articoli.html">Articoli</a>
-<a href="contatti.html">Contatti</a>
-  
-</nav>
-
-</header>
-
 
 <!-- INTESTAZIONE TITOLO -->
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
