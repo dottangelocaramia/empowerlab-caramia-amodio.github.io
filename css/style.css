@@ -415,59 +415,69 @@ h2 {
 /* ===========================
    FOOTER
 =========================== */
-
 footer {
-    background: #2c3e50;   /* colore di sfondo scuro */
-    color: white;           /* testo bianco di default */
-    margin-top: 40px;       /* spazio sopra il footer */
+    background: #2c3e50;
+    color: white;
+    margin-top: 40px;
 }
 
 .footer-container {
-    max-width: 900px;      /* larghezza massima del contenitore */
-    margin: auto;           /* centra il contenitore nella pagina */
-    padding: 12px 20px;     /* 20px sopra/sotto (altezza), 20px sinistra/destra (margini laterali) — riduci il primo numero per renderlo più sottile */
-    display: flex;          /* mette le colonne in riga orizzontale */
-    justify-content: space-between; /* distribuisce le colonne: prima a sinistra, ultima a destra */
-    gap: 30px;              /* spazio tra le colonne — riducilo per avvicinarle */
-    flex-wrap: wrap;        /* su mobile va a capo automaticamente */
-    align-items: flex-start; /* allinea le colonne in alto */
+    max-width: 1100px;      /* aumentato da 900px a 1100px — più spazio totale per le 3 colonne */
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;              /* ridotto da 30px a 10px — meno spazio fisso tra colonne */
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .footer-col {
-    flex: 1;                /* ogni colonna occupa spazio proporzionale */
-    min-width: 180px;       /* larghezza minima prima di andare a capo su mobile */
+    flex: 1;
+    min-width: 150px;       /* ridotto da 180px — così le colonne si stringono meno in fretta */
 }
 
 .footer-col:first-child {
-    padding-left: 10px;     /* sposta "Empower Lab" verso destra — aumenta per spostarlo più a destra, riduci per più a sinistra */
+    padding-left: 0px;      /* rimosso padding — "Empower Lab" parte dal margine sinistro */
+    flex: 0.8;              /* colonna più stretta — occupa meno spazio */
+}
+
+.footer-col:nth-child(2) {
+    flex: 1.4;              /* colonna centrale più larga — più spazio per i link utili */
+    text-align: center;     /* centra i link nella colonna centrale */
+    padding: 0 20px;        /* respiro interno sinistra e destra */
 }
 
 .footer-col:last-child {
-    padding-right: 20px;    /* sposta "Contatti" verso sinistra — aumenta per spostarlo più a sinistra, riduci per più a destra */
-    text-align: right;      /* allinea il testo di "Contatti" a destra */
+    padding-right: 0px;     /* rimosso padding — "Contatti" arriva al margine destro */
+    flex: 0.8;              /* colonna più stretta — occupa meno spazio */
+    text-align: right;      /* allinea il testo a destra */
 }
 
 .footer-col h3 {
-    margin-bottom: 5px;    /* spazio sotto i titoli delle colonne */
-    font-size: 1em;         /* dimensione titoli colonne — aumenta per ingrandirli */
+    margin-bottom: 5px;
+    font-size: 1em;
 }
 
 .footer-links a {
-    color: white;           /* colore link nel footer */
-    text-decoration: none;  /* rimuove la sottolineatura dai link */
-    display: inline;        /* tiene i link sulla stessa riga separati dai trattini */
+    color: white;
+    text-decoration: none;
+    display: inline;        /* link sulla stessa riga */
+    white-space: nowrap;    /* evita che i singoli link vadano a capo a metà parola */
 }
 
 .footer-links a:hover {
-    color: #f39c12;         /* colore link al passaggio del mouse */
+    color: #f39c12;
 }
 
 .footer-bottom {
-    background: #233140;    /* colore striscia copyright, leggermente più scuro del footer */
-    text-align: center;     /* centra il testo copyright */
-    padding: 10px;          /* altezza striscia copyright — riduci per renderla più sottile */
-    font-size: 14px;        /* dimensione testo copyright */
+    background: #233140;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
 }
+
+
 
 
 
