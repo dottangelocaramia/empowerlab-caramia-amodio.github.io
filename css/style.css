@@ -437,8 +437,7 @@ footer {
 .footer-links a {
     color: white;
     text-decoration: none;
-    display: block;
-    margin-bottom: 6px;
+    display: inline;
 }
 
 .footer-links a:hover {
