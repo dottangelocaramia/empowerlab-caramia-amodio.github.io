@@ -8,12 +8,15 @@ body {
     line-height: 1.6;
 }
 
+
+
 /* ===========================
    HEADER
 =========================== */
 header {
     background: #2c3e50;
     border-bottom: 3px solid #2e6da4;
+    overflow: hidden;
 }
 
 .header-container {
@@ -124,6 +127,33 @@ nav a:hover {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* ===========================
+   HAMBURGER
+=========================== */
+.hamburger {
+    display: none;             /* nascosto su desktop */
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+
+
+
+
 
 /* ===========================
    HERO
@@ -512,33 +542,53 @@ p {
     }
 }
 
+/* animazione X quando aperto */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 /* ===========================
    RESPONSIVE MOBILE (max 768px)
 =========================== */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
         padding: 12px 20px;
-        gap: 10px;
     }
 
-    .logo-header {
-        width: 100%;
-        justify-content: center;
+    .hamburger {
+        display: flex;         /* visibile su mobile */
     }
 
     nav {
+        display: none;         /* nascosto di default su mobile */
         width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 4px;
+        padding: 10px 0;
+    }
+
+    nav.open {
+        display: flex;         /* visibile quando hamburger è cliccato */
     }
 
     nav a,
     .dropbtn {
-        font-size: 0.85em;
-        padding: 5px 8px;
+        width: 100%;
+        font-size: 1em;
+        padding: 10px 12px;
+        border-radius: 4px;
+    }
+
+    .dropdown {
+        width: 100%;
     }
 
     .dropdown-content {
@@ -546,6 +596,8 @@ p {
         box-shadow: none;
         border-radius: 6px;
         margin-top: 4px;
+        min-width: unset;
+        width: 100%;
     }
 
     .hero {
@@ -591,14 +643,8 @@ p {
         font-size: 28px;
     }
 
-    nav a,
-    .dropbtn {
-        font-size: 0.8em;
-        padding: 4px 6px;
-    }
-
     .logo-header h2 {
-        font-size: 1em;
+        font-size: 0.95em;
     }
 
     .logo-header img {
