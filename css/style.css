@@ -4,7 +4,7 @@
 body {
     font-family: 'Inter', Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #ffede1;  /* ← cambia da #f4f4f4 a #ffede1 per uniformare a logo*/
     line-height: 1.6;
 }
 
