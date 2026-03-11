@@ -450,7 +450,7 @@ footer {
 
 .footer-col:last-child {
     padding-right: 0px;     /* rimosso padding — "Contatti" arriva al margine destro */
-    flex: 0.8;              /* colonna più stretta — occupa meno spazio */
+    flex: 0.9;              /* colonna più stretta — occupa meno spazio */
     text-align: right;      /* allinea il testo a destra */
 }
 
