@@ -191,6 +191,19 @@ document.getElementById("footer").innerHTML = data;
   
 
 
+
+
+
+<script>
+  // Aspetta che il template header sia caricato, poi aggiunge la classe solo nella home
+  setTimeout(function() {
+    var logo = document.querySelector('.logo-header');
+    if (logo) logo.classList.add('animate-slide');
+  }, 100);
+</script>
+
+
+
     
     
 </body>
