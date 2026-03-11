@@ -1,6 +1,23 @@
 <header>
   <div class="header-container">
-    <nav>
+    <div class="logo-header">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Empower Lab">
+      </a>
+      <h2>
+        <span style="font-family: 'Raleway', sans-serif; font-style: italic; font-weight: 800; letter-spacing: 2px; color: #ffffff;">Empower Lab</span>
+        <span style="font-size: 0.6em; font-style: italic; font-weight: normal; color: #d0d0d0;"> – Amodio & Caramia</span>
+      </h2>
+    </div>
+
+    <!-- HAMBURGER BUTTON (visibile solo su mobile) -->
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="main-nav">
       <a href="index.html">Home</a>
       <a href="chi-siamo.html">Chi siamo</a>
       <a href="empowerlab.html">EmpowerLab</a>
@@ -16,17 +33,17 @@
       <a href="faq.html">FAQ</a>
       <a href="contatti.html">Contatti</a>
     </nav>
-    <div class="logo-header">
-      <a href="index.html">
-        <img src="images/logo.png" alt="Empower Lab">
-      </a>
-      <h2>
-        <span style="font-family: 'Raleway', sans-serif; font-style: italic; font-weight: 800; letter-spacing: 2px; color: #ffffff;">Empower Lab</span>
-        <span style="font-size: 0.8em; font-style: italic; font-weight: normal; color: #d0d0d0;"> – Amodio & Caramia</span>
-      </h2>
-    </div>
   </div>
 </header>
+
+<script>
+function toggleMenu() {
+  var nav = document.getElementById('main-nav');
+  var btn = document.querySelector('.hamburger');
+  nav.classList.toggle('open');
+  btn.classList.toggle('active');
+}
+</script>
 
 
 
