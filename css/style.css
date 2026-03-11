@@ -406,63 +406,74 @@ h2 {
     height: auto;
 }
 
+
+
+
+
+
+
 /* ===========================
    FOOTER
 =========================== */
 
 footer {
-    background: #2c3e50;
-    color: white;
-    margin-top: 60px;
+    background: #2c3e50;   /* colore di sfondo scuro */
+    color: white;           /* testo bianco di default */
+    margin-top: 40px;       /* spazio sopra il footer */
 }
 
 .footer-container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 24px 40px;
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    max-width: 1000px;      /* larghezza massima del contenitore */
+    margin: auto;           /* centra il contenitore nella pagina */
+    padding: 20px 20px;     /* 20px sopra/sotto (altezza), 20px sinistra/destra (margini laterali) — riduci il primo numero per renderlo più sottile */
+    display: flex;          /* mette le colonne in riga orizzontale */
+    justify-content: space-between; /* distribuisce le colonne: prima a sinistra, ultima a destra */
+    gap: 20px;              /* spazio tra le colonne — riducilo per avvicinarle */
+    flex-wrap: wrap;        /* su mobile va a capo automaticamente */
+    align-items: flex-start; /* allinea le colonne in alto */
 }
 
 .footer-col {
-    flex: 1;
-    min-width: 220px;
+    flex: 1;                /* ogni colonna occupa spazio proporzionale */
+    min-width: 180px;       /* larghezza minima prima di andare a capo su mobile */
 }
 
 .footer-col:first-child {
-    margin-right: auto;
-    padding-left: 10px;
+    padding-left: 10px;     /* sposta "Empower Lab" verso destra — aumenta per spostarlo più a destra, riduci per più a sinistra */
 }
 
 .footer-col:last-child {
-    margin-left: auto;
-    padding-right: 10px;
-    text-align: right;
+    padding-right: 10px;    /* sposta "Contatti" verso sinistra — aumenta per spostarlo più a sinistra, riduci per più a destra */
+    text-align: right;      /* allinea il testo di "Contatti" a destra */
 }
 
 .footer-col h3 {
-    margin-bottom: 15px;
+    margin-bottom: 5px;    /* spazio sotto i titoli delle colonne */
+    font-size: 1em;         /* dimensione titoli colonne — aumenta per ingrandirli */
 }
 
 .footer-links a {
-    color: white;
-    text-decoration: none;
-    display: inline;
+    color: white;           /* colore link nel footer */
+    text-decoration: none;  /* rimuove la sottolineatura dai link */
+    display: inline;        /* tiene i link sulla stessa riga separati dai trattini */
 }
 
 .footer-links a:hover {
-    color: #f39c12;
+    color: #f39c12;         /* colore link al passaggio del mouse */
 }
 
 .footer-bottom {
-    background: #233140;
-    text-align: center;
-    padding: 12px;
-    font-size: 14px;
+    background: #233140;    /* colore striscia copyright, leggermente più scuro del footer */
+    text-align: center;     /* centra il testo copyright */
+    padding: 10px;          /* altezza striscia copyright — riduci per renderla più sottile */
+    font-size: 14px;        /* dimensione testo copyright */
 }
+
+
+
+
+
+
 
 /* ===========================
    TIPOGRAFIA
