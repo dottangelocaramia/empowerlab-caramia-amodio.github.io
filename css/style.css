@@ -632,7 +632,3 @@ p {
 }
 
 
-.logo-header img,
-.logo-header h2 {
-    opacity: 0;  /* nascosti di default, visibili solo quando animate-slide è attiva */
-}
