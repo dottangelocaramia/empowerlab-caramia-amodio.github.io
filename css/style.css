@@ -656,3 +656,86 @@ p {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   servizi nella home
+=========================== */
+
+
+
+.servizi-home{
+
+margin-top:80px;
+
+text-align:center;
+
+}
+
+.servizi-grid{
+
+display:flex;
+
+gap:30px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.servizio-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:12px;
+
+width:280px;
+
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+
+transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.servizio-card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+.servizio-card h3{
+
+margin-top:0;
+
+color:#2c3e50;
+
+}
+
+.servizio-card a{
+
+display:inline-block;
+
+margin-top:15px;
+
+text-decoration:none;
+
+font-weight:600;
+
+color:#27ae60;
+
+}
