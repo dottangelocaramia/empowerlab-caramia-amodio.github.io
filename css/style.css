@@ -743,3 +743,46 @@ font-weight:600;
 color:#27ae60;
 
 }
+
+
+
+
+
+
+.box-invisibile{
+
+    max-width: 850px;
+    /* larghezza massima del blocco di testo
+       serve a evitare righe troppo lunghe e migliorare la leggibilità
+       valori tipici:
+       600px = testo molto compatto
+       800-900px = ideale per articoli o presentazioni
+       1000px+ = layout più aperto */
+
+    margin-left: clamp(20px, 8vw, 140px);
+    /* spazio tra il margine sinistro della pagina e il box
+    
+       clamp(min, valore fluido, max)
+    
+       20px  → margine minimo su mobile
+       8vw   → spazio proporzionale alla larghezza dello schermo
+       140px → margine massimo su schermi grandi
+    
+       se vuoi più spazio:
+       clamp(20px, 10vw, 200px)
+    
+       se vuoi quasi nessuno spazio:
+       clamp(10px, 3vw, 60px)
+    */
+
+    margin-right: 20px;
+    /* spazio tra il box e il lato destro della pagina
+       evita che il testo tocchi il bordo dello schermo
+    
+       valori consigliati:
+       10px = molto compatto
+       20px = standard
+       40px = layout più arioso
+    */
+
+}
