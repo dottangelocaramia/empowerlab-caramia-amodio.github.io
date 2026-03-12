@@ -27,14 +27,24 @@
 
 <div id="header"></div>
 
+/** menu mobile **/
 <script>
-
 fetch("template/header.html")
 .then(response => response.text())
 .then(data => {
-document.getElementById("header").innerHTML = data;
-});
+  document.getElementById("header").innerHTML = data;
 
+  /* AGGIUNTA: lo script hamburger va eseguito QUI,
+     solo dopo che l'header è stato inserito nel DOM */
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('active'); /* anima le 3 linee in X */
+    nav.classList.toggle('open');         /* mostra/nasconde il menu */
+  });
+
+});
 </script>
 
 
