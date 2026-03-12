@@ -38,12 +38,13 @@
 </header>
 
 <script>
-const hamburger = document.getElementById('hamburger');
-const nav = document.querySelector('nav');
-
-hamburger.addEventListener('click', function () {
-hamburger.classList.toggle('active');
-nav.classList.toggle('open');
+document.addEventListener('click', function(e) {
+  if (e.target.closest('#hamburger')) {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('nav');
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('open');
+  }
 });
 </script>
 
