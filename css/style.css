@@ -787,13 +787,13 @@ color:#27ae60;
 
 .faq-section-title {
   font-family: 'Inter', sans-serif;  /* coerente con il font del sito */
-  font-size: 1.2rem;                 /* più grande del testo ma subordinato all'h1 */
+  font-size: 1.1rem;                 /* più grande del testo ma subordinato all'h1 */
   font-weight: 600;                  /* semibold — distintivo ma non aggressivo */
   color: #5a3e36;                    /* tono caldo, in armonia con #ffede1 */
   text-transform: uppercase;         /* maiuscolo per dare carattere e distinzione */
-  letter-spacing: 0.12em;           /* spaziatura che accompagna il maiuscolo */
+  letter-spacing: 0.11em;           /* spaziatura che accompagna il maiuscolo */
   margin-top: 2rem;                  /* respiro prima di ogni nuova sezione */
-  margin-bottom: 0.7rem;              /* spazio tra il titolo e la prima domanda */
-  padding-bottom: 0.4rem;           /* spazio prima della linea decorativa */
+  margin-bottom: 0.6rem;              /* spazio tra il titolo e la prima domanda */
+  padding-bottom: 0.3rem;           /* spazio prima della linea decorativa */
   border-bottom: 2px solid #ff6f01; /* linea sottile in arancio del cuore — separa visivamente */
 }
