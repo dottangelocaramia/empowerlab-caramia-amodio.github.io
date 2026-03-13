@@ -797,3 +797,44 @@ color:#27ae60;
   padding-bottom: 0.2rem;           /* spazio prima della linea decorativa */
   border-bottom: 2px solid #ff6f01; /* linea sottile in arancio del cuore — separa visivamente */
 }
+
+
+
+
+ /* PULSANTE DEI CONTATTI NELLE FAQ */
+
+.faq-cta {
+  text-align: center;          /* tutto centrato */
+  margin-top: 4rem;            /* respiro dalla sezione FAQ sopra */
+  margin-bottom: 3rem;         /* respiro dal footer */
+  padding: 2.5rem 1.5rem;      /* spazio interno generoso */
+  border-top: 1px solid #d4a898; /* linea sottile che separa dalla FAQ */
+}
+
+.faq-cta-testo {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;           /* leggermente più grande del testo normale */
+  font-weight: 600;            /* semibold — dà peso alla domanda */
+  color: #5a3e36;              /* tono caldo coerente con il sito */
+  margin-bottom: 1.2rem;       /* spazio tra la frase e il bottone */
+}
+
+.faq-cta-button {
+  display: inline-block;
+  background-color: #6aab7e;        /* verde chiaro */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.8rem 2.2rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease; /* anima sia sfondo che testo */
+}
+
+.faq-cta-button:hover {
+  background-color: #3a6147;        /* verde scuro all'hover */
+  color: #f4a261;                   /* testo arancione all'hover */
+}
+
+
