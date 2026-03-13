@@ -799,7 +799,7 @@ color:#27ae60;
 .box-centrale-invisibile {
   display: block;              /* si comporta come blocco, occupa tutta la riga */
   width: 90%;                  /* larghezza al 90% del contenitore padre */
-  max-width: 860px;            /* non supera 860px anche su schermi larghi */
+  max-width: 660px;            /* non supera 860px anche su schermi larghi */
   margin-top: 0;               /* nessun margine sopra */
   margin-bottom: 0;            /* nessun margine sotto */
   margin-left: auto;           /* margine sinistro automatico — spinge a destra */
