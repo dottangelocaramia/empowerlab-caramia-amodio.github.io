@@ -755,55 +755,25 @@ color:#27ae60;
 
 
 
-.box-invisibile{
-
-    max-width: 850px;
-    /* larghezza massima del blocco di testo
-       serve a evitare righe troppo lunghe e migliorare la leggibilità
-       valori tipici:
-       600px = testo molto compatto
-       800-900px = ideale per articoli o presentazioni
-       1000px+ = layout più aperto */
-
-    margin-left: clamp(20px, 8vw, 140px);
-    /* spazio tra il margine sinistro della pagina e il box
-    
-       clamp(min, valore fluido, max)
-    
-       20px  → margine minimo su mobile
-       8vw   → spazio proporzionale alla larghezza dello schermo
-       140px → margine massimo su schermi grandi
-    
-       se vuoi più spazio:
-       clamp(20px, 10vw, 200px)
-    
-       se vuoi quasi nessuno spazio:
-       clamp(10px, 3vw, 60px)
-    */
-
-    margin-right: 20px;
-    /* spazio tra il box e il lato destro della pagina
-       evita che il testo tocchi il bordo dello schermo
-    
-       valori consigliati:
-       10px = molto compatto
-       20px = standard
-       40px = layout più arioso
-    */
-
+/* Per paragrafi e testi lunghi */
+.box-invisibile-testo {
+  width: 90%;              /* su mobile occupa il 90% evitando di toccare i bordi */
+  max-width: 850px;        /* su schermi grandi non supera 850px */
+  margin-left: auto;       /* centratura orizzontale */
+  margin-right: auto;      /* centratura orizzontale */
+  padding-left: 1.2rem;    /* respiro laterale sinistro */
+  padding-right: 1.2rem;   /* respiro laterale destro */
+  box-sizing: border-box;  /* padding incluso nella larghezza totale */
 }
 
-
-
-
-.box-centrale-invisibile {
-  display: block;              /* si comporta come blocco, occupa tutta la riga */
-  width: 90%;                  /* larghezza al 90% del contenitore padre */
-  max-width: 660px;            /* non supera 860px anche su schermi larghi */
-  margin-top: 0;               /* nessun margine sopra */
-  margin-bottom: 0;            /* nessun margine sotto */
-  margin-left: auto;           /* margine sinistro automatico — spinge a destra */
-  margin-right: auto;          /* margine destro automatico — spinge a sinistra */
-  padding: 2rem 1.5rem;        /* spazio interno: 2rem sopra/sotto, 1.5rem ai lati */
-  box-sizing: border-box;      /* il padding è incluso nella larghezza totale */
+/* Per citazioni brevi ad effetto */
+.box-invisibile-citazioni {
+  width: 90%;              /* su mobile occupa il 90% evitando di toccare i bordi */
+  max-width: 620px;        /* più stretto per non disperdere la citazione */
+  margin-left: auto;       /* centratura orizzontale */
+  margin-right: auto;      /* centratura orizzontale */
+  padding-left: 1.2rem;    /* respiro laterale sinistro */
+  padding-right: 1.2rem;   /* respiro laterale destro */
+  box-sizing: border-box;  /* padding incluso nella larghezza totale */
+  text-align: center;      /* testo centrato — ideale per frasi brevi */
 }
