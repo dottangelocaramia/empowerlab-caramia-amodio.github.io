@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="UTF-8">
+
+<title>Titolo articolo | Empower Lab</title>
+
+<meta name="description" content="Breve descrizione dell'articolo per Google">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+
+
+
+<div id="header"></div>
+
+<script>
+
+fetch("template/header.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+
+</script>
+
+
+
+  
+
+<!-- INTESTAZIONE TITOLO -->
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
+
+<h2>
+  <span style="font-family: 'Raleway', sans-serif; font-style: italic; font-weight: 800; letter-spacing: 2px; color: #ffffff;">Empower Lab</span>
+  <span style="font-size: 0.6em; font-style: italic; font-weight: normal; color: #d0d0d0;">  –  Amodio & Caramia</span>
+</h2>
+
+
+
+  
+<div class="container articolo">
+
+<h1>Titolo articolo</h1>
+
+<p class="meta-articolo">
+Pubblicato il 10 Marzo 2026
+</p>
+
+<p>
+Introduzione dell'articolo. Qui introduci il tema e spieghi al lettore cosa troverà leggendo.
+</p>
+
+<h2>Sottotitolo sezione</h2>
+
+<p>
+Testo dell'articolo. Qui sviluppi l'argomento in modo chiaro e divulgativo.
+</p>
+
+<h2>Seconda sezione</h2>
+
+<p>
+Altri contenuti dell'articolo.
+</p>
+
+<h2>Conclusione</h2>
+
+<p>
+Sintesi finale e messaggio chiave per il lettore.
+</p>
+
+</div>
+
+
+
+
+
+
+
+
+<div id="footer"></div>
+
+<script>
+
+fetch("template/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+
+</script>
+
+
+
+
+  
+
+
+  
+
+
+  
+</body>
+</html>
