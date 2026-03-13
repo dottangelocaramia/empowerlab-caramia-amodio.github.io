@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Rosa Amodio | Empower Lab</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+
+
+
+
+<div id="header"></div>
+
+<script>
+
+fetch("template/header.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+
+</script>
+
+
+
+
+  
+
+<div class="container">
+
+<h1>Dott.ssa Rosa Amodio</h1>
+
+<p>
+Psicologa ...
+  In lavorazione
+</p>
+
+
+
+<h2 style="font-family: 'Raleway', sans-serif; color: #1a1a1a; letter-spacing: 1px;">Ambiti di lavoro</h2>
+<div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:16px;">
+  <a href="servizio1.html" style="border:1.5px solid #4f46e5; border-radius:50px; padding:8px 20px; color:#4f46e5; font-style:italic; font-size:0.9em; text-decoration:none; font-family:'Raleway',sans-serif;">Servizio1</a>
+  <a href="servizio2.html" style="border:1.5px solid #4f46e5; border-radius:50px; padding:8px 20px; color:#4f46e5; font-style:italic; font-size:0.9em; text-decoration:none; font-family:'Raleway',sans-serif;">Servizio2o</a>
+  <a href="servizio3.html" style="border:1.5px solid #4f46e5; border-radius:50px; padding:8px 20px; color:#4f46e5; font-style:italic; font-size:0.9em; text-decoration:none; font-family:'Raleway',sans-serif;">Servizio3</a>
+  <a href="servizio4.html" style="border:1.5px solid #4f46e5; border-radius:50px; padding:8px 20px; color:#4f46e5; font-style:italic; font-size:0.9em; text-decoration:none; font-family:'Raleway',sans-serif;">Servizio4</a>
+</div>
+
+</div>
+
+
+
+
+<div id="footer"></div>
+
+<script>
+
+fetch("template/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+
+</script>
+
+
+
+
+
+  
+</body>
+</html>
