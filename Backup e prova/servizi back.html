@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Servizi</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  
+<div id="header"></div>
+
+<script>
+
+fetch("template/header.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+
+</script>
+
+
+  
+
+<div class="container">
+
+<h1>Servizi</h1>
+
+<p>
+Empower Lab propone percorsi psicologici e formativi dedicati a studenti universitari,
+giovani adulti e persone che desiderano sviluppare maggiore consapevolezza personale.
+</p>
+
+<div class="servizio">
+
+<h2>Supporto psicologico</h2>
+
+<p>
+Percorsi individuali dedicati alla gestione dell’ansia, dello stress accademico e delle difficoltà emotive legate allo studio e alle scelte di vita.
+</p>
+
+<a href="supporto-psicologico.html" class="servizio-link">
+Scopri di più
+</a>
+
+</div>
+
+
+<div class="servizio">
+
+<h2>Percorsi per studenti</h2>
+
+<p>
+Percorsi dedicati agli studenti universitari per migliorare il metodo di studio, la gestione della motivazione e l’organizzazione dello studio.
+</p>
+
+<a href="percorsi-studenti.html" class="servizio-link">
+Scopri di più
+</a>
+
+</div>
+
+
+<div class="servizio">
+
+<h2>Seminari e formazione</h2>
+
+<p>
+Seminari e incontri divulgativi dedicati alla psicologia dello studio, alla crescita personale e alle relazioni.
+</p>
+
+<a href="seminari-formazione.html" class="servizio-link">
+Scopri di più
+</a>
+
+</div>
+
+</div>
+
+
+
+
+
+
+  
+
+<div id="footer"></div>
+
+<script>
+
+fetch("template/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+
+</script>
+
+
+
+  
+
+  
+</body>
+</html>
