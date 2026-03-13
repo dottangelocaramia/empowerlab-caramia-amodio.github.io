@@ -758,7 +758,7 @@ color:#27ae60;
 /* Per paragrafi e testi lunghi */
 .box-invisibile-testo {
   width: 90%;              /* su mobile occupa il 90% evitando di toccare i bordi */
-  max-width: 1000px;        /* su schermi grandi non supera 850px */
+  max-width: 1200px;        /* su schermi grandi non supera 850px */
   margin-left: auto;       /* centratura orizzontale */
   margin-right: auto;      /* centratura orizzontale */
   margin-top: 1rem;        /* più spazio sopra per dare respiro alla citazione */
