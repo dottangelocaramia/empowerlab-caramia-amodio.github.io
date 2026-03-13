@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Chi siamo – EmpowerLab</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<script>
+
+fetch("template/header.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+
+</script>
+  
+
+
+<div class="container">
+
+<h1>Chi siamo</h1>
+
+<p>
+Questa pagina presenterà il progetto e i fondatori. 
+  
+  
+  In lavorazione...
+</p>
+
+</div>
+
+
+
+
+
+<div class="team">
+
+<h2>Il nostro team</h2>
+
+<div class="profilo-preview">
+
+<h3>Dott. Angelo Caramia</h3>
+<p style="font-family: 'Raleway', sans-serif; font-style: italic; font-size: 0.95em; color: #888; margin-top: -10px; letter-spacing: 0.5px;">
+  Psicologo · Formatore · Data Scientist · Psicoterapeuta Breve Strategico in formazione
+</p>
+<p>
+Psicologo e formatore. Mi occupo di supporto psicologico per studenti universitari, gestione dell'ansia accademica e percorsi di crescita personale.
+</p>
+
+<a href="angelo-caramia.html" class="profilo-link">
+Scopri di più
+</a>
+
+</div>
+
+<div class="profilo-preview">
+
+<h3>Dott.ssa Rosa Amodio</h3>
+<p style="font-family: 'Raleway', sans-serif; font-style: italic; font-size: 0.95em; color: #888; margin-top: -10px; letter-spacing: 0.5px;">
+  Psicologa ...
+</p>
+<p>
+Psicologa e professionista nell'ambito del benessere psicologico e relazionale. Collabora ai progetti di Empower Lab dedicati alla crescita personale e alle relazioni.
+</p>
+
+<a href="amodio.html" class="profilo-link">
+Scopri di più
+</a>
+
+</div>
+
+</div>
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+<div id="footer"></div>
+
+<script>
+
+fetch("template/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+
+</script>
+
+  
+
+  
+</body>
+
+</html>
