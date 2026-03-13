@@ -791,9 +791,9 @@ color:#27ae60;
   font-weight: 600;                  /* semibold — distintivo ma non aggressivo */
   color: #5a3e36;                    /* tono caldo, in armonia con #ffede1 */
   text-transform: uppercase;         /* maiuscolo per dare carattere e distinzione */
-  letter-spacing: 0.11em;           /* spaziatura che accompagna il maiuscolo */
-  margin-top: 2rem;                  /* respiro prima di ogni nuova sezione */
-  margin-bottom: 0.6rem;              /* spazio tra il titolo e la prima domanda */
-  padding-bottom: 0.3rem;           /* spazio prima della linea decorativa */
+  letter-spacing: 0.10em;           /* spaziatura che accompagna il maiuscolo */
+  margin-top: 1.6rem;                  /* respiro prima di ogni nuova sezione */
+  margin-bottom: 0.5rem;              /* spazio tra il titolo e la prima domanda */
+  padding-bottom: 0.2rem;           /* spazio prima della linea decorativa */
   border-bottom: 2px solid #ff6f01; /* linea sottile in arancio del cuore — separa visivamente */
 }
