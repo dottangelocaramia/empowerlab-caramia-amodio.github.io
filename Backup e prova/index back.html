@@ -22,40 +22,22 @@
 
 <body>
 
-<header>
 
 
 
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
-
-<h2>
-  <span style="font-family: 'Raleway', sans-serif; font-style: italic; font-weight: 800; letter-spacing: 2px; color: #ffffff;">Empower Lab</span>
-  <span style="font-size: 0.6em; font-style: italic; font-weight: normal; color: #d0d0d0;">  –  Amodio & Caramia</span>
-</h2>
+<div id="header"></div>
 
 
+  
+<!-- menu mobile -->
+<script>
+fetch("template/header.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("header").innerHTML = data;
 
-    
-<nav>
-
-<a href="index.html">Home</a>
-<a href="chi-siamo.html">Chi siamo</a>
-<a href="empowerlab.html">EmpowerLab</a>
-
-<div class="dropdown">
-<button class="dropbtn">Servizi ▾</button>
-<div class="dropdown-content">
-<a href="supporto-psicologico.html">Supporto psicologico</a>
-<a href="percorsi-studenti.html">Percorsi per studenti</a>
-<a href="seminari-formazione.html">Seminari e formazione</a>
-</div>
-
-<a href="articoli.html">Articoli</a>
-<a href="contatti.html">Contatti</a>
-
-</nav>
-
-</header>
+});
+</script>
 
 
 
@@ -71,36 +53,124 @@
     </h2>
     
     <h2>Crescita personale, formazione e psicologia</h2>
-    <p>Uno spazio dedicato all’apprendimento, alla consapevolezza e alla trasformazione personale.</p>
-</div>
-
-<h1>Benvenuto/a in Empower Lab</h1>
-
-<p>
-Uno spazio dedicato alla crescita personale,
-alla consapevolezza psicologica
-e alla formazione.
+  <p>
+«L’autostima è l’esperienza di sentirsi capaci di affrontare le sfide fondamentali della vita.»
 </p>
 
+<p style="font-family: 'Raleway', sans-serif; font-style: italic; font-size: 0.85em; color: #D3D3D3; margin-top: -10px; letter-spacing: 0.5px;">
+Nathaniel Branden, The Six Pillars of Self-Esteem (1994)
+</p>
+</div>
+
+
+
+
+<h1 style="text-align: center;">Benvenuto/a in Empower Lab</h1>
+
+
+<div class="box-invisibile">
+
+
 <p>
-Il progetto nasce dall'incontro tra psicologia,
-formazione e divulgazione.
+Empower Lab nasce con l’obiettivo di offrire strumenti concreti per comprendere meglio se stessi, affrontare momenti di difficoltà e sviluppare maggiore equilibrio e benessere nella propria vita.
+
+Il progetto nasce dall’incontro tra psicologia, formazione e divulgazione, con uno sguardo al benessere della persona nella sua globalità. 
+
+Attraverso colloqui, percorsi e attività formative accompagniamo le persone nel costruire maggiore consapevolezza, autonomia e fiducia nelle proprie capacità.
+
 </p>
 
 </div>
+
+
+    
+
+</div>
+
+
+
+
+<!-- sezioni con link percorsi su pagina principale 
+-->
+    
+<section class="servizi-home">
+
+<h2>I principali servizi</h2>
+
+<div class="servizi-grid">
+
+
+
+<div class="servizio-card">
+
+<h3>Colloqui individuali e di coppia</h3>
+
+<p>
+Descizione breve. Descizione breve. Descizione breve. Descizione breve. Descizione breve. Descizione breve. Descizione breve. Descizione breve.
+
+</p>
+
+<a href="supporto-psicologico.html">Scopri di più</a>
+
+</div>
+
+<div class="servizio-card">
+
+<h3>Formazione e Tutoraggi</h3>
+
+<p>
+????
+  ????
+</p>
+
+<a href="servizi.html">Scopri di più</a>
+
+</div>
+
+
+<div class="servizio-card">
+
+<h3>I Percorsi</h3>
+
+<p>
+Programmi strutturati dedicati a obiettivi specifici. Parole chiave/titoli...
+</p>
+
+<a href="percorsi-studenti.html">Scopri di più</a>
+
+</div>
+
+    
+
+</div>
+
+</section>
+    
 
 
 
 
     
-<!-- questo non compare
+<!-- tasto centrale di prenotazione 
 -->
+    
+<div class="container prenota">
 
+<a href="contatti.html" class="prenota-button">
+Prenota il colloquio conoscitivo Gratuito
+</a>
+
+</div>
+
+
+
+    
     
 
 <div class="container">
 
-<h2>Chi siamo</h2>
+<h1 style="text-align: center;">Chi siamo</h1>
+
 
 <p>
 Empower Lab è un progetto di psicologia e divulgazione dedicato alla crescita personale e allo sviluppo di strumenti psicologici utili per affrontare studio, relazioni e scelte di vita.
@@ -115,16 +185,17 @@ Empower Lab è un progetto di psicologia e divulgazione dedicato alla crescita p
     
 <div class="container">
 
-<h2>Contattaci</h2>
+<h1 style="text-align: center;">Contattaci</h1>
+
 
 <p>
-Se desideri ricevere informazioni sui percorsi o sui seminari puoi scriverci direttamente.
+Se desideri ricevere informazioni su tutti i nostri servizi puoi scriverci direttamente.
 </p>
-
+<div style="text-align: center;">        
 <a href="contatti.html" class="cta-button">
 Vai ai contatti
 </a>
-
+</div>  
 </div>
 
 
@@ -132,26 +203,7 @@ Vai ai contatti
 
 
 
-    
-<div class="container">
 
-<h2>Ricevi informazioni via email</h2>
-
-<form class="contact-form">
-
-<input type="text" placeholder="Nome">
-
-<input type="email" placeholder="Email">
-
-<textarea placeholder="Scrivi qui la tua richiesta"></textarea>
-
-<button type="submit">
-Invia richiesta
-</button>
-
-</form>
-
-</div>
 
 
 
@@ -161,21 +213,37 @@ Invia richiesta
     
 
 <div class="container">
+<h1 style="text-align: center;">Hai qualche dubbio, angoscia, perplessità?</h1>
 
-<h2>Hai qualche dubbio?</h2>
-
-<p>
-Consulta la sezione delle domande frequenti per trovare risposte ai quesiti più comuni.
-</p>
-
+<div style="text-align: center;">       
 <a href="faq.html" class="cta-button">
 Leggi le FAQ
 </a>
+</div>  
+    
+<p>
+Consulta la sezione delle domande frequenti per trovare risposte ai quesiti che ci fate spesso.
+</p>
+
+
 
 </div>
 
 
 
+<div class="box-invisibile">
+  <p>
+    « L'autostima non è un lusso: è un bisogno umano fondamentale. »
+    <br>
+    <span style="font-family: 'Raleway', sans-serif; font-style: italic; font-size: 0.85em; color: #A9A9A9; letter-spacing: 0.5px;">
+      Nathaniel Branden (1994)
+    </span>
+  </p>
+</div>
+
+
+
+  
 <div class="container prenota">
 
 <a href="contatti.html" class="prenota-button">
@@ -191,58 +259,36 @@ Prenota il colloquio conoscitivo Gratuito
 
 
     
-<footer>
 
-<div class="footer-container">
 
-<div class="footer-col">
 
-<h3>Empower Lab</h3>
+<div id="footer"></div>
 
-<p>
-Progetto dedicato alla crescita personale, allo studio universitario e al benessere psicologico.
-</p>
+<script>
 
-</div>
+fetch("template/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
 
-<div class="footer-col">
+</script>
 
-<h3>Link utili</h3>
 
-<p class="footer-links">
-<a href="index.html">Home</a> -
-<a href="chi-sono.html">Chi sono</a> -
-<a href="servizi.html">Servizi</a> -
-<a href="articoli.html">Articoli</a> -
-<a href="faq.html">FAQ</a>
-<a href="contatti.html">Contatti</a>
-</p>
 
-</div>
+  
 
-<div class="footer-col">
 
-<h3>Contatti</h3>
 
-<p>
-WhatsApp: 0000000000<br>
-Email: emailtemporanea@gmail.com<br>
-Bari, Italia
-</p>
 
-</div>
+<script>
+  // Aspetta che il template header sia caricato, poi aggiunge la classe solo nella home
+  setTimeout(function() {
+    var logo = document.querySelector('.logo-header');
+    if (logo) logo.classList.add('animate-slide');
+  }, 200);
+</script>
 
-</div>
-
-<div class="footer-bottom">
-
-<p>
-© 2026 Empower Lab — Amodio & Caramia - Psicologia e formazione
-</p>
-
-</div>
-
-</footer>
 
 
     
