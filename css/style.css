@@ -758,7 +758,7 @@ color:#27ae60;
 /* Per paragrafi e testi lunghi */
 .box-invisibile-testo {
   width: 90%;              /* su mobile occupa il 90% evitando di toccare i bordi */
-  max-width: 1200px;        /* su schermi grandi non supera 850px */
+  max-width: 1250px;        /* su schermi grandi non supera 850px */
   margin-left: auto;       /* centratura orizzontale */
   margin-right: auto;      /* centratura orizzontale */
   margin-top: 1rem;        /* più spazio sopra per dare respiro alla citazione */
@@ -780,4 +780,20 @@ color:#27ae60;
   padding-right: 1.2rem;   /* respiro laterale destro */
   box-sizing: border-box;  /* padding incluso nella larghezza totale */
   text-align: center;      /* testo centrato — ideale per frasi brevi */
+}
+
+
+
+
+.faq-section-title {
+  font-family: 'Inter', sans-serif;  /* coerente con il font del sito */
+  font-size: 1.2rem;                 /* più grande del testo ma subordinato all'h1 */
+  font-weight: 600;                  /* semibold — distintivo ma non aggressivo */
+  color: #5a3e36;                    /* tono caldo, in armonia con #ffede1 */
+  text-transform: uppercase;         /* maiuscolo per dare carattere e distinzione */
+  letter-spacing: 0.12em;           /* spaziatura che accompagna il maiuscolo */
+  margin-top: 2rem;                  /* respiro prima di ogni nuova sezione */
+  margin-bottom: 1rem;              /* spazio tra il titolo e la prima domanda */
+  padding-bottom: 0.5rem;           /* spazio prima della linea decorativa */
+  border-bottom: 2px solid #d4a898; /* linea sottile in tono caldo — separa visivamente */
 }
