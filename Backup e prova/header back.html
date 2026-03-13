@@ -1,0 +1,51 @@
+<header>
+<div class="header-container">
+
+<button class="hamburger" id="hamburger" aria-label="Apri menu">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="chi-siamo.html">Chi siamo</a>
+<a href="empowerlab.html">EmpowerLab</a>
+<div class="dropdown">
+<button class="dropbtn" onclick="window.location='servizi.html'">Servizi ▾</button>
+<div class="dropdown-content">
+<a href="supporto-psicologico.html">Supporto psicologico</a>
+<a href="percorsi-studenti.html">Percorsi per studenti</a>
+<a href="seminari-formazione.html">Seminari e formazione</a>
+</div>
+</div>
+<a href="articoli.html">Articoli</a>
+<a href="faq.html">FAQ</a>
+<a href="contatti.html">Contatti</a>
+</nav>
+
+<div class="logo-header">
+<a href="index.html">
+<img src="images/logo.png" alt="Empower Lab">
+</a>
+<h2>
+<span style="font-family: 'Raleway', sans-serif; font-style: italic; font-weight: 800; letter-spacing: 2px; color: #ffffff;">Empower Lab</span>
+<span style="font-size: 0.8em; font-style: italic; font-weight: normal; color: #d0d0d0;"> – Amodio & Caramia</span>
+</h2>
+</div>
+
+</div>
+</header>
+
+<script>
+document.addEventListener('click', function(e) {
+  if (e.target.closest('#hamburger')) {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.querySelector('nav');
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('open');
+  }
+});
+</script>
+
+
