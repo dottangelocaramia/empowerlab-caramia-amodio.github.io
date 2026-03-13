@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Angelo Caramia | Empower Lab</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+
+
+
+
+<div id="header"></div>
+
+<script>
+
+fetch("template/header.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+
+</script>
+
+
+
+
+
+
+
+
+<div class="container">
+
+<h1>Dott. Angelo Caramia</h1>
+<p style="font-family: 'Raleway', sans-serif; font-style: italic; font-size: 0.95em; color: #888; margin-top: -10px; letter-spacing: 0.5px;">
+  Psicologo · Formatore · Data Scientist · Psicoterapeuta Breve Strategico in formazione
+</p>
+
+<p>
+Psicologo e formatore. Mi occupo di supporto psicologico per studenti universitari e giovani adulti, con particolare attenzione alle difficoltà legate allo studio, alla gestione dell'ansia e alla costruzione del proprio percorso personale e professionale.
+In lavorazione ...
+</p>
+
+
+
+
+
+<!-- pulsanti con link -->
+<h2 style="font-family: 'Raleway', sans-serif; color: #1a1a1a; letter-spacing: 1px;">Ambiti di lavoro</h2>
+<div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:16px;">
+  <a href="ansia-universitaria.html" style="border:1.5px solid #4f46e5; border-radius:50px; padding:8px 20px; color:#4f46e5; font-style:italic; font-size:0.9em; text-decoration:none; font-family:'Raleway',sans-serif;">Ansia universitaria</a>
+  <a href="metodo-di-studio.html" style="border:1.5px solid #4f46e5; border-radius:50px; padding:8px 20px; color:#4f46e5; font-style:italic; font-size:0.9em; text-decoration:none; font-family:'Raleway',sans-serif;">Metodo di studio</a>
+  <a href="stress-accademico.html" style="border:1.5px solid #4f46e5; border-radius:50px; padding:8px 20px; color:#4f46e5; font-style:italic; font-size:0.9em; text-decoration:none; font-family:'Raleway',sans-serif;">Gestione dello stress accademico</a>
+  <a href="crescita-personale.html" style="border:1.5px solid #4f46e5; border-radius:50px; padding:8px 20px; color:#4f46e5; font-style:italic; font-size:0.9em; text-decoration:none; font-family:'Raleway',sans-serif;">Crescita personale</a>
+</div>
+
+
+
+</div>
+
+
+
+<div id="footer"></div>
+
+<script>
+
+fetch("template/footer.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+
+</script>
+
+
+  
+</body>
+</html>
