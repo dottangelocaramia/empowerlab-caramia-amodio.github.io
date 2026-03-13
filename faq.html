@@ -1,183 +1,287 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-
 <meta charset="UTF-8">
-
 <title>Domande frequenti | Empower Lab</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body>
 
-
-
-  
 <div id="header"></div>
-
 <script>
-
 fetch("template/header.html")
 .then(response => response.text())
 .then(data => {
-document.getElementById("header").innerHTML = data;
+  document.getElementById("header").innerHTML = data;
 });
-
 </script>
 
-
-
-  
 <div class="container">
+  <h1>Domande frequenti</h1>
+  <p>
+    In questa sezione trovi alcune risposte alle domande più frequenti
+    riguardo ai percorsi psicologici e agli incontri di supporto.
+  </p>
 
-<h1>Domande frequenti</h1>
+  <!-- SEZIONE 1: Prima di iniziare -->
+  <h2 class="faq-section-title">Prima di iniziare</h2>
+  <div class="faq">
 
-<p>
-In questa sezione trovi alcune risposte alle domande più frequenti
-riguardo ai percorsi psicologici e agli incontri di supporto.
-</p>
+    <button class="faq-question">
+      Devo avere già chiaro di cosa ho bisogno o cosa voglio cambiare?
+    </button>
+    <div class="faq-answer">
+      <p>
+        No, non serve avere tutto definito. Il percorso serve proprio a capire cosa ti pesa, 
+        cosa vuoi affrontare e come costruire strategie per vivere meglio. 
+        Anche narrare solo una sensazione di disagio o curiosità è sufficiente per iniziare.
+        Il primo colloquio conoscitivo Gratuito servirà soprattutto a questo.
+      </p>
+    </div>
 
-<div class="faq">
+    <button class="faq-question">
+      Ho paura di essere giudicato/a.
+    </button>
+    <div class="faq-answer">
+      <p>
+        Nel nostro lavoro non esistono giudizi: ogni incontro è uno spazio sicuro in cui esplorare 
+        pensieri, emozioni e dubbi. Tutto ciò che condividi rimane rispettato e protetto.
+      </p>
+    </div>
 
-<button class="faq-question">
-Come funziona il primo incontro?
-</button>
+    <button class="faq-question">
+      Cosa succede se non mi sento pronto/a?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Non è necessario sentirsi "pronti". Puoi iniziare anche con piccoli passi: 
+        un primo colloquio serve solo a conoscersi e valutare insieme come procedere.
+      </p>
+    </div>
 
-<div class="faq-answer">
-<p>
-Il primo incontro è gratuito e di durata di circa 30 minuti.
-È uno spazio iniziale in cui possiamo conoscerci, capire meglio la tua situazione e valutare insieme quale tipo di percorso può essere più utile: un colloquio individuale, un percorso di coppia, uno dei percorsi strutturati (work-life balance, carrer coaching, autostima etc) o un corso formativo specifico (tecniche di memoria, metodo di studio, comunicazione efficace, CNV, statistica, data analysis, etc.) o tutoraggi per materie specifiche e tutoraggi DSA 
-Da qui si costruisce un percorso su misura, in base alle tue esigenze specifiche.
-È necessaria una prenotazione tramite i nostri contatti.
-</p>
-</div>
+    <button class="faq-question">
+      Perché contattare Empower Lab?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Perché offre uno spazio completo: psicologia, crescita personale e formazione, 
+        con approcci concreti, strumenti pratici e un supporto che integra professionalità 
+        ed esperienza reale. Non si tratta solo di "parlare", ma di trovare strumenti concreti 
+        per vivere meglio, sviluppare maggiore equilibrio e
+        acquisire competenze spendibili nelle relazioni, nel lavoro, nella vita.
+      </p>
+    </div>
 
+    <button class="faq-question">
+      Come posso capire se ho bisogno di uno psicologo?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Non è necessario trovarsi in una situazione grave per iniziare un percorso psicologico. 
+        Molte persone chiedono supporto quando sentono che qualcosa nella loro vita non funziona 
+        come prima, quando attraversano un momento di difficoltà o quando desiderano comprendere 
+        meglio se stesse e sviluppare nuove risorse o ancora se si trovano in periodi di trasizioni o scelte difficili.
+      </p>
+    </div>
 
-<button class="faq-question">
-Quanto dura un percorso psicologico?
-</button>
+  </div><!-- fine faq -->
 
-<div class="faq-answer">
-<p>
-La durata varia da persona a persona e dell'approccio del professionista. Alcuni percorsi possono essere più brevi e focalizzati su una difficoltà specifica, 
-altri possono richiedere più tempo per lavorare in modo più approfondito.
-</p>
-</div>
+  <!-- SEZIONE 2: Colloqui psicologici -->
+  <h2 class="faq-section-title">Colloqui psicologici</h2>
+  <div class="faq">
 
-<button class="faq-question">
-Quanto dura un incontro?
-</button>
-<div class="faq-answer">
-<p>
-Un colloquio psicologico dura circa 50 minuti.
-</p>
-</div>
+    <button class="faq-question">
+      Come funziona il primo incontro?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Il primo incontro è gratuito e di durata di circa 30 minuti.
+        È uno spazio iniziale in cui possiamo conoscerci, capire meglio la tua situazione 
+        e valutare insieme quale tipo di percorso può essere più utile: un colloquio individuale, 
+        un percorso di coppia, uno dei percorsi strutturati (work-life balance, career coaching, 
+        autostima ecc.) o un corso formativo specifico (tecniche di memoria, metodo di studio, 
+        comunicazione efficace, CNV, statistica, data analysis, ecc.) o tutoraggi per materie 
+        specifiche e tutoraggi DSA.
+        Da qui si costruisce un percorso su misura, in base alle tue esigenze specifiche.
+        È necessaria una prenotazione tramite i nostri contatti.
+      </p>
+    </div>
 
+    <button class="faq-question">
+      Quanto dura un percorso psicologico?
+    </button>
+    <div class="faq-answer">
+      <p>
+        La durata varia da persona a persona e dall'approccio del professionista. 
+        Alcuni percorsi possono essere più brevi e focalizzati su una difficoltà specifica, 
+        altri possono richiedere più tempo per lavorare in modo più approfondito.
+      </p>
+    </div>
 
-<button class="faq-question">
-Con quale frequenza si svolgono gli incontri?
-</button>
-<div class="faq-answer">
-<p>
-Solitamente gli incontri si svolgono una volta a settimana, ma la frequenza viene concordata inizialmente e in base alla situazione e agli obiettivi del percorso.
-</p>
-</div>
-  
-<button class="faq-question">
-Gli incontri sono in presenza o online?
-</button>
+    <button class="faq-question">
+      Quanto dura un incontro?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Un colloquio psicologico dura circa 50 minuti.
+      </p>
+    </div>
 
-<div class="faq-answer">
-<p>
-Gli incontri possono svolgersi in presenza oppure online.
-</p>
-</div>
+    <button class="faq-question">
+      Con quale frequenza si svolgono gli incontri?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Solitamente gli incontri si svolgono una volta a settimana, ma la frequenza viene 
+        concordata inizialmente e in base alla situazione e agli obiettivi del percorso.
+      </p>
+    </div>
 
-<button class="faq-question">
-Di cosa si parla durante i colloqui?
-</button>
-<div class="faq-answer">
-<p>
-Durante i colloqui puoi portare qualsiasi tema che in questo momento crea difficoltà o preoccupazione: 
-emozioni, relazioni, momenti di cambiamento, dubbi personali o situazioni di stress. 
-Il percorso si costruisce sempre partendo dalla storia e dai bisogni della persona.
-</p>
-</div>
+    <button class="faq-question">
+      Gli incontri sono in presenza o online?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Gli incontri possono svolgersi in presenza oppure online.
+      </p>
+    </div>
 
+    <button class="faq-question">
+      Di cosa si parla durante i colloqui?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Durante i colloqui puoi portare qualsiasi tema che in questo momento crea difficoltà 
+        o preoccupazione: emozioni, relazioni, momenti di cambiamento, dubbi personali o 
+        situazioni di stress. Il percorso si costruisce sempre partendo dalla storia e 
+        dai bisogni della persona.
+      </p>
+    </div>
 
+    <button class="faq-question">
+      I colloqui sono riservati?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Sì, certamente. Tutto ciò che viene condiviso durante gli incontri è protetto 
+        dal segreto professionale, come previsto dal codice deontologico degli psicologi 
+        e dal consenso informato.
+      </p>
+    </div>
 
-<button class="faq-question">
-I colloqui sono riservati?
-</button>
-<div class="faq-answer">
-<p>
-Sì, certamente. Tutto ciò che viene condiviso durante gli incontri è protetto dal segreto professionale, 
-come previsto dal codice deontologico degli psicologi e consenso informato.
-</p>
-</div>
+    <button class="faq-question">
+      Come posso prenotare un incontro?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Puoi contattarci tramite il modulo presente nel sito oppure scriverci via email o WhatsApp. 
+        Dopo il primo contatto ti forniremo tutte le informazioni necessarie per fissare il primo incontro.
+      </p>
+    </div>
 
+  </div><!-- fine faq -->
 
-  
-<button class="faq-question">
-Come posso prenotare un incontro?
-</button>
+  <!-- SEZIONE 3: Servizi di Empower Lab -->
+  <h2 class="faq-section-title">Servizi di Empower Lab</h2>
+  <div class="faq">
 
-<div class="faq-answer">
-<p>
-Puoi contattarci tramite il modulo presente nel sito oppure scriverci via email o WhatsApp. 
-Dopo il primo contatto ti forniremo tutte le informazioni necessarie per fissare il primo incontro.
-</p>
-</div>
+    <button class="faq-question">
+      Offrite anche colloqui di coppia?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Sì. I colloqui di coppia aiutano a comprendere meglio le dinamiche della relazione, 
+        migliorare la comunicazione e affrontare momenti di conflitto o cambiamento 
+        nella vita della coppia.
+      </p>
+    </div>
 
-</div>
+    <button class="faq-question">
+      È possibile fare colloqui online?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Sì, è possibile svolgere i colloqui anche online. Questa modalità permette di accedere 
+        al percorso psicologico anche a chi vive lontano o ha difficoltà a spostarsi.
+      </p>
+    </div>
 
-</div>
+    <button class="faq-question">
+      Offrite anche percorsi per studenti?
+    </button>
+    <div class="faq-answer">
+      <p>
+        Sì. All'interno di Empower Lab proponiamo percorsi dedicati a studenti delle scuole 
+        superiori e universitari, che possono riguardare il metodo di studio, la gestione 
+        dello stress, l'organizzazione dello studio e lo sviluppo delle proprie risorse personali.
+      </p>
+    </div>
 
+    <button class="faq-question">
+      Qual è la differenza tra colloqui psicologici e percorsi strutturati?
+    </button>
+    <div class="faq-answer">
+      <p>
+        I colloqui psicologici sono incontri individuali o di coppia costruiti intorno 
+        alla situazione della persona. I percorsi strutturati sono invece programmi organizzati 
+        in più incontri e pensati per lavorare su obiettivi specifici, come l'autostima, 
+        la gestione dello stress o il metodo di studio.
+      </p>
+    </div>
 
+  </div><!-- fine faq -->
 
+  <!-- SEZIONE 4: Formazione — domande da aggiungere -->
+  <h2 class="faq-section-title">Formazione</h2>
+  <div class="faq">
+
+    <button class="faq-question">
+      [Domanda da aggiungere]
+    </button>
+    <div class="faq-answer">
+      <p>[Risposta da aggiungere]</p>
+    </div>
+
+  </div><!-- fine faq -->
+
+  <!-- SEZIONE 5: Percorsi — domande da aggiungere -->
+  <h2 class="faq-section-title">Percorsi</h2>
+  <div class="faq">
+
+    <button class="faq-question">
+      [Domanda da aggiungere]
+    </button>
+    <div class="faq-answer">
+      <p>[Risposta da aggiungere]</p>
+    </div>
+
+  </div><!-- fine faq -->
+
+</div><!-- fine container -->
 
 <script>
-
 const questions = document.querySelectorAll(".faq-question");
-
 questions.forEach(question => {
-
-question.addEventListener("click", () => {
-
-const answer = question.nextElementSibling;
-
-if(answer.style.display === "block"){
-
-answer.style.display = "none";
-
-}else{
-
-answer.style.display = "block";
-
-}
-
+  question.addEventListener("click", () => {
+    const answer = question.nextElementSibling;
+    if (answer.style.display === "block") {
+      answer.style.display = "none";
+    } else {
+      answer.style.display = "block";
+    }
+  });
 });
-
-});
-
 </script>
-
 
 <div id="footer"></div>
-
 <script>
-
 fetch("template/footer.html")
 .then(response => response.text())
 .then(data => {
-document.getElementById("footer").innerHTML = data;
+  document.getElementById("footer").innerHTML = data;
 });
-
 </script>
+
 </body>
 </html>
