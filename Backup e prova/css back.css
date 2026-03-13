@@ -1,0 +1,794 @@
+/* ===========================
+   FONT E BASE
+=========================== */
+body {
+    font-family: 'Inter', Arial, sans-serif; /* font principale di tutto il sito */
+    margin: 0;                                /* rimuove margini di default del browser */
+    background-color: #ffede1;               /* colore sfondo tutte le pagine — uguale al logo */
+    line-height: 1.6;                        /* altezza riga per leggibilità */
+    overflow-x: hidden;                      /* evita scroll orizzontale indesiderato */
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    background: #2c3e50;                     /* colore sfondo header */
+    border-bottom: 3px solid #2e6da4;        /* linea blu sotto l'header — riduci px per renderla più sottile */
+
+}
+
+#header {
+    position: sticky; /* menu che insegue */
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    width: 100%;                             /* occupa tutta la larghezza */
+    display: flex;                           /* mette nav e logo sulla stessa riga */
+    align-items: center;                     /* allinea verticalmente al centro */
+    justify-content: space-between;         /* nav a sinistra, logo a destra */
+    padding: 12px 40px;                      /* spazio interno: 12px sopra/sotto, 40px sinistra/destra */
+    box-sizing: border-box;                  /* il padding non aggiunge larghezza extra */
+}
+
+.logo-header {
+    display: flex;                           /* mette img e h2 sulla stessa riga */
+    align-items: center;                     /* allinea verticalmente */
+    gap: 14px;                               /* spazio tra logo e scritta */
+    flex-shrink: 0;                          /* impedisce al logo di restringersi */
+}
+
+.logo-header img {
+    height: 45px;                            /* altezza logo nell'header — modifica per ridimensionarlo */
+}
+
+.logo-header h2 {
+    margin: 0;                               /* rimuove margini default dell'h2 */
+    font-size: 1.2em;                        /* dimensione scritta Empower Lab */
+    white-space: nowrap;                     /* impedisce alla scritta di andare a capo */
+}
+
+/* ===========================
+   NAV
+=========================== */
+nav {
+    display: flex;                           /* mette i link in riga orizzontale */
+    align-items: center;                     /* allinea verticalmente */
+    gap: 4px;                                /* spazio tra i link del menu */
+    flex-wrap: nowrap;                       /* impedisce ai link di andare a capo */
+}
+
+nav a {
+    text-decoration: none;                   /* rimuove sottolineatura dai link */
+    font-weight: 600;                        /* grassetto medio */
+    color: white;                            /* colore testo link */
+    padding: 6px 12px;                       /* spazio interno ai link — aumenta per renderli più grandi */
+    border-radius: 4px;                      /* angoli arrotondati al passaggio del mouse */
+    transition: background 0.2s;            /* animazione sfondo al hover */
+    white-space: nowrap;                     /* impedisce ai link di andare a capo */
+}
+
+nav a:hover {
+    color: #f39c12;                          /* colore link al passaggio del mouse */
+    background: rgba(255,255,255,0.08);     /* sfondo leggero al hover */
+}
+
+/* ===========================
+   DROPDOWN SERVIZI
+=========================== */
+.dropdown {
+    position: relative;                      /* necessario per posizionare il menu a tendina */
+    display: inline-block;                   /* si comporta come un elemento inline */
+}
+
+.dropbtn {
+    background: none;                        /* nessuno sfondo */
+    border: none;                            /* nessun bordo */
+    cursor: pointer;                         /* cursore a mano al hover */
+    font-weight: 600;
+    color: white;
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.dropbtn:hover {
+    color: #f39c12;
+    background: rgba(255,255,255,0.08);
+}
+
+.dropdown-content {
+    display: none;                           /* nascosto di default */
+    position: absolute;                      /* si posiziona sotto il bottone */
+    top: 100%;                               /* parte dal basso del bottone */
+    left: 0;
+    background: #2c3e50;
+    border-top: 2px solid #f39c12;          /* linea arancione in cima al dropdown */
+    border-radius: 0 0 8px 8px;            /* angoli arrotondati solo in basso */
+    min-width: 200px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    z-index: 999;                            /* sta sopra tutti gli altri elementi */
+}
+
+.dropdown-content a {
+    display: block;                          /* ogni link occupa una riga */
+    padding: 10px 16px;
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+    background: rgba(255,255,255,0.1);
+    color: #f39c12;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;                          /* mostra il dropdown al passaggio del mouse */
+}
+
+/* ===========================
+   HAMBURGER (solo mobile)
+=========================== */
+.hamburger {
+    display: none;                           /* nascosto su desktop */
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;                             /* larghezza delle 3 linee */
+    height: 3px;                             /* spessore delle 3 linee */
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;              /* animazione trasformazione in X */
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);  /* linea superiore ruota */
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;                              /* linea centrale sparisce */
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* linea inferiore ruota */
+}
+
+/* ===========================
+   HERO (box grande in cima alla home)
+=========================== */
+.hero {
+    background: linear-gradient(rgba(44,62,80,0.95), rgba(44,62,80,0.95)),
+                url('../images/hero.jpg') no-repeat center center/cover; /* immagine di sfondo con overlay scuro */
+    color: white;
+    text-align: center;
+    padding: 40px 40px;                      /* spazio interno: riduci il primo numero per compattarlo */
+    border-radius: 10px;                     /* angoli arrotondati */
+    margin-top: 20px;                        /* spazio sopra la hero */
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4); /* ombra testo per leggibilità */
+}
+
+.hero-title {
+    font-size: 56px;                         /* dimensione titolo principale hero */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeHero 1.5s ease forwards;  /* animazione entrata dall'alto */
+}
+
+@keyframes fadeHero {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-subtitle {
+    font-size: 22px;                         /* dimensione sottotitolo hero */
+    margin-top: 20px;
+}
+
+/* ===========================
+   CONTAINER CENTRALE
+=========================== */
+.container {
+    max-width: 900px;                        /* larghezza massima dei box centrali */
+    margin: auto;                            /* centra il box nella pagina */
+    background: white;                       /* sfondo bianco dei box */
+    padding: 40px;                           /* spazio interno ai box */
+    margin-top: 30px;                        /* spazio tra i box */
+    border-radius: 10px;                     /* angoli arrotondati */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* ombra leggera */
+}
+
+/* ===========================
+   TITOLI
+=========================== */
+h1 {
+    color: #2c3e50;                          /* colore titoli h1 */
+}
+
+h2 {
+    color: #2c3e50;                          /* colore titoli h2 */
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+/* ===========================
+   ARTICOLI
+=========================== */
+.articolo {
+    max-width: 750px;
+}
+
+.meta-articolo {
+    color: #777;                             /* colore testo data/autore articolo */
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.articolo p {
+    margin-bottom: 18px;
+}
+
+.articolo ul {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   TEAM
+=========================== */
+.team {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.profilo-preview {
+    margin-top: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;           /* linea divisoria tra profili */
+}
+
+.profilo-preview h3 {
+    margin-bottom: 10px;
+}
+
+.profilo-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profilo-link:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   SERVIZI
+=========================== */
+.servizio {
+    margin-top: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.servizio h2 {
+    margin-bottom: 10px;
+}
+
+.servizio-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.servizio-link:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   FAQ
+=========================== */
+.faq {
+    margin-top: 40px;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: #f4f4f4;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.faq-question:hover {
+    background: #e9e9e9;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: white;
+    border-left: 3px solid #f39c12;         /* linea arancione a sinistra risposta FAQ */
+}
+
+/* ===========================
+   CHI SIAMO BOX
+=========================== */
+.chi-siamo-box {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ===========================
+   FORM CONTATTI
+=========================== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+.contact-form button {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background: #d68910;
+}
+
+/* ===========================
+   PRENOTA
+=========================== */
+.prenota {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.prenota-button {
+    background: #27ae60;                     /* colore verde pulsante prenota */
+    color: white;
+    padding: 18px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.prenota-button:hover {
+    background: #219150;
+}
+
+.container.prenota {
+    max-width: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* ===========================
+   CTA BUTTON
+=========================== */
+.cta-button {
+    display: inline-block;
+    margin-top: 12px;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.cta-button:hover {
+    background: #1a252f;
+}
+
+/* ===========================
+   LOGO (nella hero)
+=========================== */
+.logo img {
+    width: 200px;                            /* dimensione logo nella hero — modifica per ridimensionarlo */
+    height: auto;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background: #2c3e50;                     /* colore sfondo footer */
+    color: white;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 12px 20px;                      /* spazio interno footer: riduci primo numero per compattarlo */
+    display: flex;
+    justify-content: space-between;         /* colonne distribuite: prima a sx, ultima a dx */
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-col:first-child {
+    padding-left: 10px;                      /* sposta "Empower Lab" — aumenta per spostarlo a destra */
+}
+
+.footer-col:nth-child(2) {
+    flex: 1.4;                               /* colonna centrale più larga per i link */
+    text-align: center;
+    padding: 0 20px;
+}
+
+.footer-col:last-child {
+    padding-right: 0px;
+    flex: 0.9;
+    text-align: right;
+    white-space: nowrap;                     /* impedisce all'email di andare a capo */
+}
+
+.footer-col h3 {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    display: inline;                         /* link sulla stessa riga */
+}
+
+.footer-links a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    background: #233140;                     /* striscia copyright — leggermente più scura del footer */
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* ===========================
+   TIPOGRAFIA
+=========================== */
+p {
+    font-size: 17px;
+}
+
+.articolo p {
+    font-size: 18px;
+}
+
+/* ===========================
+   ANIMAZIONE TITOLO HEADER (solo home)
+=========================== */
+
+.animate-slide {
+    animation: slideFromRight 0.8s ease forwards;
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);         /* parte da destra — riduci per distanza minore */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===========================
+   RESPONSIVE TABLET (max 1024px)
+=========================== */
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 12px 24px;
+    }
+
+    nav a,
+    .dropbtn {
+        padding: 5px 9px;
+        font-size: 0.92em;
+    }
+}
+
+/* ===========================
+   RESPONSIVE MOBILE (max 768px)
+=========================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        padding: 12px 20px;
+    }
+
+    .hamburger {
+        display: flex;                       /* mostra hamburger su mobile */
+    }
+
+    nav {
+        display: none;                       /* nasconde il menu su mobile */
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 10px 0;
+    }
+
+    nav.open {
+        display: flex;                       /* mostra il menu quando hamburger è cliccato */
+    }
+
+    nav a,
+    .dropbtn {
+        width: 100%;
+        font-size: 1em;
+        padding: 10px 12px;
+        border-radius: 4px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 6px;
+        margin-top: 4px;
+        min-width: unset;
+        width: 100%;
+    }
+
+    .hero {
+        padding: 30px 20px;                  /* ridotto da 60px — compatta la hero su mobile */
+        margin-top: 16px;
+        border-radius: 0;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 24px 16px;
+        margin-top: 16px;
+    }
+
+    .team {
+        padding: 24px 16px;
+        margin-top: 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prenota-button {
+        font-size: 15px;
+        padding: 14px 20px;
+    }
+
+    .logo-header img,
+    .logo-header h2 {
+        opacity: 1 !important;               /* su mobile disattiva animazione e mostra sempre */
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+/* ===========================
+   RESPONSIVE SMALL MOBILE (max 480px)
+=========================== */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .logo-header h2 {
+        font-size: 1em;
+    }
+
+    .logo-header img {
+        height: 35px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   servizi nella home
+=========================== */
+
+
+
+.servizi-home{
+
+margin-top:80px;
+
+text-align:center;
+
+}
+
+.servizi-grid{
+
+display:flex;
+
+gap:30px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.servizio-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:12px;
+
+width:280px;
+
+border:2px solid #0271c0; /** blu classico #cfe8ff */
+
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+
+transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.servizio-card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+border-color:#4da3ff;
+
+}
+
+.servizio-card h3{
+
+margin-top:0;
+
+color:#2c3e50;
+
+}
+
+.servizio-card a{
+
+display:inline-block;
+
+margin-top:15px;
+
+text-decoration:none;
+
+font-weight:600;
+
+color:#27ae60;
+
+}
+
+
+
+
+
+
+.box-invisibile{
+
+    max-width: 850px;
+    /* larghezza massima del blocco di testo
+       serve a evitare righe troppo lunghe e migliorare la leggibilità
+       valori tipici:
+       600px = testo molto compatto
+       800-900px = ideale per articoli o presentazioni
+       1000px+ = layout più aperto */
+
+    margin-left: clamp(20px, 8vw, 140px);
+    /* spazio tra il margine sinistro della pagina e il box
+    
+       clamp(min, valore fluido, max)
+    
+       20px  → margine minimo su mobile
+       8vw   → spazio proporzionale alla larghezza dello schermo
+       140px → margine massimo su schermi grandi
+    
+       se vuoi più spazio:
+       clamp(20px, 10vw, 200px)
+    
+       se vuoi quasi nessuno spazio:
+       clamp(10px, 3vw, 60px)
+    */
+
+    margin-right: 20px;
+    /* spazio tra il box e il lato destro della pagina
+       evita che il testo tocchi il bordo dello schermo
+    
+       valori consigliati:
+       10px = molto compatto
+       20px = standard
+       40px = layout più arioso
+    */
+
+}
