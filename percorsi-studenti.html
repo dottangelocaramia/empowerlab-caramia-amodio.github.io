@@ -117,23 +117,41 @@ fetch("template/footer.html")
 
 
 <script>
-  // Seleziona tutte le feedback card
-  var cards = document.querySelectorAll('.feedback-card');
+  var cards = document.querySelectorAll('.feedback-card'); // prende tutte le card
+  var current = 0; // indice della card attualmente visibile
 
-  // Nasconde tutte le card inizialmente
+  // nasconde tutte le card all'inizio
   cards.forEach(function(card) {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';  /* parte leggermente in basso */
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; /* durata animazione */
+    card.style.display = 'none';         // nascosta
+    card.style.opacity = '0';            // trasparente
+    card.style.transition = 'opacity 0.5s ease'; // durata dissolvenza entrata/uscita
   });
 
-  // Fa apparire ogni card in sequenza con un ritardo crescente
-  cards.forEach(function(card, index) {
+  function mostraCard(index) {
+    var card = cards[index];
+    card.style.display = 'block';        // rende visibile nel layout
+
+    // piccolo ritardo per far scattare la transizione CSS
     setTimeout(function() {
-      card.style.opacity = '1';
-      card.style.transform = 'translateY(0)';
-    }, 300 + (index * 400)); /* 300ms ritardo iniziale, poi 400ms tra una card e l'altra */
-  });
+      card.style.opacity = '1';          // dissolvenza in entrata
+    }, 50);
+
+    // dopo 2 secondi fa sparire la card e passa alla successiva
+    setTimeout(function() {
+      card.style.opacity = '0';          // dissolvenza in uscita
+
+      // aspetta che finisca la dissolvenza poi nasconde e passa alla prossima
+      setTimeout(function() {
+        card.style.display = 'none';     // nasconde completamente
+        current = (current + 1) % cards.length; // passa alla successiva, ricomincia dal primo
+        mostraCard(current);             // mostra la prossima card
+      }, 500); // deve corrispondere alla durata della transition CSS sopra
+
+    }, 2000); // durata visibilità in millisecondi — cambia per più o meno tempo
+  }
+
+  // avvia la sequenza dalla prima card
+  mostraCard(0);
 </script>
 
   
