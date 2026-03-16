@@ -136,7 +136,7 @@ fetch("template/footer.html")
       card.style.opacity = '1';          // dissolvenza in entrata
     }, 50);
 
-    // dopo 2 secondi fa sparire la card e passa alla successiva
+    // dopo 3 secondi (3000 ms) fa sparire la card e passa alla successiva
     setTimeout(function() {
       card.style.opacity = '0';          // dissolvenza in uscita
 
@@ -147,7 +147,7 @@ fetch("template/footer.html")
         mostraCard(current);             // mostra la prossima card
       }, 500); // deve corrispondere alla durata della transition CSS sopra
 
-    }, 2000); // durata visibilità in millisecondi — cambia per più o meno tempo
+    }, 3000); // durata visibilità in millisecondi — cambia per più o meno tempo
   }
 
   // avvia la sequenza dalla prima card
