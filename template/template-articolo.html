@@ -1,112 +1,121 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
 <meta charset="UTF-8">
-
-<title>Titolo articolo | Empower Lab</title>
-
-<meta name="description" content="Breve descrizione dell'articolo per Google">
-
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Titolo articolo | Empower Lab</title> <!-- modifica per ogni articolo -->
+<meta name="description" content="Breve descrizione dell'articolo per Google"> <!-- modifica per SEO -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body>
 
-
-
-
-
+<!-- HEADER caricato dal template condiviso -->
 <div id="header"></div>
-
 <script>
-
 fetch("template/header.html")
 .then(response => response.text())
 .then(data => {
-document.getElementById("header").innerHTML = data;
+  document.getElementById("header").innerHTML = data;
 });
-
 </script>
 
-
-
-  
-
-<!-- INTESTAZIONE TITOLO -->
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
-
-<h2>
-  <span style="font-family: 'Raleway', sans-serif; font-style: italic; font-weight: 800; letter-spacing: 2px; color: #ffffff;">Empower Lab</span>
-  <span style="font-size: 0.6em; font-style: italic; font-weight: normal; color: #d0d0d0;">  –  Amodio & Caramia</span>
-</h2>
-
-
-
-  
 <div class="container articolo">
 
-<h1>Titolo articolo</h1>
+  <!-- CATEGORIA / TAG — es. "Psicologia" o "Studio" -->
+  <p class="articolo-categoria">Psicologia · Crescita personale</p>
 
-<p class="meta-articolo">
-Pubblicato il 10 Marzo 2026
-</p>
+  <!-- TITOLO PRINCIPALE DELL'ARTICOLO -->
+  <h1 class="articolo-titolo">Titolo dell'articolo</h1>
 
-<p>
-Introduzione dell'articolo. Qui introduci il tema e spieghi al lettore cosa troverà leggendo.
-</p>
+  <!-- LINEA DI SEPARAZIONE -->
+  <div class="articolo-linea"></div>
 
-<h2>Sottotitolo sezione</h2>
+  <!-- SOTTOTITOLO EVOCATIVO — aggancia il lettore -->
+  <p class="articolo-sottotitolo">
+    Una frase introduttiva che sintetizza il senso dell'articolo e invoglia a continuare la lettura.
+  </p>
 
-<p>
-Testo dell'articolo. Qui sviluppi l'argomento in modo chiaro e divulgativo.
-</p>
+  <!-- META: data e autore -->
+  <p class="meta-articolo">
+    Pubblicato il 10 Marzo 2026 &nbsp;·&nbsp; Angelo Caramia <!-- modifica data e autore -->
+  </p>
 
-<h2>Seconda sezione</h2>
+  <!-- IMMAGINE DI APERTURA con trasparenza elegante -->
+  <div class="articolo-immagine">
+    <img src="images/articolo-nome.jpg" alt="Descrizione immagine"> <!-- modifica src e alt -->
+  </div>
 
-<p>
-Altri contenuti dell'articolo.
-</p>
+  <!-- INTRODUZIONE — paragrafo di aggancio -->
+  <p class="articolo-intro">
+    Paragrafo introduttivo. Presenta il problema o la domanda centrale dell'articolo.
+    Deve essere breve, diretto e far venire voglia di continuare a leggere.
+  </p>
 
-<h2>Conclusione</h2>
+  <!-- SEZIONE 1 -->
+  <h2 class="articolo-h2">Prima sezione</h2>
+  <p>
+    Testo della prima sezione. Sviluppa il primo punto in modo chiaro e divulgativo.
+    Usa frasi brevi e vai a capo spesso per alleggerire la lettura.
+  </p>
 
-<p>
-Sintesi finale e messaggio chiave per il lettore.
-</p>
+  <!-- IMMAGINE INTERMEDIA con trasparenza — opzionale, rimuovi se non serve -->
+  <div class="articolo-immagine articolo-immagine--small">
+    <img src="images/articolo-nome-2.jpg" alt="Descrizione immagine">
+  </div>
+
+  <!-- SEZIONE 2 -->
+  <h2 class="articolo-h2">Seconda sezione</h2>
+  <p>
+    Testo della seconda sezione. Continua lo sviluppo del tema.
+  </p>
+
+  <!-- CITAZIONE IN EVIDENZA — opzionale, usa per spezzare il testo -->
+  <blockquote class="articolo-citazione">
+    "Una frase significativa o un concetto chiave da mettere in evidenza."
+  </blockquote>
+
+  <!-- SEZIONE 3 -->
+  <h2 class="articolo-h2">Terza sezione</h2>
+  <p>
+    Testo della terza sezione.
+  </p>
+
+  <!-- CONCLUSIONE -->
+  <h2 class="articolo-h2">Conclusione</h2>
+  <p>
+    Sintesi finale e messaggio chiave per il lettore. Chiudi con una riflessione
+    o una domanda che stimoli il lettore a riflettere o a contattarti.
+  </p>
+
+  <!-- SEPARATORE FINE ARTICOLO -->
+  <div class="articolo-fine"></div>
+
+  <!-- AUTORE -->
+  <div class="articolo-autore-box">
+    <p class="articolo-autore-nome">Angelo Caramia</p> <!-- modifica con l'autore -->
+    <p class="articolo-autore-bio">
+      Psicologo e formatore. Mi occupo di supporto psicologico per studenti universitari,
+      gestione dell'ansia accademica e percorsi di crescita personale.
+    </p>
+  </div>
 
 </div>
 
+<!-- CALL TO ACTION FINALE -->
+<div class="faq-cta">
+  <p class="faq-cta-testo">Hai domande o vuoi approfondire?</p>
+  <a href="contatti.html" class="faq-cta-button">Contattaci</a>
+</div>
 
-
-
-
-
-
-
+<!-- FOOTER caricato dal template condiviso -->
 <div id="footer"></div>
-
 <script>
-
 fetch("template/footer.html")
 .then(response => response.text())
 .then(data => {
-document.getElementById("footer").innerHTML = data;
+  document.getElementById("footer").innerHTML = data;
 });
-
 </script>
 
-
-
-
-  
-
-
-  
-
-
-  
 </body>
 </html>
