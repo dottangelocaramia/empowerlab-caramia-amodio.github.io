@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Nome Servizio | Empower Lab</title> <!-- modifica il titolo per ogni servizio -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet"> <!-- font del sito -->
+<link rel="stylesheet" href="css/style.css"> <!-- foglio di stile principale -->
+<style>
+  /* ==============================
+     STILI SPECIFICI PAGINA SERVIZIO
+     (non toccano il resto del sito)
+  ============================== */
+
+  .servizio-titolo {
+    text-align: center;          /* centra il titolo del servizio */
+    margin-bottom: 10px;         /* spazio sotto il titolo prima della linea */
+    margin-top: 10px;            /* spazio sopra il titolo */
+    font-size: 2em;              /* dimensione titolo — riduci per rimpicciolirlo */
+    color: #2c3e50;              /* colore titolo — uguale al resto del sito */
+  }
+
+  .servizio-linea {
+    width: 80%;                  /* larghezza linea — 80% della pagina, quasi tutta */
+    max-width: 720px;            /* larghezza massima su schermi grandi */
+    height: 3px;                 /* spessore linea — aumenta per renderla più spessa */
+    background: #f39c12;         /* colore linea arancione — cambia per altro colore */
+    margin: 0 auto 24px auto;    /* centrata, con spazio sotto prima del sottotitolo */
+    border-radius: 2px;          /* angoli leggermente arrotondati */
+  }
+
+  .servizio-sottotitolo {
+    text-align: center;          /* centra il sottotitolo evocativo */
+    font-style: italic;          /* corsivo */
+    font-size: 1.15em;           /* leggermente più grande del testo normale */
+    color: #555;                 /* grigio medio — cambia per scurire o schiarire */
+    margin-bottom: 40px;         /* spazio sotto prima delle sezioni */
+    line-height: 1.7;            /* altezza riga per leggibilità */
+  }
+
+  .servizio-minititolo {
+    color: #2c3e50;              /* colore testo — uguale ai titoli del sito */
+    font-size: 1em;              /* dimensione — aumenta per ingrandire */
+    text-transform: uppercase;   /* tutto maiuscolo — rimuovi se non vuoi */
+    letter-spacing: 1.5px;       /* spaziatura lettere — riduci per avvicinarle */
+    margin-top: 35px;            /* spazio sopra ogni minititolo */
+    margin-bottom: 8px;          /* spazio sotto tra minititolo e paragrafo */
+    padding-bottom: 4px;         /* spazio interno sotto */
+    border-bottom: 1px solid #f0d9cc; /* linea sottile sotto ogni minititolo */
+  }
+
+  .servizio-testo {
+    color: #444;                 /* colore testo paragrafi */
+    line-height: 1.8;            /* altezza riga per leggibilità */
+    margin-top: 8px;             /* spazio sopra il paragrafo */
+  }
+
+  /* SEZIONE FEEDBACK */
+  .feedback-sezione-titolo {
+    text-align: center;          /* centra il titolo sezione feedback */
+    margin-top: 50px;            /* spazio sopra la sezione feedback */
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+
+  .feedback-linea {
+    width: 60px;                 /* linea corta sotto il titolo feedback */
+    height: 3px;
+    background: #f39c12;
+    margin: 0 auto 30px auto;
+    border-radius: 2px;
+  }
+
+  .feedback-card {
+    background: #fff8f4;         /* sfondo caldo coerente con il colore del sito */
+    border-left: 4px solid #f39c12; /* bordo arancione a sinistra */
+    border-radius: 8px;          /* angoli arrotondati */
+    padding: 20px 24px;          /* spazio interno — riduci per compattare */
+    margin-bottom: 20px;         /* spazio tra un feedback e l'altro */
+  }
+
+  .feedback-testo {
+    font-style: italic;          /* corsivo per la citazione */
+    color: #444;
+    margin: 0 0 10px 0;          /* spazio sotto il testo prima del nome */
+    line-height: 1.7;
+  }
+
+  .feedback-autore {
+    font-weight: 600;            /* grassetto per il nome */
+    color: #2c3e50;
+    margin: 0;
+    font-size: 0.9em;            /* leggermente più piccolo del testo */
+  }
+
+  /* CTA FINALE */
+  .faq-cta {
+    text-align: center;          /* centra tutto il contenuto della CTA */
+    background: #2c3e50;         /* sfondo scuro uguale all'header */
+    padding: 40px 20px;          /* spazio interno — riduci per compattare */
+    margin-top: 40px;            /* spazio sopra la CTA */
+  }
+
+  .faq-cta-testo {
+    color: white;                /* testo bianco su sfondo scuro */
+    font-size: 1.3em;            /* dimensione testo — aumenta per ingrandire */
+    margin-bottom: 16px;         /* spazio sotto prima del pulsante */
+  }
+
+  .faq-cta-button {
+    display: inline-block;       /* si comporta come un blocco ma inline */
+    background: #f39c12;         /* colore arancione pulsante */
+    color: white;
+    padding: 12px 32px;          /* spazio interno pulsante — aumenta per ingrandirlo */
+    border-radius: 8px;          /* angoli arrotondati */
+    text-decoration: none;       /* rimuove sottolineatura */
+    font-weight: 700;            /* grassetto */
+    font-size: 1em;
+    transition: background 0.2s; /* animazione hover */
+  }
+
+  .faq-cta-button:hover {
+    background: #d68910;         /* colore più scuro al passaggio del mouse */
+  }
+
+  /* ==============================
+     RESPONSIVE MOBILE
+  ============================== */
+  @media (max-width: 768px) {
+    .servizio-titolo {
+      font-size: 1.5em;          /* titolo più piccolo su mobile */
+    }
+
+    .servizio-linea {
+      width: 90%;                /* linea quasi piena su mobile */
+    }
+
+    .servizio-sottotitolo {
+      font-size: 1em;            /* sottotitolo ridotto su mobile */
+      margin-bottom: 24px;
+    }
+
+    .servizio-minititolo {
+      font-size: 0.95em;         /* minititoli leggermente ridotti */
+    }
+
+    .feedback-card {
+      padding: 16px 16px;        /* meno padding nelle card su mobile */
+    }
+
+    .faq-cta {
+      padding: 30px 16px;        /* CTA più compatta su mobile */
+    }
+
+    .faq-cta-testo {
+      font-size: 1.1em;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER caricato dal template condiviso -->
+<div id="header"></div>
+<script>
+fetch("template/header.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("header").innerHTML = data;
+});
+</script>
+
+<div class="container">
+
+  <!-- TITOLO DEL SERVIZIO — modifica il testo tra i tag -->
+  <h1 class="servizio-titolo">Nome del Servizio</h1>
+
+  <!-- LINEA DI SEPARAZIONE — non modificare, si gestisce dal CSS sopra -->
+  <div class="servizio-linea"></div>
+
+  <!-- SOTTOTITOLO EVOCATIVO — una frase breve che cattura l'attenzione -->
+  <p class="servizio-sottotitolo">
+    Una frase evocativa che faccia da gancio e catturi l'attenzione del lettore.
+  </p>
+
+  <!-- MINITITOLO: COS'È -->
+  <h3 class="servizio-minititolo">Cos'è?</h3>
+  <p class="servizio-testo">
+    Inserisci qui la spiegazione approfondita del servizio. Descrivi in cosa consiste,
+    a chi si rivolge e quali bisogni risponde.
+  </p>
+
+  <!-- MINITITOLO: COSA NON È -->
+  <h3 class="servizio-minititolo">Cosa non è?</h3>
+  <p class="servizio-testo">
+    Inserisci qui i chiarimenti su cosa questo servizio non è, per gestire le aspettative
+    e distinguerlo da altri approcci simili.
+  </p>
+
+  <!-- MINITITOLO: METODO -->
+  <h3 class="servizio-minititolo">Metodo</h3>
+  <p class="servizio-testo">
+    Descrivi qui l'approccio metodologico utilizzato, le tecniche adottate e
+    il modo in cui si svolge il lavoro con il paziente o lo studente.
+  </p>
+
+  <!-- MINITITOLO: DURATA -->
+  <h3 class="servizio-minititolo">Durata</h3>
+  <p class="servizio-testo">
+    Indica qui la durata tipica del percorso, la frequenza degli incontri e
+    ogni altra informazione pratica utile.
+  </p>
+
+  <!-- SEZIONE FEEDBACK -->
+  <h2 class="feedback-sezione-titolo">Cosa dicono di noi</h2>
+  <div class="feedback-linea"></div>
+
+  <!-- FEEDBACK 1 — duplica questo blocco per aggiungerne altri -->
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto (es. Studente universitaria, 24 anni)
+    </p>
+  </div>
+
+  <!-- FEEDBACK 2 -->
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto
+    </p>
+  </div>
+
+  <!-- FEEDBACK 3 -->
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto
+    </p>
+  </div>
+
+</div>
+
+<!-- CALL TO ACTION FINALE -->
+<div class="faq-cta">
+  <p class="faq-cta-testo">Hai domande?</p>
+  <a href="contatti.html" class="faq-cta-button">Contattaci</a>
+</div>
+
+<!-- FOOTER caricato dal template condiviso -->
+<div id="footer"></div>
+<script>
+fetch("template/footer.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+</body>
+</html>
