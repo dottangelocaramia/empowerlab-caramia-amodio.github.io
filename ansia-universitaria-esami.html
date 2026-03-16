@@ -1,120 +1,173 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
 <meta charset="UTF-8">
 
-<title>Ansia universitaria prima degli esami | Empower Lab</title>
+<!-- TITOLO PAGINA: max 60 caratteri, metti la parola chiave principale all'inizio -->
+<title>Ansia universitaria | Empower Lab</title>
 
-<meta name="description" content="Perché l'ansia universitaria aumenta prima degli esami e quali strategie psicologiche possono aiutare a gestirla.">
+<!-- DESCRIZIONE: 150-160 caratteri, deve contenere la parola chiave e invogliare al click -->
+<meta name="description" content="Descrizione dell'articolo in 150-160 caratteri. Deve contenere la parola chiave principale e invogliare al click.">
 
+<!-- PAROLE CHIAVE: meno decisive oggi per Google, ma utili — separale con virgole -->
+<meta name="keywords" content="parola chiave principale, seconda parola chiave, terza parola chiave">
+
+<!-- AUTORE: nome di chi ha scritto l'articolo -->
+<meta name="author" content="Angelo Caramia">
+
+<!-- ROBOTS: dice a Google di indicizzare questa pagina e seguire i link -->
+<meta name="robots" content="index, follow">
+
+<!-- VIEWPORT: necessario per mobile — non modificare -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- OPEN GRAPH: controlla come appare la pagina quando condivisa su WhatsApp, Facebook, LinkedIn -->
+<!-- og:title — titolo che appare nell'anteprima di condivisione -->
+<meta property="og:title" content="Titolo articolo">
+
+<!-- og:description — testo sotto il titolo nell'anteprima di condivisione -->
+<meta property="og:description" content="Stessa descrizione del meta description sopra.">
+
+<!-- og:image — immagine di anteprima nella condivisione — usa URL assoluto completo -->
+<meta property="og:image" content="https://tuosito.github.io/images/articolo-nome.jpg">
+
+<!-- og:url — URL completo e definitivo di questa pagina — sostituisci con il tuo dominio reale -->
+<meta property="og:url" content="https://tuosito.github.io/nome-articolo.html">
+
+<!-- og:type — tipo di contenuto, "article" è corretto per articoli di blog -->
+<meta property="og:type" content="article">
+
+<!-- og:locale — lingua della pagina -->
+<meta property="og:locale" content="it_IT">
+
+<!-- CANONICAL: indica a Google l'URL ufficiale della pagina, evita contenuti duplicati -->
+<!-- sostituisci con l'URL reale e definitivo di questa pagina -->
+<link rel="canonical" href="https://tuosito.github.io/nome-articolo.html">
+
+<!-- FONT E CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body>
 
-<header>
-
-<!-- INTESTAZIONE TITOLO -->
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
-
-<h2>
-  <span style="font-family: 'Raleway', sans-serif; font-style: italic; font-weight: 800; letter-spacing: 2px; color: #ffffff;">Empower Lab</span>
-  <span style="font-size: 0.6em; font-style: italic; font-weight: normal; color: #d0d0d0;">  –  Amodio & Caramia</span>
-</h2>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="chi-siamo.html">Chi siamo</a>
-<a href="empowerlab.html">EmpowerLab</a>
-<a href="servizi.html">Servizi</a>
-<a href="articoli.html">Articoli</a>
-<a href="contatti.html">Contatti</a>
-</nav>
-
-</header>
+<!-- HEADER caricato dal template condiviso -->
+<div id="header"></div>
+<script>
+fetch("template/header.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("header").innerHTML = data;
+});
+</script>
 
 <div class="container articolo">
 
-<h1>Ansia universitaria prima degli esami: perché nasce e come gestirla</h1>
+  <!-- CATEGORIA: visibile in cima, aiuta lettore e SEO — es. "Psicologia · Studio" -->
+  <p class="articolo-categoria">Psicologia/Formazione · Ansia Universitaria</p>
 
-<p class="meta-articolo">
-Pubblicato il 10 Marzo 2026
-</p>
+  <!-- H1: UN SOLO h1 per pagina — deve contenere la parola chiave principale dell'articolo -->
+  <h1 class="articolo-titolo">L'ansia, l'essenza dello studente</h1>
 
-<p>
-Molti studenti universitari sperimentano livelli elevati di ansia nei periodi di esame. Questa esperienza è molto diffusa e può manifestarsi con sintomi cognitivi, emotivi e fisici: pensieri di fallimento, tensione, difficoltà di concentrazione o paura di non essere all'altezza delle aspettative.
-</p>
+  <!-- LINEA DI SEPARAZIONE decorativa — non modificare -->
+  <div class="articolo-linea"></div>
 
-<p>
-Comprendere da dove nasce l'ansia universitaria è il primo passo per imparare a gestirla in modo più efficace.
-</p>
+  <!-- SOTTOTITOLO: frase evocativa che aggancia il lettore — non è un tag SEO ma migliora il tempo di permanenza -->
+  <p class="articolo-sottotitolo">
+    Una frase introduttiva che sintetizza il senso dell'articolo e invoglia a continuare la lettura.
+  </p>
 
-<h2>Perché gli esami generano ansia</h2>
+  <!-- META ARTICOLO: data di pubblicazione e autore — usa il formato leggibile per il lettore -->
+  <p class="meta-articolo">
+    Pubblicato il 10 Marzo 2026 &nbsp;·&nbsp; Angelo Caramia
+  </p>
 
-<p>
-Gli esami rappresentano una situazione di valutazione pubblica delle proprie competenze. Questo attiva naturalmente sistemi psicologici legati alla prestazione, all'autostima e alla paura del giudizio.
-</p>
+  <!-- IMMAGINE DI APERTURA:
+       - src: percorso relativo dell'immagine — es. images/ansia-universitaria.jpg
+       - alt: descrizione reale dell'immagine con parola chiave — Google la legge per l'indicizzazione
+       NON lasciare alt generico come "immagine" -->
+  <div class="articolo-immagine">
+    <img src="images/articolo-nome.jpg" alt="Descrizione reale dell'immagine con parola chiave">
+  </div>
 
-<p>
-Quando il risultato dell'esame viene percepito come determinante per il proprio valore personale o per il proprio futuro, il livello di pressione percepita aumenta e l'ansia tende a crescere.
-</p>
+  <!-- INTRODUZIONE: paragrafo di aggancio — metti la parola chiave principale nelle prime righe -->
+  <p class="articolo-intro">
+    Paragrafo introduttivo. Presenta il problema o la domanda centrale dell'articolo.
+    Deve essere breve, diretto e contenere la parola chiave principale.
+  </p>
 
-<h2>Il ruolo delle aspettative personali</h2>
+  <!-- H2 SEZIONI: usa h2 per tutte le sezioni principali dopo l'h1
+       Inserisci parole chiave correlate nei titoli delle sezioni quando è naturale farlo -->
+  <h2 class="articolo-h2">Prima sezione</h2>
+  <p>
+    Testo della prima sezione. Sviluppa il primo punto in modo chiaro e divulgativo.
+    Usa frasi brevi e vai a capo spesso per alleggerire la lettura.
+  </p>
 
-<p>
-Molti studenti hanno standard molto elevati rispetto alla propria performance accademica. Quando queste aspettative diventano troppo rigide, anche piccoli ostacoli nello studio possono essere vissuti come segnali di fallimento.
-</p>
+  <!-- IMMAGINE INTERMEDIA: opzionale — rimuovi questo blocco se non hai un'immagine da inserire
+       Ricorda sempre di compilare l'attributo alt con una descrizione reale -->
+  <div class="articolo-immagine articolo-immagine--small">
+    <img src="images/articolo-nome-2.jpg" alt="Descrizione reale della seconda immagine">
+  </div>
 
-<p>
-Questo meccanismo spesso alimenta un circolo vizioso: più aumenta la pressione, più diventa difficile studiare con lucidità.
-</p>
+  <!-- SECONDA SEZIONE -->
+  <h2 class="articolo-h2">Seconda sezione</h2>
+  <p>
+    Testo della seconda sezione. Continua lo sviluppo del tema.
+  </p>
 
-<h2>Strategie per gestire l'ansia universitaria</h2>
+  <!-- CITAZIONE IN EVIDENZA: opzionale — usa per spezzare visivamente il testo
+       Aiuta il lettore a restare sulla pagina più a lungo, segnale positivo per Google -->
+  <blockquote class="articolo-citazione">
+    "Una frase significativa o un concetto chiave da mettere in evidenza."
+  </blockquote>
 
-<p>
-Gestire l'ansia non significa eliminarla completamente. Una certa attivazione emotiva è naturale e può anche migliorare la performance. L'obiettivo è piuttosto imparare a mantenere l'ansia entro livelli funzionali.
-</p>
+  <!-- TERZA SEZIONE -->
+  <h2 class="articolo-h2">Terza sezione</h2>
+  <p>
+    Testo della terza sezione.
+  </p>
 
-<p>
-Tra le strategie più utili troviamo:
-</p>
+  <!-- CONCLUSIONE: chiudi sempre con una riflessione o domanda
+       Stimola il lettore a contattarti o leggere altri articoli — riduce la frequenza di rimbalzo -->
+  <h2 class="articolo-h2">Conclusione</h2>
+  <p>
+    Sintesi finale e messaggio chiave per il lettore. Chiudi con una riflessione
+    o una domanda che stimoli a riflettere o a contattarti.
+  </p>
 
-<ul>
+  <!-- SEPARATORE FINE ARTICOLO — decorativo, non modificare -->
+  <div class="articolo-fine"></div>
 
-<li>organizzare lo studio in modo realistico</li>
-
-<li>suddividere gli obiettivi in passi più piccoli</li>
-
-<li>riconoscere e ristrutturare i pensieri catastrofici</li>
-
-<li>allenare tecniche di regolazione emotiva</li>
-
-</ul>
-
-<h2>Quando può essere utile un supporto psicologico</h2>
-
-<p>
-Se l'ansia diventa molto intensa o interferisce con lo studio e la vita quotidiana, può essere utile confrontarsi con uno psicologo. Un percorso di supporto può aiutare a comprendere i meccanismi personali che alimentano la pressione e sviluppare strategie più efficaci per affrontare gli esami.
-</p>
+  <!-- BOX AUTORE: nome e bio breve — migliora l'autorevolezza percepita della pagina (E-E-A-T per Google)
+       E-E-A-T = Experience, Expertise, Authoritativeness, Trustworthiness -->
+  <div class="articolo-autore-box">
+    <!-- nome autore — modifica per ogni articolo se cambia l'autore -->
+    <p class="articolo-autore-nome">Angelo Caramia</p>
+    <!-- bio breve — può restare uguale per tutti gli articoli dello stesso autore -->
+    <p class="articolo-autore-bio">
+      Psicologo e formatore. Mi occupo di supporto psicologico per studenti universitari,
+      gestione dell'ansia accademica e percorsi di crescita personale.
+    </p>
+  </div>
 
 </div>
 
+<!-- CALL TO ACTION FINALE: invita il lettore ad agire dopo aver letto
+     Riduce la frequenza di rimbalzo e porta traffico alla pagina contatti -->
+<div class="faq-cta">
+  <p class="faq-cta-testo">Hai domande o vuoi approfondire?</p>
+  <a href="contatti.html" class="faq-cta-button">Contattaci</a>
+</div>
 
+<!-- FOOTER caricato dal template condiviso -->
 <div id="footer"></div>
-
 <script>
-
 fetch("template/footer.html")
 .then(response => response.text())
 .then(data => {
-document.getElementById("footer").innerHTML = data;
+  document.getElementById("footer").innerHTML = data;
 });
-
 </script>
 
-
-  
 </body>
 </html>
