@@ -1173,3 +1173,127 @@ color:#27ae60;
         padding: 16px;
     }
 }
+
+
+/* ==============================
+   CITAZIONE FINALE ARTICOLO
+============================== */
+
+.articolo-citazione-finale {
+    background: #2c3e50;          /* sfondo scuro elegante — cambia colore se vuoi */
+    border-radius: 12px;          /* angoli arrotondati */
+    padding: 30px 36px;           /* spazio interno — riduci per compattare */
+    margin: 40px 0 30px 0;        /* spazio sopra e sotto */
+    text-align: center;           /* tutto centrato */
+}
+
+.articolo-citazione-finale-titolo {
+    color: #f39c12;               /* arancione coerente col sito */
+    font-size: 1em;               /* piccolo, funge da etichetta */
+    text-transform: uppercase;    /* tutto maiuscolo */
+    letter-spacing: 2px;          /* spaziatura lettere */
+    margin-bottom: 16px;
+    margin-top: 0;
+    border-bottom: none;          /* annulla il border-bottom degli h2 normali */
+    padding-bottom: 0;
+}
+
+.articolo-citazione-finale-testo {
+    color: #ffffff;               /* bianco su sfondo scuro */
+    font-size: 1.2em;             /* grande e d'impatto */
+    font-style: italic;           /* corsivo */
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.articolo-citazione-finale-autore {
+    font-family: 'Raleway', sans-serif; /* font diverso per distinguerlo */
+    font-style: italic;
+    font-size: 0.85em;
+    color: #aaa;                  /* grigio chiaro su sfondo scuro */
+    margin-top: -6px;             /* avvicina al testo sopra */
+    letter-spacing: 0.5px;
+}
+
+/* ==============================
+   BIBLIOGRAFIA A TENDINA
+============================== */
+
+.bibliografia {
+    margin: 20px 0 30px 0;       /* spazio sopra e sotto */
+}
+
+.bibliografia-btn {
+    background: none;             /* nessuno sfondo */
+    border: 1.5px solid #d0bfb5; /* bordo sottile color sabbia — cambia colore se vuoi */
+    border-radius: 6px;           /* angoli arrotondati */
+    padding: 10px 20px;           /* spazio interno pulsante */
+    font-size: 0.9em;
+    font-family: 'Inter', sans-serif;
+    color: #555;                  /* grigio medio */
+    cursor: pointer;              /* cursore a mano */
+    transition: all 0.2s;        /* animazione hover */
+    display: block;               /* occupa tutta la larghezza */
+    width: 100%;
+    text-align: left;             /* testo allineato a sinistra */
+}
+
+.bibliografia-btn:hover {
+    background: #fff8f4;          /* sfondo caldo al hover */
+    border-color: #f39c12;        /* bordo arancione al hover */
+    color: #2c3e50;               /* testo più scuro al hover */
+}
+
+.bibliografia-contenuto {
+    display: none;                /* nascosta di default */
+    background: #fafafa;          /* sfondo leggermente grigio */
+    border: 1px solid #eee;       /* bordo sottile */
+    border-top: none;             /* nessun bordo in cima — collegato visivamente al pulsante */
+    border-radius: 0 0 6px 6px;  /* angoli arrotondati solo in basso */
+    padding: 16px 20px;           /* spazio interno */
+}
+
+/* quando la classe .aperta è aggiunta dal JS, mostra il contenuto */
+.bibliografia.aperta .bibliografia-contenuto {
+    display: block;               /* visibile quando tendina è aperta */
+}
+
+/* ruota la freccia quando aperta */
+.bibliografia.aperta .bibliografia-btn {
+    border-radius: 6px 6px 0 0;  /* angoli arrotondati solo in alto quando aperta */
+    border-color: #f39c12;        /* bordo arancione quando aperta */
+    color: #2c3e50;
+}
+
+.bibliografia-lista {
+    margin: 0;                    /* rimuove margini default dell'ul */
+    padding-left: 20px;           /* rientro lista */
+}
+
+.bibliografia-lista li {
+    font-size: 0.88em;            /* più piccolo del testo normale */
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 8px;           /* spazio tra le voci */
+}
+
+.bibliografia-lista li:last-child {
+    margin-bottom: 0;             /* rimuove spazio sotto l'ultima voce */
+}
+
+/* ==============================
+   RESPONSIVE MOBILE
+============================== */
+@media (max-width: 768px) {
+    .articolo-citazione-finale {
+        padding: 22px 20px;       /* meno padding su mobile */
+    }
+
+    .articolo-citazione-finale-testo {
+        font-size: 1.05em;        /* testo leggermente ridotto */
+    }
+
+    .bibliografia-btn {
+        font-size: 0.85em;
+    }
+}
