@@ -838,3 +838,167 @@ color:#27ae60;
 }
 
 
+
+
+
+
+
+
+
+
+
+/* ==============================
+   PAGINE SERVIZIO
+  
+============================== */
+
+.servizio-titolo {
+    text-align: center;          /* centra il titolo del servizio */
+    margin-bottom: 10px;         /* spazio sotto il titolo prima della linea */
+    margin-top: 10px;            /* spazio sopra il titolo */
+    font-size: 2em;              /* dimensione titolo — riduci per rimpicciolirlo */
+    color: #2c3e50;              /* colore titolo */
+}
+
+.servizio-linea {
+    width: 80%;                  /* larghezza linea — quasi tutta la pagina */
+    max-width: 720px;            /* larghezza massima su schermi grandi */
+    height: 3px;                 /* spessore linea — aumenta per renderla più spessa */
+    background: #f39c12;         /* colore arancione coerente col sito */
+    margin: 0 auto 24px auto;    /* centrata, con spazio sotto */
+    border-radius: 2px;          /* angoli leggermente arrotondati */
+}
+
+.servizio-sottotitolo {
+    text-align: center;          /* centra il sottotitolo */
+    font-style: italic;          /* corsivo */
+    font-size: 1.15em;           /* leggermente più grande del testo normale */
+    color: #555;                 /* grigio medio */
+    margin-bottom: 40px;         /* spazio sotto prima delle sezioni */
+    line-height: 1.7;            /* altezza riga per leggibilità */
+}
+
+.servizio-minititolo {
+    color: #2c3e50;              /* colore testo — uguale ai titoli del sito */
+    font-size: 1em;              /* dimensione — aumenta per ingrandire */
+    text-transform: uppercase;   /* tutto maiuscolo — rimuovi se non vuoi */
+    letter-spacing: 1.5px;       /* spaziatura lettere */
+    margin-top: 35px;            /* spazio sopra ogni minititolo */
+    margin-bottom: 8px;          /* spazio sotto tra minititolo e paragrafo */
+    padding-bottom: 4px;         /* spazio interno sotto */
+    border-bottom: 1px solid #f0d9cc; /* linea sottile sotto ogni minititolo */
+}
+
+.servizio-testo {
+    color: #444;                 /* colore testo paragrafi */
+    line-height: 1.8;            /* altezza riga per leggibilità */
+    margin-top: 8px;             /* spazio sopra il paragrafo */
+}
+
+/* ==============================
+   SEZIONE FEEDBACK
+============================== */
+
+.feedback-sezione-titolo {
+    text-align: center;          /* centra il titolo sezione feedback */
+    margin-top: 50px;            /* spazio sopra la sezione */
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.feedback-linea {
+    width: 60px;                 /* linea corta decorativa sotto il titolo */
+    height: 3px;
+    background: #f39c12;
+    margin: 0 auto 30px auto;
+    border-radius: 2px;
+}
+
+.feedback-card {
+    background: #fff8f4;         /* sfondo caldo coerente con il colore del sito */
+    border-left: 4px solid #f39c12; /* bordo arancione a sinistra */
+    border-radius: 8px;          /* angoli arrotondati */
+    padding: 20px 24px;          /* spazio interno */
+    margin-bottom: 20px;         /* spazio tra una card e l'altra */
+}
+
+.feedback-testo {
+    font-style: italic;          /* corsivo per la citazione */
+    color: #444;
+    margin: 0 0 10px 0;          /* spazio sotto il testo prima del nome */
+    line-height: 1.7;
+}
+
+.feedback-autore {
+    font-weight: 600;            /* grassetto per il nome */
+    color: #2c3e50;
+    margin: 0;
+    font-size: 0.9em;            /* leggermente più piccolo del testo */
+}
+
+/* ==============================
+   CTA FINALE (Contattaci)
+============================== */
+
+.faq-cta {
+    text-align: center;          /* centra tutto il contenuto */
+    background: #2c3e50;         /* sfondo scuro uguale all'header */
+    padding: 40px 20px;          /* spazio interno */
+    margin-top: 40px;            /* spazio sopra */
+}
+
+.faq-cta-testo {
+    color: white;                /* testo bianco su sfondo scuro */
+    font-size: 1.3em;            /* dimensione testo */
+    margin-bottom: 16px;         /* spazio sotto prima del pulsante */
+}
+
+.faq-cta-button {
+    display: inline-block;       /* si comporta come blocco ma inline */
+    background: #f39c12;         /* colore arancione */
+    color: white;
+    padding: 12px 32px;          /* spazio interno pulsante */
+    border-radius: 8px;          /* angoli arrotondati */
+    text-decoration: none;       /* rimuove sottolineatura */
+    font-weight: 700;            /* grassetto */
+    font-size: 1em;
+    transition: background 0.2s; /* animazione hover */
+}
+
+.faq-cta-button:hover {
+    background: #d68910;         /* colore più scuro al passaggio del mouse */
+}
+
+/* ==============================
+   RESPONSIVE MOBILE (max 768px)
+============================== */
+@media (max-width: 768px) {
+    .servizio-titolo {
+        font-size: 1.5em;        /* titolo più piccolo su mobile */
+    }
+
+    .servizio-linea {
+        width: 90%;              /* linea quasi piena su mobile */
+    }
+
+    .servizio-sottotitolo {
+        font-size: 1em;          /* sottotitolo ridotto su mobile */
+        margin-bottom: 24px;
+    }
+
+    .servizio-minititolo {
+        font-size: 0.95em;       /* minititoli leggermente ridotti */
+    }
+
+    .feedback-card {
+        padding: 16px;           /* meno padding nelle card su mobile */
+    }
+
+    .faq-cta {
+        padding: 30px 16px;      /* CTA più compatta su mobile */
+    }
+
+    .faq-cta-testo {
+        font-size: 1.1em;        /* testo CTA ridotto su mobile */
+    }
+}
