@@ -111,5 +111,33 @@ fetch("template/footer.html")
 });
 </script>
 
+
+
+  
+  /* script per far andare in sequenza i feedback */
+  
+<script>
+  // Seleziona tutte le feedback card
+  var cards = document.querySelectorAll('.feedback-card');
+
+  // Nasconde tutte le card inizialmente
+  cards.forEach(function(card) {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';  /* parte leggermente in basso */
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; /* durata animazione */
+  });
+
+  // Fa apparire ogni card in sequenza con un ritardo crescente
+  cards.forEach(function(card, index) {
+    setTimeout(function() {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }, 300 + (index * 400)); /* 300ms ritardo iniziale, poi 400ms tra una card e l'altra */
+  });
+</script>
+
+
+
+  
 </body>
 </html>
