@@ -19,19 +19,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
-    // --- DROPDOWN MOBILE ---
+// --- DROPDOWN MOBILE + DESKTOP CLICK ---
 const dropbtn = document.querySelector('.dropbtn');
 const dropdown = document.querySelector('.dropdown');
 if (dropbtn && dropdown) {
   dropbtn.addEventListener('click', function (e) {
     if (window.innerWidth <= 768) {
+      // MOBILE: primo click apre, secondo click va alla pagina
       e.stopPropagation();
       const isOpen = dropdown.classList.contains('open-dropdown');
       if (isOpen) {
-        window.location = 'servizi.html'; // secondo click → pagina
+        window.location = 'servizi.html';
       } else {
-        dropdown.classList.add('open-dropdown'); // primo click → apre
+        dropdown.classList.add('open-dropdown');
       }
+    } else {
+      // DESKTOP: click va direttamente alla pagina
+      window.location = 'servizi.html';
     }
   });
 }
