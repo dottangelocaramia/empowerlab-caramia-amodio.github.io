@@ -1297,3 +1297,23 @@ color:#27ae60;
         font-size: 0.85em;
     }
 }
+
+
+
+
+
+/* ===========================
+   FIX DROPDOWN MOBILE
+=========================== */
+@media (max-width: 768px) {
+
+    /* disabilita hover desktop su mobile */
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    /* apre il dropdown solo quando JS aggiunge la classe */
+    .dropdown.open-dropdown .dropdown-content {
+        display: block;
+    }
+}
