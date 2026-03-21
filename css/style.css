@@ -504,6 +504,45 @@ p {
     font-size: 18px;
 }
 
+
+
+/* ===========================
+   LISTA ARTICOLI pagina pricipale
+=========================== */
+.articolo-preview {
+    padding-bottom: 24px;              /* spazio interno sotto il testo prima della linea — aumenta per più respiro */
+    margin-bottom: 24px;               /* spazio esterno sotto la linea prima del prossimo articolo — aumenta per distanziare di più */
+    border-bottom: 1px solid #f0d9cc; /* linea separatrice — 1px è lo spessore, #f0d9cc è arancione chiaro — cambia con #f39c12 per più visibile o #eee per grigio */
+}
+
+.articolo-preview:last-child {
+    border-bottom: none;               /* rimuove la linea dopo l'ultimo articolo — lascia così */
+    margin-bottom: 0;                  /* rimuove lo spazio sotto l'ultimo articolo — lascia così */
+}
+
+.articolo-preview h2 {
+    margin-top: 0;                     /* spazio sopra il titolo — tienilo a 0 per non allontanarlo dal bordo superiore */
+    margin-bottom: 8px;                /* spazio sotto il titolo prima della descrizione — aumenta per più distanza */
+    font-size: 1.15em;                 /* dimensione titolo articolo — aumenta per ingrandire, riduci per rimpicciolire */
+}
+
+.articolo-preview h2 a {
+    text-decoration: none;             /* rimuove la sottolineatura dai link — rimuovi questa riga se vuoi tenerla */
+    color: #2c3e50;                    /* colore del titolo — uguale agli h2 del sito, cambia per un altro colore */
+    transition: color 0.2s;           /* durata animazione cambio colore al hover — 0.2s è veloce, aumenta per più lento */
+}
+
+.articolo-preview h2 a:hover {
+    color: #f39c12;                    /* colore del titolo al passaggio del mouse — cambia per altro colore hover */
+}
+
+.articolo-preview p {
+    color: #666;                       /* colore testo descrizione — #666 è grigio medio, #333 più scuro, #999 più chiaro */
+    font-size: 0.95em;                 /* dimensione testo descrizione — leggermente più piccolo del testo normale */
+    margin: 0;                         /* rimuove margini default del paragrafo — aumenta margin-top per distanziarlo dal titolo */
+}
+
+
 /* ===========================
    ANIMAZIONE TITOLO HEADER (solo home)
 =========================== */
