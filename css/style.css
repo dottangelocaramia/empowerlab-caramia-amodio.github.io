@@ -1363,3 +1363,70 @@ color:#27ae60;
         text-align: left; /* allinea "Servizi" come gli altri link */
     }
 }
+
+
+
+
+/* PER PAGINA FORMAZIONE CON DUE BOX */
+
+.servizi-nav{
+
+display:flex;
+
+gap:30px;
+
+margin:40px 0;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.servizio-nav-box{
+
+flex:1;
+
+min-width:280px;
+
+max-width:450px;
+
+background:white;
+
+padding:30px;
+
+border-radius:12px;
+
+border:2px solid #cfe8ff;
+
+text-decoration:none;
+
+color:#2c3e50;
+
+transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+
+}
+
+.servizio-nav-box:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+border-color:#4da3ff;
+
+}
+
+.servizio-nav-box h3{
+
+margin-top:0;
+
+}
+
+.servizio-nav-box p{
+
+margin-bottom:0;
+
+font-size:16px;
+
+}
