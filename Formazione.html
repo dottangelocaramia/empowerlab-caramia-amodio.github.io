@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Nome Servizio | Empower Lab</title> <!-- modifica il titolo per ogni servizio -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Raleway:ital,wght@1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"> <!-- foglio di stile principale -->
+</head>
+<body>
+
+<!-- HEADER caricato dal template condiviso -->
+<div id="header"></div>
+<script src="js/menu.js"></script>
+
+<div class="container">
+
+  <!-- TITOLO DEL SERVIZIO — modifica il testo tra i tag -->
+  <h1 class="servizio-titolo">Nome del Servizio</h1>
+
+  <!-- LINEA DI SEPARAZIONE — si gestisce dal CSS -->
+  <div class="servizio-linea"></div>
+
+  <!-- SOTTOTITOLO EVOCATIVO — una frase breve che cattura l'attenzione -->
+  <p class="servizio-sottotitolo">
+    Una frase evocativa che faccia da gancio e catturi l'attenzione del lettore.
+  </p>
+
+
+
+
+
+
+
+  <div class="servizi-nav">
+
+<a href="corsi.html" class="servizio-nav-box">
+
+<h3>Corsi e Formazione</h3>
+
+<p>
+Percorsi strutturati, seminari e contenuti per sviluppare competenze e consapevolezza.
+</p>
+
+</a>
+
+<a href="tutoraggio.html" class="servizio-nav-box">
+
+<h3>Tutoraggio e Supporto allo studio</h3>
+
+<p>
+Affiancamento personalizzato per affrontare lo studio universitario e migliorare metodo e risultati.
+</p>
+
+</a>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <!-- MINITITOLO: COS'È -->
+  <h3 class="servizio-minititolo">Cos'è?</h3>
+  <p class="servizio-testo">
+    Inserisci qui la spiegazione approfondita del servizio. Descrivi in cosa consiste,
+    a chi si rivolge e quali bisogni risponde.
+  </p>
+
+  <!-- MINITITOLO: COSA NON È -->
+  <h3 class="servizio-minititolo">Cosa non è?</h3>
+  <p class="servizio-testo">
+    Inserisci qui i chiarimenti su cosa questo servizio non è, per gestire le aspettative
+    e distinguerlo da altri approcci simili.
+  </p>
+
+  <!-- MINITITOLO: METODO -->
+  <h3 class="servizio-minititolo">Metodo</h3>
+  <p class="servizio-testo">
+    Descrivi qui l'approccio metodologico utilizzato, le tecniche adottate e
+    il modo in cui si svolge il lavoro con il paziente o lo studente.
+  </p>
+
+  <!-- MINITITOLO: DURATA -->
+  <h3 class="servizio-minititolo">Durata</h3>
+  <p class="servizio-testo">
+    Indica qui la durata tipica del percorso, la frequenza degli incontri e
+    ogni altra informazione pratica utile.
+  </p>
+
+  <!-- SEZIONE FEEDBACK -->
+  <h2 class="feedback-sezione-titolo">Cosa dicono di noi</h2>
+  <div class="feedback-linea"></div>
+
+  <!-- FEEDBACK 1 — duplica questo blocco per aggiungerne altri -->
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto (es. Studente universitaria, 24 anni)
+    </p>
+  </div>
+
+  <!-- FEEDBACK 2 -->
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto
+    </p>
+  </div>
+
+  <!-- FEEDBACK 3 — aggiungi o rimuovi blocchi feedback liberamente -->
+  <div class="feedback-card">
+    <p class="feedback-testo">
+      "Inserisci qui il testo del feedback del cliente o studente."
+    </p>
+    <p class="feedback-autore">
+      — Nome, ruolo o contesto
+    </p>
+  </div>
+
+</div>
+
+<!-- CALL TO ACTION FINALE -->
+<div class="faq-cta">
+  <p class="faq-cta-testo">Hai domande?</p>
+  <a href="contatti.html" class="faq-cta-button">Contattaci</a>
+</div>
+
+<!-- FOOTER caricato dal template condiviso -->
+<div id="footer"></div>
+<script>
+fetch("template/footer.html")
+.then(response => response.text())
+.then(data => {
+  document.getElementById("footer").innerHTML = data;
+});
+</script>
+
+
+
+  
+  /* script per far andare in sequenza i feedback */
+  
+<script>
+  var cards = document.querySelectorAll('.feedback-card'); // prende tutte le card
+  var current = 0; // indice della card attualmente visibile
+
+  // nasconde tutte le card all'inizio
+  cards.forEach(function(card) {
+    card.style.display = 'none';         // nascosta
+    card.style.opacity = '0';            // trasparente
+    card.style.transition = 'opacity 0.5s ease'; // durata dissolvenza entrata/uscita
+  });
+
+  function mostraCard(index) {
+    var card = cards[index];
+    card.style.display = 'block';        // rende visibile nel layout
+
+    // piccolo ritardo per far scattare la transizione CSS
+    setTimeout(function() {
+      card.style.opacity = '1';          // dissolvenza in entrata
+    }, 50);
+
+    // dopo 3 secondi fa sparire la card e passa alla successiva
+    setTimeout(function() {
+      card.style.opacity = '0';          // dissolvenza in uscita
+
+      // aspetta che finisca la dissolvenza poi nasconde e passa alla prossima
+      setTimeout(function() {
+        card.style.display = 'none';     // nasconde completamente
+        current = (current + 1) % cards.length; // passa alla successiva, ricomincia dal primo
+        mostraCard(current);             // mostra la prossima card
+      }, 500); // deve corrispondere alla durata della transition CSS sopra
+
+    }, 3000); // durata visibilità in millisecondi — cambia per più o meno tempo
+  }
+
+  // avvia la sequenza dalla prima card
+  mostraCard(0);
+</script>
+
+
+
+  
+</body>
+</html>
