@@ -1518,16 +1518,16 @@ letter-spacing:1px;
 .linea-editoriale{
 
     /* Larghezza della linea */
-    width: 100%; 
+    width: 80%; 
     
     /* Altezza (spessore della linea) */
-    height: 3px;
+    height: 2px;
 
     /* Colore della linea (arancione del logo) */
     background-color: #ff8326; /* arancione più chiaro  #ffede1;*/
 
     /* Spazio sopra e sotto la linea */
-    margin: 30px 0;
+    margin: 20px 0;
 
     /* Rende la linea più “morbida” visivamente */
     border-radius: 2px;
