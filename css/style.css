@@ -1430,3 +1430,62 @@ margin-bottom:0;
 font-size:16px;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* per pagina CORSI  */
+/* BLOCCO GENERALE */
+.corsi-sezione{
+margin-top:40px;
+}
+
+/* TENDINA */
+.corsi-toggle{
+background:#ecf0f1;
+padding:15px 20px;
+cursor:pointer;
+border-radius:8px;
+margin-top:20px;
+}
+
+.corsi-toggle h2{
+margin:0;
+}
+
+/* CONTENUTO NASCOSTO */
+.corsi-content{
+display:none;
+margin-top:20px;
+}
+
+/* GRID */
+.corsi-grid{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+/* CARD */
+.corso-card{
+background:white;
+padding:25px;
+border-radius:12px;
+border:2px solid #cfe8ff;
+width:280px;
+transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.corso-card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
