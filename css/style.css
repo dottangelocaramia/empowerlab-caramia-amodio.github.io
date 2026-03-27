@@ -1521,10 +1521,10 @@ letter-spacing:1px;
     width: 100%; 
     
     /* Altezza (spessore della linea) */
-    height: 1px;
+    height: 3px;
 
     /* Colore della linea (arancione del logo) */
-    background-color: #ffede1;
+    background-color: #ff8326; /* arancione più chiaro  #ffede1;*/
 
     /* Spazio sopra e sotto la linea */
     margin: 30px 0;
