@@ -1500,3 +1500,10 @@ display:block;
 .corso-card:hover h3{
 color:#4da3ff;
 }
+
+
+.corsi-toggle h2{
+text-align:center;
+font-weight:600;
+letter-spacing:1px;
+}
