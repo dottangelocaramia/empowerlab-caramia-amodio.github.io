@@ -1518,7 +1518,7 @@ letter-spacing:1px;
 .linea-editoriale{
 
     /* Larghezza della linea */
-    width: 80%; 
+    width: 100%;  /* se lo si vuole tagliato ridurre da 100 a 70 e cosi via */
     
     /* Altezza (spessore della linea) */
     height: 2px;
