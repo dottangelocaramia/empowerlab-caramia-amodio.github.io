@@ -1521,70 +1521,64 @@ margin-top:20px;
 }
 
 /* GRID */
-.corsi-grid{
-display:flex;
-gap:30px;
-flex-wrap:wrap;
-justify-content:center;
+/* GRID */
+.corsi-grid {
+    display: flex;
+    gap: 30px;                        /* spazio tra le card */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;             /* forza tutte le card alla stessa altezza */
 }
 
 /* CARD */
-.corso-card{
-
+.corso-card {
     background: white;
     padding: 25px;
     border-radius: 14px;
-
-    border: 1px solid rgba(0,0,0,0.06); /* meno pesante del bordo blu */
-
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06); /* ombra più morbida */
-
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+    color: #2c3e50;
+    display: flex;                    /* contenuto in colonna per permettere altezza uguale */
+    flex-direction: column;
+    width: 220px;                     /* larghezza fissa uguale per tutte — modifica se vuoi più larghe */
 }
 
-.corso-card:hover{
-
-    transform: translateY(-6px);
-
-    box-shadow: 0 12px 28px rgba(0,0,0,0.12); /* più profondità */
-
+.corso-card:hover {
+    transform: translateY(-10px);     /* spostamento più evidente al hover — era -6px */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18); /* ombra più grande e intensa al hover */
 }
 
-
-
-
-.corso-card h3{
-    font-size: 1.1em;      /* titolo leggermente più compatto */
-    margin-bottom: 10px;   /* spazio tra titolo e descrizione */
+.corso-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    text-align: center;               /* centra il titolo */
+    color: #2c3e50;
 }
 
-.corso-card p{
-    font-size: 0.95em;     /* testo leggermente più piccolo → più gerarchia */
-    color: #666;           /* grigio più morbido → meno “pesante” */
+.corso-card:hover h3 {
+    color: #4da3ff;                   /* colore titolo al hover */
 }
 
-
-
-
-
-
-
-
-/* estetica corso card per click */
-.corso-card{
-text-decoration:none;
-color:#2c3e50;
-display:block;
-}
-.corso-card:hover h3{
-color:#4da3ff;
+.corso-card p {
+    font-size: 0.95em;
+    color: #666;
+    margin: 0;
+    text-align: center;               /* centra il testo descrizione */
 }
 
+.corso-card {
+    text-decoration: none;
+    color: #2c3e50;
+    display: flex;                    /* lascia flex — non sovrascrivere con block */
+    flex-direction: column;
+}
 
-.corsi-toggle h2{
-text-align:center;
-font-weight:600;
-letter-spacing:1px;
+.corsi-toggle h2 {
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 
