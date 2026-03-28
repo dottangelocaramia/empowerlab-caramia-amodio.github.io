@@ -1663,7 +1663,7 @@ footer a:hover {
   font-family: 'Inter', sans-serif;  /* font coerente con il resto del sito */
   font-size: 1.3rem;                 /* dimensione titolo: aumenta per più presenza, diminuisce per più discrezione */
   font-weight: 600;                  /* semibold: visibile ma non aggressivo */
-  color: #2585c9;                    /* colore del testo: blu coerente col sito */
+  color: #2c3e50                   /* colore del testo: blu coerente col sito */
   letter-spacing: 0.06em;           /* spaziatura tra lettere: aumenta per più respiro, diminuisce per più compattezza */
   margin-top: 1.6rem;               /* spazio sopra il titolo, prima della sezione */
   margin-bottom: 0.8rem;            /* spazio sotto il titolo, verso il contenuto che segue */
