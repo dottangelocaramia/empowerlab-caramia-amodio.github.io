@@ -1664,7 +1664,7 @@ footer a:hover {
   font-size: 1.1rem;                 /* dimensione subordinata all'h1 ma distintiva */
   font-weight: 600;                  /* semibold: visibile ma non aggressivo */
   color: #2596be;                    /* colore del testo del titolo */
-  text-transform: uppercase;         /* maiuscolo per dare carattere e distinzione */
+           /*inserire--- text-transform: uppercase; per ottenere tutto maiuscolo per dare carattere e distinzione */
   letter-spacing: 0.06em;           /* spaziatura tra lettere: aumenta per più respiro, diminuisce per più compattezza */
   margin-top: 1.6rem;               /* spazio sopra il titolo, prima della sezione */
   margin-bottom: 0.8rem;            /* spazio sotto il titolo, verso il contenuto che segue */
