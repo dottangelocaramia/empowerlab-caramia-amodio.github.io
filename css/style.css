@@ -1651,3 +1651,27 @@ footer a:hover {
     color: #ccc;                 /* grigio chiaro per il copyright */
     margin: 0;
 }
+
+
+
+
+
+
+/* formattazione di titoli intermedi con riga blu sotto sfumata - testato su Founder della pagina CHI SIAMO */
+
+.page-section-title {
+  font-family: 'Inter', sans-serif;  /* font coerente con il resto del sito */
+  font-size: 1.1rem;                 /* dimensione subordinata all'h1 ma distintiva */
+  font-weight: 600;                  /* semibold: visibile ma non aggressivo */
+  color: #2596be;                    /* colore del testo del titolo */
+  text-transform: uppercase;         /* maiuscolo per dare carattere e distinzione */
+  letter-spacing: 0.06em;           /* spaziatura tra lettere: aumenta per più respiro, diminuisce per più compattezza */
+  margin-top: 1.6rem;               /* spazio sopra il titolo, prima della sezione */
+  margin-bottom: 0.8rem;            /* spazio sotto il titolo, verso il contenuto che segue */
+  padding-bottom: 0.2rem;           /* distanza tra il testo e la linea decorativa */
+  border-bottom: none;              /* disabilita il bordo classico: la linea è gestita sotto */
+  background-image: linear-gradient(to right, #2596be 60%, transparent 100%); /* linea sfumata: cambia il colore o la % per controllare fino a dove rimane piena */
+  background-repeat: no-repeat;     /* evita che il gradiente si ripeta */
+  background-position: bottom;      /* posiziona la linea in fondo al padding */
+  background-size: 100% 2px;        /* larghezza della linea (100% = tutta la larghezza) e spessore (2px) */
+}
