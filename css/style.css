@@ -530,7 +530,7 @@ p {
 
 .articolo-preview h2 a {
     text-decoration: none;             /* rimuove la sottolineatura dai link — rimuovi questa riga se vuoi tenerla */
-    color: #0271c0;                    /* colore del titolo — uguale agli h2 del sito, cambia per un altro colore */
+    color: #2c3e50;                    /* colore del titolo — coerente con gli altri blu */
     transition: color 0.2s;           /* durata animazione cambio colore al hover — 0.2s è veloce, aumenta per più lento */
 }
 
