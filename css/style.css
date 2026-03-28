@@ -1669,7 +1669,7 @@ footer a:hover {
   margin-bottom: 0.8rem;            /* spazio sotto il titolo, verso il contenuto che segue */
   padding-bottom: 0.2rem;           /* distanza tra il testo e la linea decorativa sottostante */
   border-bottom: none;              /* disabilita il bordo classico: la linea è gestita tramite background */
-  background-image: linear-gradient(to right, #2585c9 40%, transparent 100%); /* linea sfumata verso destra: cambia % per controllare dove inizia la sfumatura, cambia colore per modificare il tono */
+  background-image: linear-gradient(to right, #2585c9 30%, transparent 100%); /* linea sfumata verso destra: cambia % per controllare dove inizia la sfumatura, cambia colore per modificare il tono */
   background-repeat: no-repeat;     /* evita che il gradiente si ripeta verticalmente */
   background-position: bottom;      /* ancora la linea al fondo del padding */
   background-size: 100% 2px;        /* larghezza linea (100% = tutta la larghezza del titolo) e spessore (2px) */
