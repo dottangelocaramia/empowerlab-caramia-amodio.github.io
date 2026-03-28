@@ -1661,17 +1661,16 @@ footer a:hover {
 
 .page-section-title {
   font-family: 'Inter', sans-serif;  /* font coerente con il resto del sito */
-  font-size: 1.1rem;                 /* dimensione subordinata all'h1 ma distintiva */
+  font-size: 1.3rem;                 /* dimensione titolo: aumenta per più presenza, diminuisce per più discrezione */
   font-weight: 600;                  /* semibold: visibile ma non aggressivo */
-  color: #2596be;                    /* colore del testo del titolo */
-           /*inserire--- text-transform: uppercase; per ottenere tutto maiuscolo per dare carattere e distinzione */
+  color: #2585c9;                    /* colore del testo: blu coerente col sito */
   letter-spacing: 0.06em;           /* spaziatura tra lettere: aumenta per più respiro, diminuisce per più compattezza */
   margin-top: 1.6rem;               /* spazio sopra il titolo, prima della sezione */
   margin-bottom: 0.8rem;            /* spazio sotto il titolo, verso il contenuto che segue */
-  padding-bottom: 0.2rem;           /* distanza tra il testo e la linea decorativa */
-  border-bottom: none;              /* disabilita il bordo classico: la linea è gestita sotto */
-  background-image: linear-gradient(to right, #2596be 60%, transparent 100%); /* linea sfumata: cambia il colore o la % per controllare fino a dove rimane piena */
-  background-repeat: no-repeat;     /* evita che il gradiente si ripeta */
-  background-position: bottom;      /* posiziona la linea in fondo al padding */
-  background-size: 100% 2px;        /* larghezza della linea (100% = tutta la larghezza) e spessore (2px) */
+  padding-bottom: 0.2rem;           /* distanza tra il testo e la linea decorativa sottostante */
+  border-bottom: none;              /* disabilita il bordo classico: la linea è gestita tramite background */
+  background-image: linear-gradient(to right, #2585c9 40%, transparent 100%); /* linea sfumata verso destra: cambia % per controllare dove inizia la sfumatura, cambia colore per modificare il tono */
+  background-repeat: no-repeat;     /* evita che il gradiente si ripeta verticalmente */
+  background-position: bottom;      /* ancora la linea al fondo del padding */
+  background-size: 100% 2px;        /* larghezza linea (100% = tutta la larghezza del titolo) e spessore (2px) */
 }
