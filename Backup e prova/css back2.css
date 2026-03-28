@@ -1,0 +1,1677 @@
+/* ===========================
+   FONT E BASE
+=========================== */
+body {
+    font-family: 'Inter', Arial, sans-serif; /* font principale di tutto il sito */
+    margin: 0;                                /* rimuove margini di default del browser */
+    background-color: #ffede1;               /* colore sfondo tutte le pagine — uguale al logo */
+    line-height: 1.6;                        /* altezza riga per leggibilità */
+    overflow-x: hidden;                      /* evita scroll orizzontale indesiderato */
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+    background: #2c3e50;                     /* colore sfondo header */
+    border-bottom: 3px solid #2e6da4;        /* linea blu sotto l'header — riduci px per renderla più sottile */
+
+}
+
+#header {
+    position: sticky; /* menu che insegue */
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    width: 100%;                             /* occupa tutta la larghezza */
+    display: flex;                           /* mette nav e logo sulla stessa riga */
+    align-items: center;                     /* allinea verticalmente al centro */
+    justify-content: space-between;         /* nav a sinistra, logo a destra */
+    padding: 12px 40px;                      /* spazio interno: 12px sopra/sotto, 40px sinistra/destra */
+    box-sizing: border-box;                  /* il padding non aggiunge larghezza extra */
+}
+
+.logo-header {
+    display: flex;                           /* mette img e h2 sulla stessa riga */
+    align-items: center;                     /* allinea verticalmente */
+    gap: 14px;                               /* spazio tra logo e scritta */
+    flex-shrink: 0;                          /* impedisce al logo di restringersi */
+}
+
+.logo-header img {
+    height: 45px;                            /* altezza logo nell'header — modifica per ridimensionarlo */
+}
+
+.logo-header h2 {
+    margin: 0;                               /* rimuove margini default dell'h2 */
+    font-size: 1.2em;                        /* dimensione scritta Empower Lab */
+    white-space: nowrap;                     /* impedisce alla scritta di andare a capo */
+}
+
+/* ===========================
+   NAV
+=========================== */
+nav {
+    display: flex;                           /* mette i link in riga orizzontale */
+    align-items: center;                     /* allinea verticalmente */
+    gap: 4px;                                /* spazio tra i link del menu */
+    flex-wrap: nowrap;                       /* impedisce ai link di andare a capo */
+}
+
+nav a {
+    text-decoration: none;                   /* rimuove sottolineatura dai link */
+    font-weight: 600;                        /* grassetto medio */
+    color: white;                            /* colore testo link */
+    padding: 6px 12px;                       /* spazio interno ai link — aumenta per renderli più grandi */
+    border-radius: 4px;                      /* angoli arrotondati al passaggio del mouse */
+    transition: background 0.2s;            /* animazione sfondo al hover */
+    white-space: nowrap;                     /* impedisce ai link di andare a capo */
+}
+
+nav a:hover {
+    color: #f39c12;                          /* colore link al passaggio del mouse */
+    background: rgba(255,255,255,0.08);     /* sfondo leggero al hover */
+}
+
+/* ===========================
+   DROPDOWN SERVIZI
+=========================== */
+.dropdown {
+    position: relative;                      /* necessario per posizionare il menu a tendina */
+    display: inline-block;                   /* si comporta come un elemento inline */
+}
+
+.dropbtn {
+    background: none;                        /* nessuno sfondo */
+    border: none;                            /* nessun bordo */
+    cursor: pointer;                         /* cursore a mano al hover */
+    font-weight: 600;
+    color: white;
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.dropbtn:hover {
+    color: #f39c12;
+    background: rgba(255,255,255,0.08);
+}
+
+.dropdown-content {
+    display: none;                           /* nascosto di default */
+    position: absolute;                      /* si posiziona sotto il bottone */
+    top: 100%;                               /* parte dal basso del bottone */
+    left: 0;
+    background: #2c3e50;
+    border-top: 2px solid #f39c12;          /* linea arancione in cima al dropdown */
+    border-radius: 0 0 8px 8px;            /* angoli arrotondati solo in basso */
+    min-width: 200px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    z-index: 999;                            /* sta sopra tutti gli altri elementi */
+}
+
+.dropdown-content a {
+    display: block;                          /* ogni link occupa una riga */
+    padding: 10px 16px;
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+    background: rgba(255,255,255,0.1);
+    color: #f39c12;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;                          /* mostra il dropdown al passaggio del mouse */
+}
+
+/* ===========================
+   HAMBURGER (solo mobile)
+=========================== */
+.hamburger {
+    display: none;                           /* nascosto su desktop */
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;                             /* larghezza delle 3 linee */
+    height: 3px;                             /* spessore delle 3 linee */
+    background: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;              /* animazione trasformazione in X */
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);  /* linea superiore ruota */
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;                              /* linea centrale sparisce */
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg); /* linea inferiore ruota */
+}
+
+/* ===========================
+   HERO (box grande in cima alla home)
+=========================== */
+.hero {
+    background: linear-gradient(rgba(44,62,80,0.95), rgba(44,62,80,0.95)),
+                url('../images/hero.jpg') no-repeat center center/cover; /* immagine di sfondo con overlay scuro */
+    color: white;
+    text-align: center;
+    padding: 40px 40px;                      /* spazio interno: riduci il primo numero per compattarlo */
+    border-radius: 10px;                     /* angoli arrotondati */
+    margin-top: 20px;                        /* spazio sopra la hero */
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4); /* ombra testo per leggibilità */
+}
+
+.hero-title {
+    font-size: 56px;                         /* dimensione titolo principale hero */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeHero 1.5s ease forwards;  /* animazione entrata dall'alto */
+}
+
+@keyframes fadeHero {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-subtitle {
+    font-size: 22px;                         /* dimensione sottotitolo hero */
+    margin-top: 20px;
+}
+
+/* ===========================
+   CONTAINER CENTRALE
+=========================== */
+.container {
+    max-width: 900px;                        /* larghezza massima dei box centrali */
+    margin: auto;                            /* centra il box nella pagina */
+    background: white;                       /* sfondo bianco dei box */
+    padding: 50px;                           /* spazio interno ai box */
+    margin-top: 30px;                        /* spazio tra i box */
+    border-radius: 10px;                     /* angoli arrotondati */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* ombra leggera */
+}
+
+/* ===========================
+   TITOLI
+=========================== */
+h1 {
+    color: #2c3e50;                          /* colore titoli h1 */
+}
+
+h2 {
+    color: #2c3e50;                          /* colore titoli h2 */
+    font-weight: 600;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+/* ===========================
+   TEAM
+=========================== */
+.team {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.profilo-preview {
+    margin-top: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;           /* linea divisoria tra profili */
+}
+
+.profilo-preview h3 {
+    margin-bottom: 10px;
+}
+
+.profilo-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.profilo-link:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   SERVIZI
+=========================== */
+.servizio {
+    margin-top: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.servizio h2 {
+    margin-bottom: 10px;
+}
+
+.servizio-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.servizio-link:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   FAQ
+=========================== */
+.faq {
+    margin-top: 40px;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: #f4f4f4;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+
+.faq-question:hover {
+    background: #e9e9e9;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: white;
+    border-left: 3px solid #f39c12;         /* linea arancione a sinistra risposta FAQ */
+}
+
+/* ===========================
+   CHI SIAMO BOX
+=========================== */
+.chi-siamo-box {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ===========================
+   FORM CONTATTI
+=========================== */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+.contact-form button {
+    background: #f39c12;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background: #d68910;
+}
+
+/* ===========================
+   PRENOTA
+=========================== */
+.prenota {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.prenota-button {
+    background: #27ae60;                     /* colore verde pulsante prenota */
+    color: white;
+    padding: 18px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.prenota-button:hover {
+    background: #219150;
+}
+
+.container.prenota {
+    max-width: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* ===========================
+   CTA BUTTON
+=========================== */
+.cta-button {
+    display: inline-block;
+    margin-top: 12px;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.cta-button:hover {
+    background: #1a252f;
+}
+
+/* ===========================
+   LOGO (nella hero)
+=========================== */
+.logo img {
+    width: 200px;                            /* dimensione logo nella hero — modifica per ridimensionarlo */
+    height: auto;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background: #2c3e50;                     /* colore sfondo footer */
+    color: white;
+    margin-top: 40px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 12px 20px;                      /* spazio interno footer: riduci primo numero per compattarlo */
+    display: flex;
+    justify-content: space-between;         /* colonne distribuite: prima a sx, ultima a dx */
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-col:first-child {
+    padding-left: 10px;                      /* sposta "Empower Lab" — aumenta per spostarlo a destra */
+}
+
+.footer-col:nth-child(2) {
+    flex: 1.4;                               /* colonna centrale più larga per i link */
+    text-align: center;
+    padding: 0 20px;
+}
+
+.footer-col:last-child {
+    padding-right: 0px;
+    flex: 0.9;
+    text-align: right;
+    white-space: nowrap;                     /* impedisce all'email di andare a capo */
+}
+
+.footer-col h3 {
+    margin-bottom: 5px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    display: inline;                         /* link sulla stessa riga */
+}
+
+.footer-links a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    background: #233140;                     /* striscia copyright — leggermente più scura del footer */
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* ===========================
+   TIPOGRAFIA
+=========================== */
+p {
+    font-size: 17px;
+    line-height: 1.75; /* più arioso */
+    color: #3a3a3a; /* meno nero = più elegante */
+}
+
+.articolo p {
+    font-size: 18px;
+}
+
+
+
+/* ===========================
+   LISTA ARTICOLI pagina pricipale
+=========================== */
+.articolo-preview {
+    padding-bottom: 24px;              /* spazio interno sotto il testo prima della linea — aumenta per più respiro */
+    margin-bottom: 24px;               /* spazio esterno sotto la linea prima del prossimo articolo — aumenta per distanziare di più */
+    border-bottom: 3px solid #f0d9cc; /* linea separatrice — 1px è lo spessore, #f0d9cc è arancione chiaro — cambia con #f39c12 per più visibile o #eee per grigio */
+}
+
+.articolo-preview:last-child {
+    border-bottom: none;               /* rimuove la linea dopo l'ultimo articolo — lascia così */
+    margin-bottom: 0;                  /* rimuove lo spazio sotto l'ultimo articolo — lascia così */
+}
+
+.articolo-preview h2 {
+    margin-top: 0;                     /* spazio sopra il titolo — tienilo a 0 per non allontanarlo dal bordo superiore */
+    margin-bottom: 8px;                /* spazio sotto il titolo prima della descrizione — aumenta per più distanza */
+    font-size: 1.15em;                 /* dimensione titolo articolo — aumenta per ingrandire, riduci per rimpicciolire */
+}
+
+.articolo-preview h2 a {
+    text-decoration: none;             /* rimuove la sottolineatura dai link — rimuovi questa riga se vuoi tenerla */
+    color: #2c3e50;                    /* colore del titolo — coerente con gli altri blu */
+    transition: color 0.2s;           /* durata animazione cambio colore al hover — 0.2s è veloce, aumenta per più lento */
+}
+
+.articolo-preview h2 a:hover {
+    color: #f39c12;                    /* colore del titolo al passaggio del mouse — cambia per altro colore hover */
+}
+
+.articolo-preview p {
+    color: #666;                       /* colore testo descrizione — #666 è grigio medio, #333 più scuro, #999 più chiaro */
+    font-size: 0.95em;                 /* dimensione testo descrizione — leggermente più piccolo del testo normale */
+    margin: 0;                         /* rimuove margini default del paragrafo — aumenta margin-top per distanziarlo dal titolo */
+}
+
+
+/* ===========================
+   ANIMAZIONE TITOLO HEADER (solo home)
+=========================== */
+
+.animate-slide {
+    animation: slideFromRight 0.8s ease forwards;
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);         /* parte da destra — riduci per distanza minore */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ===========================
+   RESPONSIVE TABLET (max 1024px)
+=========================== */
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 12px 24px;
+    }
+
+    nav a,
+    .dropbtn {
+        padding: 5px 9px;
+        font-size: 0.92em;
+    }
+}
+
+/* ===========================
+   RESPONSIVE MOBILE (max 768px)
+=========================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        padding: 12px 20px;
+    }
+
+    .hamburger {
+        display: flex;                       /* mostra hamburger su mobile */
+    }
+
+    nav {
+        display: none;                       /* nasconde il menu su mobile */
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 10px 0;
+    }
+
+    nav.open {
+        display: flex;                       /* mostra il menu quando hamburger è cliccato */
+    }
+
+    nav a,
+    .dropbtn {
+        width: 100%;
+        font-size: 1em;
+        padding: 10px 12px;
+        border-radius: 4px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 6px;
+        margin-top: 4px;
+        min-width: unset;
+        width: 100%;
+    }
+
+    .hero {
+        padding: 30px 20px;                  /* ridotto da 60px — compatta la hero su mobile */
+        margin-top: 16px;
+        border-radius: 0;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 24px 16px;
+        margin-top: 16px;
+    }
+
+    .team {
+        padding: 24px 16px;
+        margin-top: 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prenota-button {
+        font-size: 15px;
+        padding: 14px 20px;
+    }
+
+    .logo-header img,
+    .logo-header h2 {
+        opacity: 1 !important;               /* su mobile disattiva animazione e mostra sempre */
+        animation: none !important;
+        transform: none !important;
+    }
+}
+
+/* ===========================
+   RESPONSIVE SMALL MOBILE (max 480px)
+=========================== */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .logo-header h2 {
+        font-size: 1em;
+    }
+
+    .logo-header img {
+        height: 35px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   servizi nella home
+=========================== */
+
+
+
+.servizi-home{
+
+margin-top:80px;
+
+text-align:center;
+
+}
+
+.servizi-grid{
+
+display:flex;
+
+gap:30px;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.servizio-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:12px;
+
+width:280px;
+
+border:2px solid #0271c0; /** blu classico #cfe8ff */
+
+box-shadow:0 3px 10px rgba(0,0,0,0.08);
+
+transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.servizio-card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+border-color:#4da3ff;
+
+}
+
+.servizio-card h3{
+
+margin-top:0;
+
+color:#2c3e50;
+
+}
+
+.servizio-card a{
+
+display:inline-block;
+
+margin-top:15px;
+
+text-decoration:none;
+
+font-weight:600;
+
+color:#27ae60;
+
+}
+
+
+
+
+
+
+/* Per paragrafi e testi lunghi */
+.box-invisibile-testo {
+  width: 90%;              /* su mobile occupa il 90% evitando di toccare i bordi */
+  max-width: 1250px;        /* su schermi grandi non supera 850px */
+  margin-left: auto;       /* centratura orizzontale */
+  margin-right: auto;      /* centratura orizzontale */
+  margin-top: 1rem;        /* più spazio sopra per dare respiro alla citazione */
+  margin-bottom: 1rem;     /* più spazio sotto per dare respiro alla citazione */
+  padding-left: 1.2rem;    /* respiro laterale sinistro */
+  padding-right: 1.2rem;   /* respiro laterale destro */
+  box-sizing: border-box;  /* padding incluso nella larghezza totale */
+}
+
+/* Per citazioni brevi ad effetto */
+.box-invisibile-citazioni {
+  width: 90%;              /* su mobile occupa il 90% evitando di toccare i bordi */
+  max-width: 620px;        /* più stretto per non disperdere la citazione */
+  margin-left: auto;       /* centratura orizzontale */
+  margin-right: auto;      /* centratura orizzontale */
+  margin-top: 2rem;        /* più spazio sopra per dare respiro alla citazione */
+  margin-bottom: 2rem;     /* più spazio sotto per dare respiro alla citazione */
+  padding-left: 1.2rem;    /* respiro laterale sinistro */
+  padding-right: 1.2rem;   /* respiro laterale destro */
+  box-sizing: border-box;  /* padding incluso nella larghezza totale */
+  text-align: center;      /* testo centrato — ideale per frasi brevi */
+}
+
+
+
+
+.faq-section-title {
+  font-family: 'Inter', sans-serif;  /* coerente con il font del sito */
+  font-size: 1.1rem;                 /* più grande del testo ma subordinato all'h1 */
+  font-weight: 600;                  /* semibold — distintivo ma non aggressivo */
+  color: #5a3e36;                    /* tono caldo, in armonia con #ffede1 */
+  text-transform: uppercase;         /* maiuscolo per dare carattere e distinzione */
+  letter-spacing: 0.10em;           /* spaziatura che accompagna il maiuscolo */
+  margin-top: 1.6rem;                  /* respiro prima di ogni nuova sezione */
+  margin-bottom: 0.5rem;              /* spazio tra il titolo e la prima domanda */
+  padding-bottom: 0.2rem;           /* spazio prima della linea decorativa */
+  border-bottom: 2px solid #ff6f01; /* linea sottile in arancio del cuore — separa visivamente */
+}
+
+
+
+
+ /* PULSANTE DEI CONTATTI NELLE FAQ */
+
+.faq-cta {
+  text-align: center;          /* tutto centrato */
+  margin-top: 4rem;            /* respiro dalla sezione FAQ sopra */
+  margin-bottom: 3rem;         /* respiro dal footer */
+  padding: 2.5rem 1.5rem;      /* spazio interno generoso */
+  border-top: 1px solid #d4a898; /* linea sottile che separa dalla FAQ */
+}
+
+.faq-cta-testo {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;           /* leggermente più grande del testo normale */
+  font-weight: 600;            /* semibold — dà peso alla domanda */
+  color: #5a3e36;              /* tono caldo coerente con il sito */
+  margin-bottom: 1.2rem;       /* spazio tra la frase e il bottone */
+}
+
+.faq-cta-button {
+  display: inline-block;
+  background-color: #6aab7e;        /* verde chiaro */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.8rem 2.2rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease; /* anima sia sfondo che testo */
+}
+
+.faq-cta-button:hover {
+  background-color: #3a6147;        /* verde scuro all'hover */
+  color: #f4a261;                   /* testo arancione all'hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==============================
+   PAGINE SERVIZIO
+  
+============================== */
+
+.servizio-titolo {
+    text-align: center;          /* centra il titolo del servizio */
+    margin-bottom: 10px;         /* spazio sotto il titolo prima della linea */
+    margin-top: 10px;            /* spazio sopra il titolo */
+    font-size: 2em;              /* dimensione titolo — riduci per rimpicciolirlo */
+    color: #2c3e50;              /* colore titolo */
+}
+
+.servizio-linea {
+    width: 80%;                  /* larghezza linea — quasi tutta la pagina */
+    max-width: 720px;            /* larghezza massima su schermi grandi */
+    height: 3px;                 /* spessore linea — aumenta per renderla più spessa */
+    background: #f39c12;         /* colore arancione coerente col sito */
+    margin: 0 auto 24px auto;    /* centrata, con spazio sotto */
+    border-radius: 2px;          /* angoli leggermente arrotondati */
+}
+
+
+
+.servizio-sottotitolo {
+
+    text-align: center;
+
+    font-style: italic; /* corsivo */
+
+    font-size: 1.15em;   /* leggermente più grande del testo normale */
+
+    color: #6b6b6b; /* leggermente più morbido → più elegante */
+
+    max-width: 600px; /* limita larghezza → effetto editoriale (tipo libro/rivista) */
+
+    margin-left: auto; /* centratura */
+    margin-right: auto; /* centratura */
+
+    margin-bottom: 40px; /* spazio sotto prima delle sezioni */
+
+    line-height: 1.7;  /* altezza riga per leggibilità */
+}
+
+
+
+.servizio-minititolo {
+    color: #2c3e50;              /* colore testo — uguale ai titoli del sito */
+    font-size: 1em;              /* dimensione — aumenta per ingrandire */
+    text-transform: uppercase;   /* tutto maiuscolo — rimuovi se non vuoi */
+    letter-spacing: 1.5px;       /* spaziatura lettere */
+    margin-top: 35px;            /* spazio sopra ogni minititolo */
+    margin-bottom: 8px;          /* spazio sotto tra minititolo e paragrafo */
+    padding-bottom: 4px;         /* spazio interno sotto */
+    border-bottom: 1px solid #f0d9cc; /* linea sottile sotto ogni minititolo */
+}
+
+
+
+
+.servizio-minititolo::after{
+    content: "";              /* elemento decorativo */
+    display: block;
+
+    width: 30px;              /* lunghezza accento — aumenta per più visibilità */
+    height: 2px;
+
+    background: #f39c12;      /* colore arancione */
+
+    margin-top: 6px;          /* distanza dal testo */
+}
+
+
+
+
+.servizio-testo {
+    color: #444;                 /* colore testo paragrafi */
+    line-height: 1.8;            /* altezza riga per leggibilità */
+    margin-top: 8px;             /* spazio sopra il paragrafo */
+}
+
+/* ==============================
+   SEZIONE FEEDBACK
+============================== */
+
+.feedback-sezione-titolo {
+    text-align: center;          /* centra il titolo sezione feedback */
+    margin-top: 50px;            /* spazio sopra la sezione */
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.feedback-linea {
+    width: 60px;                 /* linea corta decorativa sotto il titolo */
+    height: 3px;
+    background: #f39c12;
+    margin: 0 auto 30px auto;
+    border-radius: 2px;
+}
+
+.feedback-card {
+    background: #fff8f4;         /* sfondo caldo coerente con il colore del sito */
+    border-left: 4px solid #f39c12; /* bordo arancione a sinistra */
+    border-radius: 8px;          /* angoli arrotondati */
+    padding: 20px 24px;          /* spazio interno */
+    margin-bottom: 20px;         /* spazio tra una card e l'altra */
+}
+
+.feedback-testo {
+    font-style: italic;          /* corsivo per la citazione */
+    color: #444;
+    margin: 0 0 10px 0;          /* spazio sotto il testo prima del nome */
+    line-height: 1.7;
+}
+
+.feedback-autore {
+    font-weight: 600;            /* grassetto per il nome */
+    color: #2c3e50;
+    margin: 0;
+    font-size: 0.9em;            /* leggermente più piccolo del testo */
+}
+
+/* ==============================
+   CTA FINALE (Contattaci)
+============================== */
+
+.faq-cta {
+    text-align: center;          /* centra tutto il contenuto */
+    background: #2c3e50;         /* sfondo scuro uguale all'header */
+    padding: 40px 20px;          /* spazio interno */
+    margin-top: 40px;            /* spazio sopra */
+}
+
+.faq-cta-testo {
+    color: white;                /* testo bianco su sfondo scuro */
+    font-size: 1.3em;            /* dimensione testo */
+    margin-bottom: 16px;         /* spazio sotto prima del pulsante */
+}
+
+.faq-cta-button {
+    display: inline-block;       /* si comporta come blocco ma inline */
+    background: #f39c12;         /* colore arancione */
+    color: white;
+    padding: 12px 32px;          /* spazio interno pulsante */
+    border-radius: 8px;          /* angoli arrotondati */
+    text-decoration: none;       /* rimuove sottolineatura */
+    font-weight: 700;            /* grassetto */
+    font-size: 1em;
+    transition: background 0.2s; /* animazione hover */
+}
+
+.faq-cta-button:hover {
+    background: #d68910;         /* colore più scuro al passaggio del mouse */
+}
+
+/* ==============================
+   RESPONSIVE MOBILE (max 768px)
+============================== */
+@media (max-width: 768px) {
+    .servizio-titolo {
+        font-size: 1.5em;        /* titolo più piccolo su mobile */
+    }
+
+    .servizio-linea {
+        width: 90%;              /* linea quasi piena su mobile */
+    }
+
+    .servizio-sottotitolo {
+        font-size: 1em;          /* sottotitolo ridotto su mobile */
+        margin-bottom: 24px;
+    }
+
+    .servizio-minititolo {
+        font-size: 0.95em;       /* minititoli leggermente ridotti */
+    }
+
+    .feedback-card {
+        padding: 16px;           /* meno padding nelle card su mobile */
+    }
+
+    .faq-cta {
+        padding: 30px 16px;      /* CTA più compatta su mobile */
+    }
+
+    .faq-cta-testo {
+        font-size: 1.1em;        /* testo CTA ridotto su mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==============================
+   TEMPLATE ARTICOLO
+   Incolla in fondo al tuo style.css
+============================== */
+
+.articolo-categoria {
+    text-align: center;           /* centra la categoria */
+    font-size: 0.85em;            /* più piccolo del testo normale */
+    color: #f39c12;               /* arancione coerente col sito */
+    font-weight: 600;
+    letter-spacing: 2px;          /* spaziatura lettere per effetto etichetta */
+    text-transform: uppercase;    /* tutto maiuscolo */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.articolo-titolo {
+    text-align: center;           /* centra il titolo */
+    font-size: 2em;               /* grande e d'impatto — riduci se troppo grande */
+    color: #2c3e50;
+    margin-bottom: 12px;
+    line-height: 1.3;             /* interlinea stretta per titoli lunghi */
+}
+
+.articolo-linea {
+    width: 80%;                   /* quasi tutta la larghezza del container */
+    max-width: 720px;             /* limite su schermi grandi */
+    height: 3px;
+    background: #f39c12;          /* arancione coerente */
+    margin: 0 auto 20px auto;     /* centrata con spazio sotto */
+    border-radius: 2px;
+}
+
+.articolo-sottotitolo {
+    text-align: center;           /* centra il sottotitolo */
+    font-style: italic;           /* corsivo */
+    font-size: 1.15em;            /* leggermente più grande del testo */
+    color: #555;
+    margin-bottom: 16px;
+    line-height: 1.7;
+}
+
+.meta-articolo {
+    text-align: center;           /* centra data e autore */
+    color: #999;                  /* grigio chiaro — secondario rispetto al testo */
+    font-size: 0.88em;
+    margin-bottom: 30px;
+}
+
+/* IMMAGINE con trasparenza elegante */
+.articolo-immagine {
+    margin: 30px 0;               /* spazio sopra e sotto l'immagine */
+    border-radius: 10px;          /* angoli arrotondati */
+    overflow: hidden;             /* nasconde gli angoli dell'img */
+    opacity: 0.82;                /* trasparenza — abbassa verso 0.6 per più trasparenza */
+    transition: opacity 0.3s;    /* dissolvenza al passaggio del mouse */
+}
+
+.articolo-immagine:hover {
+    opacity: 1;                   /* piena visibilità al hover */
+}
+
+.articolo-immagine img {
+    width: 100%;                  /* occupa tutta la larghezza del container */
+    height: 280px;                /* altezza fissa — modifica per più o meno alta */
+    object-fit: cover;            /* ritaglia mantenendo le proporzioni */
+    display: block;
+}
+
+/* immagine più piccola per le intermedie */
+.articolo-immagine--small img {
+    height: 180px;                /* più bassa delle immagini principali */
+}
+
+/* PARAGRAFO INTRODUTTIVO */
+.articolo-intro {
+    font-size: 1.08em;            /* leggermente più grande del testo normale */
+    color: #333;
+    line-height: 1.9;             /* interlinea ampia per leggibilità */
+    border-left: 3px solid #f39c12; /* bordo arancione a sinistra */
+    padding-left: 16px;           /* spazio tra bordo e testo */
+    margin-bottom: 30px;
+}
+
+/* SOTTOTITOLI DELLE SEZIONI */
+.articolo-h2 {
+    font-size: 1.25em;            /* più piccolo dell'h1 ma ben visibile */
+    color: #2c3e50;
+    margin-top: 40px;             /* spazio sopra ogni sezione */
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #f0d9cc; /* linea sottile sotto il titolo sezione */
+}
+
+/* CITAZIONE IN EVIDENZA */
+.articolo-citazione {
+    background: #fff8f4;          /* sfondo caldo coerente col sito */
+    border-left: 4px solid #f39c12; /* bordo arancione a sinistra */
+    border-radius: 0 8px 8px 0;  /* angoli arrotondati solo a destra */
+    padding: 18px 24px;           /* spazio interno */
+    margin: 30px 0;               /* spazio sopra e sotto */
+    font-style: italic;           /* corsivo */
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* SEPARATORE FINE ARTICOLO */
+.articolo-fine {
+    width: 40px;                  /* linea corta centrata */
+    height: 3px;
+    background: #f39c12;
+    margin: 40px auto 30px auto;
+    border-radius: 2px;
+}
+
+/* BOX AUTORE */
+.articolo-autore-box {
+    background: #f9f9f9;          /* sfondo leggermente grigio */
+    border-radius: 10px;
+    padding: 20px 24px;           /* spazio interno */
+    margin-top: 10px;
+    border: 1px solid #eee;       /* bordo sottile */
+}
+
+.articolo-autore-nome {
+    font-weight: 700;             /* grassetto per il nome */
+    color: #2c3e50;
+    margin: 0 0 6px 0;
+    font-size: 1em;
+}
+
+.articolo-autore-bio {
+    color: #666;                  /* grigio medio */
+    font-size: 0.9em;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ==============================
+   RESPONSIVE MOBILE (max 768px)
+============================== */
+@media (max-width: 768px) {
+    .articolo-titolo {
+        font-size: 1.5em;         /* titolo ridotto su mobile */
+    }
+
+    .articolo-linea {
+        width: 90%;               /* linea quasi piena su mobile */
+    }
+
+    .articolo-sottotitolo {
+        font-size: 1em;
+    }
+
+    .articolo-immagine img {
+        height: 200px;            /* immagini più basse su mobile */
+    }
+
+    .articolo-immagine--small img {
+        height: 140px;
+    }
+
+    .articolo-intro {
+        font-size: 1em;
+        padding-left: 12px;
+    }
+
+    .articolo-citazione {
+        padding: 14px 16px;
+        font-size: 1em;
+    }
+
+    .articolo-autore-box {
+        padding: 16px;
+    }
+}
+
+
+/* ==============================
+   CITAZIONE FINALE ARTICOLO
+============================== */
+
+.articolo-citazione-finale {
+    background: #2c3e50;          /* sfondo scuro elegante — cambia colore se vuoi */
+    border-radius: 12px;          /* angoli arrotondati */
+    padding: 30px 36px;           /* spazio interno — riduci per compattare */
+    margin: 40px 0 30px 0;        /* spazio sopra e sotto */
+    text-align: center;           /* tutto centrato */
+}
+
+.articolo-citazione-finale-titolo {
+    color: #f39c12;               /* arancione coerente col sito */
+    font-size: 1em;               /* piccolo, funge da etichetta */
+    text-transform: uppercase;    /* tutto maiuscolo */
+    letter-spacing: 2px;          /* spaziatura lettere */
+    margin-bottom: 16px;
+    margin-top: 0;
+    border-bottom: none;          /* annulla il border-bottom degli h2 normali */
+    padding-bottom: 0;
+}
+
+.articolo-citazione-finale-testo {
+    color: #ffffff;               /* bianco su sfondo scuro */
+    font-size: 1.2em;             /* grande e d'impatto */
+    font-style: italic;           /* corsivo */
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.articolo-citazione-finale-autore {
+    font-family: 'Raleway', sans-serif; /* font diverso per distinguerlo */
+    font-style: italic;
+    font-size: 0.85em;
+    color: #aaa;                  /* grigio chiaro su sfondo scuro */
+    margin-top: -6px;             /* avvicina al testo sopra */
+    letter-spacing: 0.5px;
+}
+
+/* ==============================
+   BIBLIOGRAFIA A TENDINA
+============================== */
+
+.bibliografia {
+    margin: 20px 0 30px 0;       /* spazio sopra e sotto */
+}
+
+.bibliografia-btn {
+    background: none;             /* nessuno sfondo */
+    border: 1.5px solid #d0bfb5; /* bordo sottile color sabbia — cambia colore se vuoi */
+    border-radius: 6px;           /* angoli arrotondati */
+    padding: 10px 20px;           /* spazio interno pulsante */
+    font-size: 0.9em;
+    font-family: 'Inter', sans-serif;
+    color: #555;                  /* grigio medio */
+    cursor: pointer;              /* cursore a mano */
+    transition: all 0.2s;        /* animazione hover */
+    display: block;               /* occupa tutta la larghezza */
+    width: 100%;
+    text-align: left;             /* testo allineato a sinistra */
+}
+
+.bibliografia-btn:hover {
+    background: #fff8f4;          /* sfondo caldo al hover */
+    border-color: #f39c12;        /* bordo arancione al hover */
+    color: #2c3e50;               /* testo più scuro al hover */
+}
+
+.bibliografia-contenuto {
+    display: none;                /* nascosta di default */
+    background: #fafafa;          /* sfondo leggermente grigio */
+    border: 1px solid #eee;       /* bordo sottile */
+    border-top: none;             /* nessun bordo in cima — collegato visivamente al pulsante */
+    border-radius: 0 0 6px 6px;  /* angoli arrotondati solo in basso */
+    padding: 16px 20px;           /* spazio interno */
+}
+
+/* quando la classe .aperta è aggiunta dal JS, mostra il contenuto */
+.bibliografia.aperta .bibliografia-contenuto {
+    display: block;               /* visibile quando tendina è aperta */
+}
+
+/* ruota la freccia quando aperta */
+.bibliografia.aperta .bibliografia-btn {
+    border-radius: 6px 6px 0 0;  /* angoli arrotondati solo in alto quando aperta */
+    border-color: #f39c12;        /* bordo arancione quando aperta */
+    color: #2c3e50;
+}
+
+.bibliografia-lista {
+    margin: 0;                    /* rimuove margini default dell'ul */
+    padding-left: 20px;           /* rientro lista */
+}
+
+.bibliografia-lista li {
+    font-size: 0.88em;            /* più piccolo del testo normale */
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 8px;           /* spazio tra le voci */
+}
+
+.bibliografia-lista li:last-child {
+    margin-bottom: 0;             /* rimuove spazio sotto l'ultima voce */
+}
+
+/* ==============================
+   RESPONSIVE MOBILE
+============================== */
+@media (max-width: 768px) {
+    .articolo-citazione-finale {
+        padding: 22px 20px;       /* meno padding su mobile */
+    }
+
+    .articolo-citazione-finale-testo {
+        font-size: 1.05em;        /* testo leggermente ridotto */
+    }
+
+    .bibliografia-btn {
+        font-size: 0.85em;
+    }
+}
+
+
+
+
+
+/* ===========================
+   FIX DROPDOWN MOBILE
+=========================== */
+@media (max-width: 768px) {
+
+    /* disabilita hover desktop su mobile */
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    /* apre il dropdown solo quando JS aggiunge la classe */
+    .dropdown.open-dropdown .dropdown-content {
+        display: block;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .dropbtn {
+        text-align: left; /* allinea "Servizi" come gli altri link */
+    }
+}
+
+
+
+
+/* PER PAGINA FORMAZIONE CON DUE BOX */
+
+.servizi-nav{
+
+display:flex;
+
+gap:30px;
+
+margin:40px 0;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.servizio-nav-box{
+
+flex:1;
+
+min-width:280px;
+
+max-width:450px;
+
+background:white;
+
+padding:30px;
+
+border-radius:12px;
+
+border:2px solid #cfe8ff;
+
+text-decoration:none;
+
+color:#2c3e50;
+
+transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+
+}
+
+.servizio-nav-box:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+border-color:#4da3ff;
+
+}
+
+.servizio-nav-box h3{
+
+margin-top:0;
+
+}
+
+.servizio-nav-box p{
+
+margin-bottom:0;
+
+font-size:16px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* per pagina CORSI  */
+/* BLOCCO GENERALE */
+.corsi-sezione{
+margin-top:40px;
+}
+
+/* TENDINA */
+.corsi-toggle{
+
+    background: white; /* più pulito rispetto al grigio */
+
+    padding:15px 20px;
+
+    cursor:pointer;
+
+    border-radius:10px; /* leggermente più morbido */
+
+    margin-top:20px;
+
+    border: 1px solid #eee; /* bordo leggero invece del blocco pieno */
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04); /* ombra molto soft */
+
+    transition: all 0.2s ease; /* animazione fluida */
+}
+
+/* effetto hover */
+.corsi-toggle:hover{
+    background:#fafafa; /* leggero cambio colore */
+}
+
+
+
+.corsi-toggle h2{
+margin:0;
+}
+
+/* CONTENUTO NASCOSTO */
+.corsi-content{
+display:none;
+margin-top:20px;
+}
+
+/* GRID */
+/* GRID */
+.corsi-grid {
+    display: flex;
+    gap: 30px;                        /* spazio tra le card */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;             /* forza tutte le card alla stessa altezza */
+}
+
+/* CARD */
+.corso-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-decoration: none;
+    color: #2c3e50;
+    display: flex;                    /* contenuto in colonna per permettere altezza uguale */
+    flex-direction: column;
+    width: 220px;                     /* larghezza fissa uguale per tutte — modifica se vuoi più larghe */
+}
+
+.corso-card:hover {
+    transform: translateY(-10px);     /* spostamento più evidente al hover — era -6px */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.18); /* ombra più grande e intensa al hover */
+}
+
+.corso-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    text-align: center;               /* centra il titolo */
+    color: #2c3e50;
+}
+
+.corso-card:hover h3 {
+    color: #4da3ff;                   /* colore titolo al hover */
+}
+
+.corso-card p {
+    font-size: 0.95em;
+    color: #666;
+    margin: 0;
+    text-align: center;               /* centra il testo descrizione */
+}
+
+.corso-card {
+    text-decoration: none;
+    color: #2c3e50;
+    display: flex;                    /* lascia flex — non sovrascrivere con block */
+    flex-direction: column;
+}
+
+.corsi-toggle h2 {
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+
+
+
+/* ============================= */
+/* LINEA lunga in stile editoriale RIUTILIZZABILE leggermente decentrata sulla sinistra*/
+/* ============================= */
+.linea-editoriale{
+
+    width: 100%;                 /* larghezza piena */
+    height: 2px;                 /* spessore linea — puoi portarlo a 1.5px per più eleganza */
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #ff8326 15%,
+        #ff8326 85%,  /* Colore della linea (arancione del logo) */
+        transparent
+    ); /* effetto sfumato ai lati — aumenta 15/85 per linea più corta */
+
+    margin-top: 8px;             /* POCO spazio sopra → vicino al titolo */
+    margin-bottom: 28px;         /* PIÙ spazio sotto → separa dal contenuto */
+
+    border-radius: 2px;
+    opacity: 0.85;               /* leggermente meno forte — più elegante */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* prova per migliorare i titoli ------------------------------------- */
+h1, h2, h3 {
+    letter-spacing: 0.3px; /* micro spacing */
+}
+
+
+
+
+
+
+
+/* ===========================
+   FIX COLORI FOOTER Forzatura footer con colore in bianco
+=========================== */
+footer p,
+footer a,
+footer h3,
+footer span {
+    color: white;                /* forza il bianco su tutti i testi del footer */
+}
+
+footer a:hover {
+    color: #f39c12;              /* arancione solo al hover */
+}
+
+.footer-bottom p {
+    color: #ccc;                 /* grigio chiaro per il copyright */
+    margin: 0;
+}
+
+
+
+
+
+
+/* formattazione di titoli intermedi con riga blu sotto sfumata - testato su Founder della pagina CHI SIAMO */
+
+.page-section-title {
+  font-family: 'Inter', sans-serif;  /* font coerente con il resto del sito */
+  font-size: 1.1rem;                 /* dimensione subordinata all'h1 ma distintiva */
+  font-weight: 600;                  /* semibold: visibile ma non aggressivo */
+  color: #2596be;                    /* colore del testo del titolo */
+           /*inserire--- text-transform: uppercase; per ottenere tutto maiuscolo per dare carattere e distinzione */
+  letter-spacing: 0.06em;           /* spaziatura tra lettere: aumenta per più respiro, diminuisce per più compattezza */
+  margin-top: 1.6rem;               /* spazio sopra il titolo, prima della sezione */
+  margin-bottom: 0.8rem;            /* spazio sotto il titolo, verso il contenuto che segue */
+  padding-bottom: 0.2rem;           /* distanza tra il testo e la linea decorativa */
+  border-bottom: none;              /* disabilita il bordo classico: la linea è gestita sotto */
+  background-image: linear-gradient(to right, #2596be 60%, transparent 100%); /* linea sfumata: cambia il colore o la % per controllare fino a dove rimane piena */
+  background-repeat: no-repeat;     /* evita che il gradiente si ripeta */
+  background-position: bottom;      /* posiziona la linea in fondo al padding */
+  background-size: 100% 2px;        /* larghezza della linea (100% = tutta la larghezza) e spessore (2px) */
+}
