@@ -211,7 +211,7 @@ nav a:hover {
     max-width: 900px;                        /* larghezza massima dei box centrali */
     margin: auto;                            /* centra il box nella pagina */
     background: white;                       /* sfondo bianco dei box */
-    padding: 40px;                           /* spazio interno ai box */
+    padding: 50px;                           /* spazio interno ai box */
     margin-top: 30px;                        /* spazio tra i box */
     border-radius: 10px;                     /* angoli arrotondati */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* ombra leggera */
@@ -893,14 +893,29 @@ color:#27ae60;
     border-radius: 2px;          /* angoli leggermente arrotondati */
 }
 
+
+
 .servizio-sottotitolo {
-    text-align: center;          /* centra il sottotitolo */
-    font-style: italic;          /* corsivo */
-    font-size: 1.15em;           /* leggermente più grande del testo normale */
-    color: #555;                 /* grigio medio */
-    margin-bottom: 40px;         /* spazio sotto prima delle sezioni */
-    line-height: 1.7;            /* altezza riga per leggibilità */
+
+    text-align: center;
+
+    font-style: italic; /* corsivo */
+
+    font-size: 1.15em;   /* leggermente più grande del testo normale */
+
+    color: #6b6b6b; /* leggermente più morbido → più elegante */
+
+    max-width: 600px; /* limita larghezza → effetto editoriale (tipo libro/rivista) */
+
+    margin-left: auto; /* centratura */
+    margin-right: auto; /* centratura */
+
+    margin-bottom: 40px; /* spazio sotto prima delle sezioni */
+
+    line-height: 1.7;  /* altezza riga per leggibilità */
 }
+
+
 
 .servizio-minititolo {
     color: #2c3e50;              /* colore testo — uguale ai titoli del sito */
@@ -912,6 +927,24 @@ color:#27ae60;
     padding-bottom: 4px;         /* spazio interno sotto */
     border-bottom: 1px solid #f0d9cc; /* linea sottile sotto ogni minititolo */
 }
+
+
+
+
+.servizio-minititolo::after{
+    content: "";              /* elemento decorativo */
+    display: block;
+
+    width: 30px;              /* lunghezza accento — aumenta per più visibilità */
+    height: 2px;
+
+    background: #f39c12;      /* colore arancione */
+
+    margin-top: 6px;          /* distanza dal testo */
+}
+
+
+
 
 .servizio-testo {
     color: #444;                 /* colore testo paragrafi */
@@ -1452,12 +1485,30 @@ margin-top:40px;
 
 /* TENDINA */
 .corsi-toggle{
-background:#ecf0f1;
-padding:15px 20px;
-cursor:pointer;
-border-radius:8px;
-margin-top:20px;
+
+    background: white; /* più pulito rispetto al grigio */
+
+    padding:15px 20px;
+
+    cursor:pointer;
+
+    border-radius:10px; /* leggermente più morbido */
+
+    margin-top:20px;
+
+    border: 1px solid #eee; /* bordo leggero invece del blocco pieno */
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04); /* ombra molto soft */
+
+    transition: all 0.2s ease; /* animazione fluida */
 }
+
+/* effetto hover */
+.corsi-toggle:hover{
+    background:#fafafa; /* leggero cambio colore */
+}
+
+
 
 .corsi-toggle h2{
 margin:0;
@@ -1500,6 +1551,25 @@ justify-content:center;
 }
 
 
+
+
+.corso-card h3{
+    font-size: 1.1em;      /* titolo leggermente più compatto */
+    margin-bottom: 10px;   /* spazio tra titolo e descrizione */
+}
+
+.corso-card p{
+    font-size: 0.95em;     /* testo leggermente più piccolo → più gerarchia */
+    color: #666;           /* grigio più morbido → meno “pesante” */
+}
+
+
+
+
+
+
+
+
 /* estetica corso card per click */
 .corso-card{
 text-decoration:none;
@@ -1523,25 +1593,25 @@ letter-spacing:1px;
 /* ============================= */
 /* LINEA lunga in stile editoriale RIUTILIZZABILE leggermente decentrata sulla sinistra*/
 /* ============================= */
-
 .linea-editoriale{
 
-    /* Larghezza della linea */
-    width: 100%;  /* se lo si vuole tagliato ridurre da 100 a 70 e cosi via */
-    
-    /* Altezza (spessore della linea) */
-    height: 2px;
+    width: 100%;                 /* larghezza piena */
+    height: 2px;                 /* spessore linea — puoi portarlo a 1.5px per più eleganza */
 
-    /* Colore della linea (arancione del logo) */
-    background-color: #ff8326; /* arancione più chiaro  #ffede1;*/
+    background: linear-gradient(
+        to right,
+        transparent,
+        #ff8326 15%,
+        #ff8326 85%,  /* Colore della linea (arancione del logo) */
+        transparent
+    ); /* effetto sfumato ai lati — aumenta 15/85 per linea più corta */
 
-    /* Spazio sopra e sotto la linea */
-    margin: 20px 0;
+    margin-top: 8px;             /* POCO spazio sopra → vicino al titolo */
+    margin-bottom: 28px;         /* PIÙ spazio sotto → separa dal contenuto */
 
-    /* Rende la linea più “morbida” visivamente */
     border-radius: 2px;
+    opacity: 0.85;               /* leggermente meno forte — più elegante */
 }
-
 
 
 
