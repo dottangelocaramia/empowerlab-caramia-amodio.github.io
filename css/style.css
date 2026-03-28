@@ -498,6 +498,8 @@ footer {
 =========================== */
 p {
     font-size: 17px;
+    line-height: 1.75; /* più arioso */
+    color: #3a3a3a; /* meno nero = più elegante */
 }
 
 .articolo p {
@@ -1477,17 +1479,24 @@ justify-content:center;
 
 /* CARD */
 .corso-card{
-background:white;
-padding:25px;
-border-radius:12px;
-border:2px solid #cfe8ff;
-width:280px;
-transition:transform 0.3s, box-shadow 0.3s;
+
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+
+    border: 1px solid rgba(0,0,0,0.06); /* meno pesante del bordo blu */
+
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06); /* ombra più morbida */
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .corso-card:hover{
-transform:translateY(-5px);
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12); /* più profondità */
+
 }
 
 
@@ -1532,3 +1541,25 @@ letter-spacing:1px;
     /* Rende la linea più “morbida” visivamente */
     border-radius: 2px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* prova per migliorare i titoli ------------------------------------- */
+h1, h2, h3 {
+    letter-spacing: 0.3px; /* micro spacing */
+}
+
