@@ -1633,3 +1633,27 @@ h1, h2, h3 {
     letter-spacing: 0.3px; /* micro spacing */
 }
 
+
+
+
+
+
+
+/* ===========================
+   FIX COLORI FOOTER Forzatura footer con colore in bianco
+=========================== */
+footer p,
+footer a,
+footer h3,
+footer span {
+    color: white;                /* forza il bianco su tutti i testi del footer */
+}
+
+footer a:hover {
+    color: #f39c12;              /* arancione solo al hover */
+}
+
+.footer-bottom p {
+    color: #ccc;                 /* grigio chiaro per il copyright */
+    margin: 0;
+}
