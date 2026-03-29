@@ -1690,12 +1690,12 @@ footer a:hover {
 /* linea separatrice sottile e elegante — usabile tra sezioni di qualsiasi pagina */
 .linea-separatrice {
   border: none;              /* rimuove il bordo di default dell'elemento <hr> */
-  border-top: 1px solid #cccccc; /* linea superiore: aumenta px per più spessore, cambia colore per tono diverso */
-  opacity: 0.6;              /* trasparenza: 1 = piena, 0 = invisibile, 0.6 = delicata ma visibile */
-  margin-top: 1rem;          /* spazio sopra la linea, tra lei e la sezione precedente */
-  margin-bottom: 2rem;       /* spazio sotto la linea, tra lei e la sezione successiva */
-  margin-left: 0;            /* distanza dal bordo sinistro: aumenta per rientrare */
-  margin-right: 0;           /* distanza dal bordo destro: aumenta per accorciare da destra */
+  border-top: 0.8px solid #cccccc; /* linea superiore: aumenta px per più spessore, cambia colore per tono diverso */
+  opacity: 0.5;              /* trasparenza: 1 = piena, 0 = invisibile, 0.6 = delicata ma visibile */
+  margin-top: 1.5rem;          /* spazio sopra la linea, tra lei e la sezione precedente */
+  margin-bottom: 1.5rem;       /* spazio sotto la linea, tra lei e la sezione successiva */
+  margin-left: 1;            /* distanza dal bordo sinistro: aumenta per rientrare */
+  margin-right: 1;           /* distanza dal bordo destro: aumenta per accorciare da destra */
   width: 100%;               /* larghezza: 100% = tutta la larghezza del contenitore */
   display: block;            /* si comporta come blocco, va a capo rispetto al contenuto */
 }
