@@ -1,32 +1,18 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
 <title>Contatti – EmpowerLab</title>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- aggiunto: carica le icone Font Awesome -->
 <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body>
-
-
-
 <div id="header"></div>
-
 <script src="js/menu.js"></script>
-
   
-
-  
-
 <div class="container">
-
 <div style="text-align: center;"><h1>Contatti</h1></div>
 <div class="linea-editoriale"></div>
   
@@ -34,59 +20,39 @@
 Se desideri ricevere informazioni sui percorsi psicologici o sui seminari di Empower Lab,
 puoi contattarci utilizzando uno dei canali qui sotto.
 </p>
-
 <h2>WhatsApp</h2>
-
 <p>
 Per informazioni rapide puoi scriverci su WhatsApp.
 </p>
-
 <p>
 <a href="https://wa.me/3465116313" class="prenota-button">
-Scrivici su WhatsApp
+  <i class="fa-brands fa-whatsapp"></i> Scrivici su WhatsApp <!-- aggiunto: icona WhatsApp prima del testo -->
 </a>
 </p>
-
-
 <h2>Email</h2>
-
 <p>
 Puoi scriverci anche via email: emailtemporanea@gmail.com
 </p>
-
-
-
 <h2>Dove riceviamo</h2>
-
 <p>
 In presenza (Bari) e online. 
 </p>
-
 <br>
 <h2>Richiedi informazioni</h2>
-
 <p>
 Se hai domande sui percorsi o desideri fissare un primo colloquio conoscitivo,
 scrivici e ti risponderemo nel più breve tempo possibile.
 </p>
-
 </div>
-
-
-
   
 <div class="container">
-
 <h2>Ricevi informazioni via email</h2>
-
 <p>
 Compila il modulo qui sotto e ti risponderemo entro 2 giorni lavorativi.
 </p>
-
 <div class="contact-form">
-
 <iframe 
-src="INCOLLA_QUI_LINK_GOOGLE_FORM" <!-- attenzione bisogna creare il modulo google -->
+src="INCOLLA_QUI_LINK_GOOGLE_FORM"
 width="100%" 
 height="850" 
 frameborder="0" 
@@ -94,28 +60,17 @@ marginheight="0"
 marginwidth="0">
 Caricamento…
 </iframe>
-
 </div>
-
 </div>
   
-
 <div id="footer"></div>
-
 <script>
-
 fetch("template/footer.html")
 .then(response => response.text())
 .then(data => {
 document.getElementById("footer").innerHTML = data;
 });
-
 </script>
-
-
-  
-
   
 </body>
-
 </html>
