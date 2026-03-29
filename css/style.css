@@ -1672,5 +1672,5 @@ footer a:hover {
   background-image: linear-gradient(to right, #2c3e50 30%, transparent 100%); /* linea sfumata verso destra: cambia % per controllare dove inizia la sfumatura, cambia colore per modificare il tono */
   background-repeat: no-repeat;     /* evita che il gradiente si ripeta verticalmente */
   background-position: bottom;      /* ancora la linea al fondo del padding */
-  background-size: 50% 2px;        /* larghezza linea (50% = metà larghezza del titolo) e spessore (2px) */
+  background-size: 100% 2px;        /* larghezza/lunghezza linea (se 50% = metà larghezza del titolo) e spessore (2px) */
 }
