@@ -829,9 +829,9 @@ color:#27ae60;
 
 .faq-cta {
   text-align: center;          /* tutto centrato */
-  margin-top: 4rem;            /* respiro dalla sezione FAQ sopra */
+  margin-top: 3.5rem;            /* respiro dalla sezione FAQ sopra */
   margin-bottom: 3rem;         /* respiro dal footer */
-  padding: 1.2rem 1.5rem;      /* ridotto da 2.5rem a 1.2rem: abbassa l'altezza del blocco. Aumenta per più respiro, diminuisce per più compattezza */
+  padding: 0.9rem 1.5rem;      /* ridotto a 0.9 rem: abbassa l'altezza del blocco. Aumenta per più respiro, diminuisce per più compattezza */
   border-top: 1px solid #d4a898; /* linea sottile che separa dalla FAQ */
 }
 
