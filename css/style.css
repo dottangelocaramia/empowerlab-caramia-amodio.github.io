@@ -831,7 +831,7 @@ color:#27ae60;
   text-align: center;          /* tutto centrato */
   margin-top: 4rem;            /* respiro dalla sezione FAQ sopra */
   margin-bottom: 3rem;         /* respiro dal footer */
-  padding: 2.5rem 1.5rem;      /* spazio interno generoso */
+  padding: 1.2rem 1.5rem;      /* ridotto da 2.5rem a 1.2rem: abbassa l'altezza del blocco. Aumenta per più respiro, diminuisce per più compattezza */
   border-top: 1px solid #d4a898; /* linea sottile che separa dalla FAQ */
 }
 
