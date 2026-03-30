@@ -1787,3 +1787,19 @@ footer a:hover {
 
 
 
+
+
+
+.whatsapp-icon {
+  color: #25d366;              /* verde ufficiale WhatsApp */
+  font-size: 1.4rem;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+}
+
+.whatsapp-icon:hover {
+  opacity: 0.7;
+}
+
+
+
