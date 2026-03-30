@@ -1756,14 +1756,14 @@ footer a:hover {
 
 
 .instagram-icon-piccola {
-  color: #ffffff;              /* colore icona: viola Instagram #bc1888; , cambia a #ffffff se su sfondo scuro */
+  color: #bc1888;              /* colore icona: viola Instagram #bc1888; , cambia a #ffffff se su sfondo scuro - #c9469f simile ma più chiaro */
   font-size: 1.4rem;           /* dimensione icona: aumenta per più grande, diminuisce per più piccola */
   transition: opacity 0.2s ease; /* animazione hover */
   text-decoration: none;       /* rimuove sottolineatura */
 }
 
 .instagram-icon-media {
-  color: #ffffff;              /* colore icona: viola Instagram #bc1888; , cambia a #ffffff se su sfondo scuro */
+  color: #c9469f;              /* colore icona: viola Instagram #bc1888; , cambia a #ffffff se su sfondo scuro */
   font-size: 2.4rem;           /* dimensione icona: aumenta per più grande, diminuisce per più piccola */
   transition: opacity 0.2s ease; /* animazione hover */
   text-decoration: none;       /* rimuove sottolineatura */
