@@ -1703,3 +1703,69 @@ footer a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* bottone Instagram — misura media */
+.instagram-button-md {
+  display: inline-flex;        /* allinea icona e testo sulla stessa riga */
+  align-items: center;         /* centra verticalmente icona e testo */
+  gap: 0.5rem;                 /* spazio tra icona e testo */
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* gradiente ufficiale Instagram */
+  color: #ffffff;              /* colore testo */
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;          /* dimensione testo: versione media */
+  font-weight: 600;
+  text-decoration: none;       /* rimuove sottolineatura del link */
+  padding: 0.6rem 1.4rem;      /* spazio interno: versione media */
+  border-radius: 6px;          /* angoli arrotondati */
+  transition: opacity 0.2s ease; /* animazione hover */
+}
+
+/* bottone Instagram — misura grande */
+.instagram-button-lg {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;                 /* spazio tra icona e testo */
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;          /* dimensione testo: versione grande */
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.9rem 2rem;        /* spazio interno: versione grande */
+  border-radius: 8px;          /* angoli leggermente più arrotondati */
+  transition: opacity 0.2s ease;
+}
+
+/* hover uguale per entrambi */
+.instagram-button-md:hover,
+.instagram-button-lg:hover {
+  opacity: 0.80;               /* si scurisce leggermente all'hover: abbassa per effetto più marcato */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
