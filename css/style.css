@@ -211,7 +211,7 @@ nav a:hover {
     max-width: 900px;                        /* larghezza massima dei box centrali */
     margin: auto;                            /* centra il box nella pagina */
     background: white;                       /* sfondo bianco dei box */
-    padding: 50px;                           /* spazio interno ai box */
+    padding: 35px 40px;                           /* spazio interno ai box 30 sopra 50 sotto */
     margin-top: 30px;                        /* spazio tra i box */
     border-radius: 10px;                     /* angoli arrotondati */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* ombra leggera */
